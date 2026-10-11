@@ -69,6 +69,13 @@ def claim_url(nonce: str) -> str:
     return f"http://{config.INGEST_HOST}:{config.INGEST_PORT}/claim?nonce={nonce}"
 
 
+def say_report(export_dir: Path) -> None:
+    if (export_dir / "index.html").is_file():
+        say(OK, f"Open it offline: {export_dir / 'index.html'}")
+    else:
+        say(WARN, "No offline report: the analyzer UI isn't built (cd web && npm run build), then run export again")
+
+
 def say(mark: str, text: str) -> None:
     print(f"  {mark} {text}", flush=True)
 
@@ -335,7 +342,9 @@ async def start() -> None:
     store.rewrite(prune_unmatched_wire(store.events))
     dropped = before - len(store.events)
     say(OK, f"Kept browser traffic only (dropped {dropped} events from other apps / Chrome background)")
-    say(OK, f"Export written: {write_export(session)}")
+    export_dir = write_export(session)
+    say(OK, f"Export written: {export_dir}")
+    say_report(export_dir)
     registry.end_live()
     say(OK, f"Saved {len(store.events)} events to {session}")
     for server, task in servers:

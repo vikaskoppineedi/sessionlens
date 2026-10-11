@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { api } from '../api';
+import { api, standalone } from '../api';
 import { valueAt, type Selection } from '../state';
 import type { Body, Headers, Model, RequestDetail, Row } from '../types';
 import { buildCurl, charDiff, decodings, relTime, shortUrl } from '../util';
@@ -263,19 +263,23 @@ function RequestPanel({ session, id, reveal, model, onSelect }: { session: strin
 
       <div className="actions">
         <button onClick={() => navigator.clipboard.writeText(buildCurl(detail))}>Copy as cURL</button>
-        <button disabled={busy || (unsafe && !unsafeOk)} onClick={() => run(() => api.replay(session, id, { allowUnsafe: unsafeOk }))}>
-          Replay
-        </button>
-        <button disabled={busy || (unsafe && !unsafeOk)} onClick={() => run(() => api.minimize(session, id, unsafeOk))} title="Remove headers and cookies one by one to find what the server really checks">
-          Replay + minimize
-        </button>
-        {unsafe ? (
-          <label className="warn">
-            <input type="checkbox" checked={unsafeOk} onChange={(e) => setUnsafeOk(e.target.checked)} /> I understand replaying {detail.method} may repeat the action
-          </label>
-        ) : null}
+        {standalone ? null : (
+          <>
+            <button disabled={busy || (unsafe && !unsafeOk)} onClick={() => run(() => api.replay(session, id, { allowUnsafe: unsafeOk }))}>
+              Replay
+            </button>
+            <button disabled={busy || (unsafe && !unsafeOk)} onClick={() => run(() => api.minimize(session, id, unsafeOk))} title="Remove headers and cookies one by one to find what the server really checks">
+              Replay + minimize
+            </button>
+            {unsafe ? (
+              <label className="warn">
+                <input type="checkbox" checked={unsafeOk} onChange={(e) => setUnsafeOk(e.target.checked)} /> I understand replaying {detail.method} may repeat the action
+              </label>
+            ) : null}
+          </>
+        )}
       </div>
-      <p className="muted small">Replays go from Python on your Mac, with your captured cookies. Bot protection may treat them differently from Chrome.</p>
+      {standalone ? null : <p className="muted small">Replays go from Python on your Mac, with your captured cookies. Bot protection may treat them differently from Chrome.</p>}
       {busy ? <p className="muted">Replaying…</p> : null}
       {result ? <pre className="value">{JSON.stringify(result, null, 2)}</pre> : null}
 

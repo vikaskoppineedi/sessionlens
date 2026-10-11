@@ -11,7 +11,8 @@ from tests.test_model import T0, b64, session_events
 
 
 def export(events: list[dict[str, Any]] | None = None) -> tuple[dict[str, Any], dict[str, bytes]]:
-    return build_export(Analysis(events if events is not None else session_events()), "s1")
+    doc, files, _ = build_export(Analysis(events if events is not None else session_events()), "s1")
+    return doc, files
 
 
 def all_requests(doc: dict[str, Any]) -> list[dict[str, Any]]:

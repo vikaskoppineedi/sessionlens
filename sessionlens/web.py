@@ -143,7 +143,7 @@ def create_web_app(registry: Registry, dist_dir: Path, replayer: Replayer | None
 
     @app.get("/api/sessions/{session_id}/export.zip")
     def download_export(session_id: str) -> Response:
-        data = export_zip(registry.get(session_id).analysis(), session_id)
+        data = export_zip(registry.get(session_id).analysis(), session_id, dist_dir)
         headers = {"content-disposition": f'attachment; filename="sessionlens-{session_id}.zip"'}
         return Response(data, media_type="application/zip", headers=headers)
 

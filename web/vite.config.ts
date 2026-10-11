@@ -7,5 +7,7 @@ export default defineConfig({
   server: {
     proxy: { '/api': { target: 'http://localhost:47831', ws: true } },
   },
+  // Inline the small icon so the offline report (export/index.html) only has to embed one JS and one CSS file.
+  build: { assetsInlineLimit: 8192 },
   test: { environment: 'node' },
 });

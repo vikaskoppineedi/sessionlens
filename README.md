@@ -67,6 +67,7 @@ site end to end.
 - **Disk view** — what Chrome persisted per step, and which cookies were memory-only.
 - **Replay + minimize** — re-send a request from your Mac, dropping headers and cookies one at a time
   to find the minimum the server accepts.
+- **Offline report** — `export/index.html` opens the same timeline in any browser, no server needed.
 - **Export** — `session.json` timeline + screenshots + large bodies, documented in
   [docs/export-format.md](docs/export-format.md). [docs/analyzing-sessions.md](docs/analyzing-sessions.md)
   is a hands-on guide to correlating it: action → requests → cookies → where they went next.
@@ -141,7 +142,8 @@ as *pristine* and restores it before every capture. Redo it with `python -m sess
 
 Leave about 2 seconds between actions so each gets its own step and screenshot. When you quit the
 capture window (Cmd+Q), SessionLens re-decodes the full capture, keeps only the browser's traffic,
-writes the export, and exits. Open saved sessions later with `python -m sessionlens view`.
+writes the export, and exits. Double-click `export/index.html` in the session folder to see the timeline
+again. Open saved sessions later with `python -m sessionlens view`.
 
 | Command | What it does |
 |---|---|

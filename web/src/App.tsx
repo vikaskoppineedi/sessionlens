@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { api, subscribe } from './api';
+import { api, standalone, subscribe } from './api';
 import icon from './assets/icon.png';
 import { CompareView } from './components/CompareView';
 import { Drawer } from './components/Drawer';
@@ -62,13 +62,17 @@ function SessionView({ session, sessions, onError }: { session: string; sessions
         <label>
           <input type="checkbox" checked={filters.hideTrackers} onChange={(e) => set('hideTrackers', e.target.checked)} /> hide trackers
         </label>
-        <label title="Show password fields in request bodies">
-          <input type="checkbox" checked={reveal} onChange={(e) => setReveal(e.target.checked)} /> reveal passwords
-        </label>
-        <button onClick={() => setComparing(true)}>compare</button>
-        <a className="button" href={api.exportUrl(session)} download title="session.json timeline + screenshots + large bodies, as a zip">
-          download export
-        </a>
+        {standalone ? null : (
+          <>
+            <label title="Show password fields in request bodies">
+              <input type="checkbox" checked={reveal} onChange={(e) => setReveal(e.target.checked)} /> reveal passwords
+            </label>
+            <button onClick={() => setComparing(true)}>compare</button>
+            <a className="button" href={api.exportUrl(session)} download title="session.json timeline + screenshots + large bodies, as a zip">
+              download export
+            </a>
+          </>
+        )}
       </div>
       {model ? (
         <>

@@ -21,6 +21,7 @@ sessionlens/   Python package
   ingest.py        WebSocket endpoint the extension sends events to (127.0.0.1 only)
   model.py         Analysis: events -> steps, requests, cookie/storage rows, lineage (pure, no I/O)
   export.py        session.json + screenshots + bodies
+  report.py        export/index.html: built UI inlined with the session data embedded (offline report)
   web.py           FastAPI API + static UI
   disk.py, cookies.py, bodies.py, replay.py, compare.py, session.py, config.py
 web/src/       React + TypeScript analyzer (App, components/, state.ts, util.ts)

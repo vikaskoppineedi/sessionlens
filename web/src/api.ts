@@ -1,4 +1,20 @@
-import type { Comparison, Model, RequestDetail, SessionInfo } from './types';
+import type { Comparison, Embedded, Model, RequestDetail, SessionInfo } from './types';
+
+/** Reads the data blob that `export/index.html` carries; null when absent or unreadable. */
+export function parseEmbedded(text: string | null): Embedded | null {
+  if (!text) return null;
+  try {
+    const data: unknown = JSON.parse(text);
+    if (typeof data !== 'object' || data === null || !('session' in data) || !('model' in data)) return null;
+    return data as Embedded;
+  } catch {
+    return null;
+  }
+}
+
+// The standalone report has no server: everything it can show is in this blob.
+export const embedded = parseEmbedded(typeof document === 'undefined' ? null : (document.getElementById('sessionlens-data')?.textContent ?? null));
+export const standalone = embedded !== null;
 
 async function call<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(path, {
@@ -10,7 +26,7 @@ async function call<T>(path: string, init?: RequestInit): Promise<T> {
   return data as T;
 }
 
-export const api = {
+const server = {
   sessions: () => call<SessionInfo[]>('/api/sessions'),
   detail: (session: string, request: string, reveal: boolean) =>
     call<RequestDetail>(`/api/sessions/${session}/requests/${encodeURIComponent(request)}?reveal=${reveal}`),
@@ -29,8 +45,26 @@ export const api = {
   exportUrl: (session: string) => `/api/sessions/${session}/export.zip`,
 };
 
+function fromEmbedded(data: Embedded): typeof server {
+  return {
+    ...server,
+    sessions: () => Promise.resolve([{ id: data.session, live: false }]),
+    detail: (_session, request) => {
+      const detail = data.details[request];
+      return detail ? Promise.resolve(detail) : Promise.reject(new Error('Not included in this report'));
+    },
+    screenshotUrl: (_session, index) => data.screenshots[String(index)] ?? '',
+  };
+}
+
+export const api = embedded ? fromEmbedded(embedded) : server;
+
 /** Live model updates; reconnects if the server restarts. Returns a function that stops listening. */
 export function subscribe(session: string, onModel: (m: Model) => void, onError: (msg: string) => void): () => void {
+  if (embedded) {
+    onModel(embedded.model);
+    return () => {};
+  }
   let socket: WebSocket | null = null;
   let stopped = false;
   let retry: ReturnType<typeof setTimeout> | undefined;

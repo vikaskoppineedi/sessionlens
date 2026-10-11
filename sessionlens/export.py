@@ -14,8 +14,10 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlsplit
 
+from sessionlens import config
 from sessionlens.event_store import EventStore
 from sessionlens.model import Analysis
+from sessionlens.report import build_report
 
 Json = dict[str, Any]
 FORMAT = "sessionlens-export/1"
@@ -26,6 +28,9 @@ _COOKIE_ATTRS = ("httpOnly", "secure", "sameSite", "session", "hostOnly", "expir
 _EXT_BY_TYPE = {"html": "html", "json": "json", "xml": "xml", "javascript": "js", "css": "css"}
 
 README = """# sessionlens export
+
+`index.html` opens the same timeline as the analyzer in any browser, no server needed (keep it next to
+screenshots/; bodies in bodies/ and script/stylesheet bodies show as not available).
 
 `session.json` is the timeline (format sessionlens-export/1). Times: `atMs` = ms since session start.
 
@@ -61,46 +66,56 @@ def cookie_key(row: Json) -> str:
     return f"{row['domain']} {row['name']}" + ("" if path == "/" else f" {path}")
 
 
-def build_export(analysis: Analysis, session_id: str) -> tuple[Json, dict[str, bytes]]:
-    """Returns (session.json content, {relative path: bytes} for screenshots and bodies)."""
+def build_export(analysis: Analysis, session_id: str) -> tuple[Json, dict[str, bytes], Json]:
+    """Returns (session.json content, {relative path: bytes} for screenshots and bodies, offline report data:
+    the analyzer model plus per-request details with the same bodies left out)."""
     model = analysis.model()
     files: dict[str, bytes] = {}
+    details: dict[str, Json] = {}
+    screenshots: dict[str, str] = {}
     start = model["steps"][0]["t"]
     requests = [r for r in model["requests"] if r["match"] != "wire-only"]
     rid = {r["id"]: f"r{i:04d}" for i, r in enumerate(requests, 1)}
     rows = {r["id"]: r for r in model["rows"]}
 
-    def body(data: Json, name: str, skip: bool) -> Json:
+    def body(data: Json, name: str, skip: bool) -> tuple[Json, Json]:
+        """(session.json body, analyzer body: what isn't inline in session.json shows as unavailable)."""
         kind = data.get("kind")
         meta: Json = {k: data[k] for k in ("kind", "size", "contentType") if k in data}
         if skip and kind in ("text", "json"):
-            return {**meta, "kind": "skipped", "reason": "script/stylesheet body not exported"}
+            return ({**meta, "kind": "skipped", "reason": "script/stylesheet body not exported"},
+                    {"kind": "unavailable", "reason": "script/stylesheet body not included"})  # fmt: skip
         if kind == "binary":
-            return meta
+            return meta, data
         if kind in ("text", "json"):
             text = data["text"] if kind == "text" else json.dumps(data["json"], ensure_ascii=False, indent=2)
             raw = text.encode()
             if len(raw) <= BODY_INLINE_LIMIT:
-                return data
+                return data, data
             ctype = str(data.get("contentType", "")).lower()
             path = f"bodies/{name}.{next((e for k, e in _EXT_BY_TYPE.items() if k in ctype), 'txt')}"
             files[path] = raw
-            return {**meta, "file": path, **({"truncated": True} if data.get("truncated") else {})}
-        return data
+            return ({**meta, "file": path, **({"truncated": True} if data.get("truncated") else {})},
+                    {"kind": "unavailable", "reason": f"{len(raw)} bytes, saved as {path}"})  # fmt: skip
+        return data, data
 
     def request(summary: Json) -> Json:
         d = analysis.detail(summary["id"])  # masked: password fields replaced
         short = rid[summary["id"]]
         host = urlsplit(d["url"]).hostname or ""
+        request_body, ui_request_body = body(d["requestBody"], f"{short}-request", False)
+        skip = d["resourceType"] in SKIP_RESPONSE_TYPES
+        response_body, ui_response_body = body(d["responseBody"], f"{short}-response", skip)
+        details[summary["id"]] = {**d, "requestBody": ui_request_body, "responseBody": ui_response_body}
         return {
             "id": short, "atMs": round(d["t"] - start), "method": d["method"], "url": d["url"],
             "type": d["resourceType"], "status": d["status"], "redirectTo": d["redirectTo"],
             "protocol": d["proto"], "initiator": d["initiator"], "fromCache": d["fromCache"], "error": d["error"],
             "query": d["query"],
             "requestHeaders": d["requestHeaders"]["wire"] or d["requestHeaders"]["ext"] or [],
-            "requestBody": body(d["requestBody"], f"{short}-request", False),
+            "requestBody": request_body,
             "responseHeaders": d["responseHeaders"]["wire"] or d["responseHeaders"]["ext"] or [],
-            "responseBody": body(d["responseBody"], f"{short}-response", d["resourceType"] in SKIP_RESPONSE_TYPES),
+            "responseBody": response_body,
             "cookiesSent": [cookie_key(rows[i]) for i in d["cookiesSent"] if i in rows],
             "cookiesSet": [
                 {"cookie": cookie_key(rows[c["rowId"]]) if c.get("rowId") in rows else f"{host} {c['name']}",
@@ -136,6 +151,7 @@ def build_export(analysis: Analysis, session_id: str) -> tuple[Json, dict[str, b
         shot = None
         if step["screenshot"] is not None:
             shot = f"screenshots/step-{i:02d}.jpg"
+            screenshots[str(step["screenshot"])] = shot
             files[shot] = base64.b64decode(analysis.screenshots[step["screenshot"]]["dataUrl"].partition(",")[2])
         event = analysis.steps[i].event or {}
         action = None
@@ -174,30 +190,37 @@ def build_export(analysis: Analysis, session_id: str) -> tuple[Json, dict[str, b
         "steps": steps_out,
         "finalState": final,
     }  # fmt: skip
-    return doc, files
+    # Must match `Embedded` in web/src/types.ts.
+    report: Json = {"session": session_id, "model": {**model, "live": False}, "details": details,
+                    "screenshots": screenshots}  # fmt: skip
+    return doc, files, report
 
 
-def _contents(analysis: Analysis, session_id: str) -> dict[str, bytes]:
-    doc, files = build_export(analysis, session_id)
-    return {"session.json": json.dumps(doc, ensure_ascii=False, indent=2).encode(), "README.md": README.encode(),
-            **files}  # fmt: skip
+def _contents(analysis: Analysis, session_id: str, dist_dir: Path) -> dict[str, bytes]:
+    doc, files, report = build_export(analysis, session_id)
+    out = {"session.json": json.dumps(doc, ensure_ascii=False, indent=2).encode(), "README.md": README.encode(),
+           **files}  # fmt: skip
+    page = build_report(report, dist_dir)
+    if page is not None:
+        out["index.html"] = page.encode()
+    return out
 
 
-def write_export(session_dir: Path) -> Path:
+def write_export(session_dir: Path, dist_dir: Path = config.WEB_DIST_DIR) -> Path:
     """(Re)write sessions/<id>/export/ from the session's events.jsonl."""
     analysis = Analysis(EventStore.load(session_dir / "events.jsonl").events)
     out = session_dir / "export"
     shutil.rmtree(out, ignore_errors=True)
-    for name, data in _contents(analysis, session_dir.name).items():
+    for name, data in _contents(analysis, session_dir.name, dist_dir).items():
         path = out / name
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(data)
     return out
 
 
-def export_zip(analysis: Analysis, session_id: str) -> bytes:
+def export_zip(analysis: Analysis, session_id: str, dist_dir: Path = config.WEB_DIST_DIR) -> bytes:
     buffer = io.BytesIO()
     with zipfile.ZipFile(buffer, "w", zipfile.ZIP_DEFLATED) as archive:
-        for name, data in _contents(analysis, session_id).items():
+        for name, data in _contents(analysis, session_id, dist_dir).items():
             archive.writestr(name, data)
     return buffer.getvalue()

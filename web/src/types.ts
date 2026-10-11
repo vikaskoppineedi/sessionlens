@@ -135,6 +135,14 @@ export interface SessionInfo {
   live: boolean;
 }
 
+/** Data blob in `export/index.html` (written by `report.py`). `screenshots` maps screenshot index to a relative path. */
+export interface Embedded {
+  session: string;
+  model: Model;
+  details: Record<string, RequestDetail>;
+  screenshots: Record<string, string>;
+}
+
 export interface Comparison {
   cookies: { onlyA: string[]; onlyB: string[]; both: string[] };
   endpoints: { onlyA: string[]; onlyB: string[]; both: string[] };

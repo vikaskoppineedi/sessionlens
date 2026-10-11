@@ -4,6 +4,7 @@ Every capture writes `<captures>/<session-id>/export/`:
 
 ```
 export/
+  index.html         offline report: the analyzer timeline, opens in any browser without a server
   README.md          short field guide (for whoever, or whatever, reads the export)
   session.json       the timeline
   screenshots/       step-NN.jpg, referenced from steps[].screenshot
@@ -12,6 +13,11 @@ export/
 
 Rebuild it any time with `python -m sessionlens export <session-id>`, or download it as a zip from
 the analyzer.
+
+`index.html` is only written when the analyzer UI is built (`cd web && npm run build`). It embeds the
+same data as the analyzer (password fields masked) and loads screenshots from `screenshots/`, so keep it
+inside the `export/` folder. Bodies stored in `bodies/` and script/stylesheet bodies show as not
+available; replay, minimize and compare need `python -m sessionlens view`.
 
 ## `session.json`
 

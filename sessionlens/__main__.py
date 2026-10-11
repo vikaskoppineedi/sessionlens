@@ -27,7 +27,9 @@ def main() -> None:
         session = config.SESSIONS_DIR / args.session
         if not (session / "events.jsonl").is_file():
             raise SystemExit(f"No session at {session}")
-        print(f"Export written: {write_export(session)}")
+        export_dir = write_export(session)
+        print(f"Export written: {export_dir}")
+        orchestrator.say_report(export_dir)
         return
     command = {"start": orchestrator.start, "view": orchestrator.view, "setup": orchestrator.setup_profile}
     with contextlib.suppress(KeyboardInterrupt):
