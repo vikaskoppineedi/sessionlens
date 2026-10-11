@@ -141,7 +141,7 @@ as *pristine* and restores it before every capture. Redo it with `python -m sess
 
 Leave about 2 seconds between actions so each gets its own step and screenshot. When you quit the
 capture window (Cmd+Q), SessionLens re-decodes the full capture, keeps only the browser's traffic,
-writes the export, and leaves the analyzer running until you press Ctrl+C.
+writes the export, and exits. Open saved sessions later with `python -m sessionlens view`.
 
 | Command | What it does |
 |---|---|

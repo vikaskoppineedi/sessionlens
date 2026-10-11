@@ -338,12 +338,9 @@ async def start() -> None:
     say(OK, f"Export written: {write_export(session)}")
     registry.end_live()
     say(OK, f"Saved {len(store.events)} events to {session}")
-    print(f"  Analyzer still running: http://localhost:{config.UI_PORT}/  (Ctrl+C to quit)", flush=True)
-    try:
-        await asyncio.Event().wait()
-    finally:
-        for server, task in servers:
-            await _stop(server, task)
+    for server, task in servers:
+        await _stop(server, task)
+    print("  Open it any time with: python -m sessionlens view", flush=True)
 
 
 async def view() -> None:
