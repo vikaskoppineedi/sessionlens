@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+node_modules/
+web/dist/
+profiles/
+sessions/
+tasks/
+.claude/
+.DS_Store

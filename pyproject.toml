@@ -1,0 +1,28 @@
+[project]
+name = "sessionlens"
+version = "0.1.0"
+description = "Step-by-step capture of everything a website does in real Chrome: requests, cookies, storage, disk."
+readme = "README.md"
+license = "MIT"
+requires-python = "==3.12.*"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501"]  # event fixtures read better one event per line
+
+[tool.mypy]
+strict = true
+packages = ["sessionlens", "tests"]
+
+[[tool.mypy.overrides]]
+module = ["brotli"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

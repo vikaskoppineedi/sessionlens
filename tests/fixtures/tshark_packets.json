@@ -1,0 +1,2608 @@
+[
+  {
+    "_index": "packets-2026-10-10",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "en0",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "2026-10-10T22:37:48.389316000Z",
+          "frame.time_utc": "2026-10-10T22:37:48.389316000Z",
+          "frame.time_epoch": "2026-10-10T22:37:48.389316000Z",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000101000",
+          "frame.time_relative": "2.399005000",
+          "frame.number": "175",
+          "frame.len": "492",
+          "frame.cap_len": "492",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:tcp:http",
+          "frame.encoding": "0"
+        },
+        "eth": {
+          "filtered": "eth"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "478",
+          "ip.id": "0x0000",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "6",
+          "ip.checksum": "0xe5c6",
+          "ip.checksum.status": "2",
+          "ip.src": "192.0.2.10",
+          "ip.addr": [
+            "192.0.2.10",
+            "74.125.21.139"
+          ],
+          "ip.src_host": "192.0.2.10",
+          "ip.host": [
+            "192.0.2.10",
+            "74.125.21.139"
+          ],
+          "ip.dst": "74.125.21.139",
+          "ip.dst_host": "74.125.21.139",
+          "ip.stream": "11"
+        },
+        "tcp": {
+          "tcp.srcport": "50403",
+          "tcp.dstport": "80",
+          "tcp.port": [
+            "50403",
+            "80"
+          ],
+          "tcp.stream": "27",
+          "tcp.stream.pnum": "4",
+          "tcp.completeness": "7",
+          "tcp.completeness_tree": {
+            "tcp.completeness.rst": "0",
+            "tcp.completeness.fin": "0",
+            "tcp.completeness.data": "0",
+            "tcp.completeness.ack": "1",
+            "tcp.completeness.syn-ack": "1",
+            "tcp.completeness.syn": "1",
+            "tcp.completeness.str": "···ASS"
+          },
+          "tcp.len": "426",
+          "tcp.seq": "1",
+          "tcp.seq_raw": "490160005",
+          "tcp.nxtseq": "427",
+          "tcp.ack": "1",
+          "tcp.ack_raw": "2473102457",
+          "tcp.hdr_len": "32",
+          "tcp.flags": "0x0018",
+          "tcp.flags_tree": {
+            "tcp.flags.res": "0",
+            "tcp.flags.ae": "0",
+            "tcp.flags.cwr": "0",
+            "tcp.flags.ece": "0",
+            "tcp.flags.urg": "0",
+            "tcp.flags.ack": "1",
+            "tcp.flags.push": "1",
+            "tcp.flags.reset": "0",
+            "tcp.flags.syn": "0",
+            "tcp.flags.fin": "0",
+            "tcp.flags.str": "·······AP···"
+          },
+          "tcp.window_size_value": "2057",
+          "tcp.window_size": "131648",
+          "tcp.window_size_scalefactor": "64",
+          "tcp.checksum": "0x1563",
+          "tcp.checksum.status": "2",
+          "tcp.urgent_pointer": "0",
+          "tcp.options": "01:01:08:0a:c0:51:dd:56:1d:f9:6d:cd",
+          "tcp.options_tree": {
+            "tcp.options.nop": [
+              "01",
+              "01"
+            ],
+            "tcp.options.nop_tree": [
+              {
+                "tcp.option_kind": "1"
+              },
+              {
+                "tcp.option_kind": "1"
+              }
+            ],
+            "tcp.options.timestamp": "08:0a:c0:51:dd:56:1d:f9:6d:cd",
+            "tcp.options.timestamp_tree": {
+              "tcp.option_kind": "8",
+              "tcp.option_len": "10",
+              "tcp.options.timestamp.tsval": "3226590550",
+              "tcp.options.timestamp.tsecr": "502885837"
+            }
+          },
+          "Timestamps": {
+            "tcp.time_relative": "0.031408000",
+            "tcp.time_delta": "0.000101000"
+          },
+          "tcp.analysis": {
+            "tcp.analysis.initial_rtt": "0.031307000",
+            "tcp.analysis.bytes_in_flight": "426",
+            "tcp.analysis.push_bytes_sent": "426"
+          },
+          "tcp.stream.client.contiguity_count": "1",
+          "tcp.stream.server.contiguity_count": "1"
+        },
+        "http": {
+          "GET /time/1/current?cup2key=10:G8HNkQmMXEI7WI6mafabiJfMB28r2OLR8Zf0NfNev7Q&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 HTTP/1.1\\r\\n": {
+            "http.request.method": "GET",
+            "http.request.uri": "/time/1/current?cup2key=10:G8HNkQmMXEI7WI6mafabiJfMB28r2OLR8Zf0NfNev7Q&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "http.request.uri_tree": {
+              "http.request.uri.path": "/time/1/current",
+              "http.request.uri.query": "cup2key=10:G8HNkQmMXEI7WI6mafabiJfMB28r2OLR8Zf0NfNev7Q&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "http.request.uri.query_tree": {
+                "http.request.uri.query.parameter": [
+                  "cup2key=10:G8HNkQmMXEI7WI6mafabiJfMB28r2OLR8Zf0NfNev7Q",
+                  "cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                ]
+              }
+            },
+            "http.request.version": "HTTP/1.1"
+          },
+          "http.host": "clients2.google.com",
+          "http.request.line": [
+            "Host: clients2.google.com\r\n",
+            "Connection: keep-alive\r\n",
+            "Pragma: no-cache\r\n",
+            "Cache-Control: no-cache\r\n",
+            "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36\r\n",
+            "Accept-Encoding: gzip, deflate\r\n"
+          ],
+          "http.connection": "keep-alive",
+          "http.cache_control": "no-cache",
+          "http.user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "http.accept_encoding": "gzip, deflate",
+          "\\r\\n": "",
+          "http.request": "1",
+          "http.request.full_uri": "http://clients2.google.com/time/1/current?cup2key=10:G8HNkQmMXEI7WI6mafabiJfMB28r2OLR8Zf0NfNev7Q&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2026-10-10",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "en0",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "2026-10-10T22:37:48.422097000Z",
+          "frame.time_utc": "2026-10-10T22:37:48.422097000Z",
+          "frame.time_epoch": "2026-10-10T22:37:48.422097000Z",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000001000",
+          "frame.time_delta_displayed": "0.032781000",
+          "frame.time_relative": "2.431786000",
+          "frame.number": "213",
+          "frame.len": "86",
+          "frame.cap_len": "86",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:tcp:http:json:data-text-lines",
+          "frame.encoding": "0"
+        },
+        "eth": {
+          "filtered": "eth"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "72",
+          "ip.id": "0x40fd",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "117",
+          "ip.proto": "6",
+          "ip.checksum": "0xb15f",
+          "ip.checksum.status": "2",
+          "ip.src": "74.125.21.139",
+          "ip.addr": [
+            "74.125.21.139",
+            "192.0.2.10"
+          ],
+          "ip.src_host": "74.125.21.139",
+          "ip.host": [
+            "74.125.21.139",
+            "192.0.2.10"
+          ],
+          "ip.dst": "192.0.2.10",
+          "ip.dst_host": "192.0.2.10",
+          "ip.stream": "11"
+        },
+        "tcp": {
+          "tcp.srcport": "80",
+          "tcp.dstport": "50403",
+          "tcp.port": [
+            "80",
+            "50403"
+          ],
+          "tcp.stream": "27",
+          "tcp.stream.pnum": "7",
+          "tcp.completeness": "15",
+          "tcp.completeness_tree": {
+            "tcp.completeness.rst": "0",
+            "tcp.completeness.fin": "0",
+            "tcp.completeness.data": "1",
+            "tcp.completeness.ack": "1",
+            "tcp.completeness.syn-ack": "1",
+            "tcp.completeness.syn": "1",
+            "tcp.completeness.str": "··DASS"
+          },
+          "tcp.len": "20",
+          "tcp.seq": "1139",
+          "tcp.seq_raw": "2473103595",
+          "tcp.nxtseq": "1159",
+          "tcp.ack": "427",
+          "tcp.ack_raw": "490160431",
+          "tcp.hdr_len": "32",
+          "tcp.flags": "0x0018",
+          "tcp.flags_tree": {
+            "tcp.flags.res": "0",
+            "tcp.flags.ae": "0",
+            "tcp.flags.cwr": "0",
+            "tcp.flags.ece": "0",
+            "tcp.flags.urg": "0",
+            "tcp.flags.ack": "1",
+            "tcp.flags.push": "1",
+            "tcp.flags.reset": "0",
+            "tcp.flags.syn": "0",
+            "tcp.flags.fin": "0",
+            "tcp.flags.str": "·······AP···"
+          },
+          "tcp.window_size_value": "1050",
+          "tcp.window_size": "268800",
+          "tcp.window_size_scalefactor": "256",
+          "tcp.checksum": "0x58ff",
+          "tcp.checksum.status": "2",
+          "tcp.urgent_pointer": "0",
+          "tcp.options": "01:01:08:0a:1d:f9:6d:ee:c0:51:dd:56",
+          "tcp.options_tree": {
+            "tcp.options.nop": [
+              "01",
+              "01"
+            ],
+            "tcp.options.nop_tree": [
+              {
+                "tcp.option_kind": "1"
+              },
+              {
+                "tcp.option_kind": "1"
+              }
+            ],
+            "tcp.options.timestamp": "08:0a:1d:f9:6d:ee:c0:51:dd:56",
+            "tcp.options.timestamp_tree": {
+              "tcp.option_kind": "8",
+              "tcp.option_len": "10",
+              "tcp.options.timestamp.tsval": "502885870",
+              "tcp.options.timestamp.tsecr": "3226590550"
+            }
+          },
+          "Timestamps": {
+            "tcp.time_relative": "0.064189000",
+            "tcp.time_delta": "0.000001000"
+          },
+          "tcp.analysis": {
+            "tcp.analysis.initial_rtt": "0.031307000",
+            "tcp.analysis.bytes_in_flight": "1158",
+            "tcp.analysis.push_bytes_sent": "20"
+          },
+          "tcp.stream.client.contiguity_count": "1",
+          "tcp.stream.server.contiguity_count": "1"
+        },
+        "tcp.segments": {
+          "filtered": "tcp.segments"
+        },
+        "http": {
+          "HTTP/1.1 200 OK\\r\\n": {
+            "http.response.version": "HTTP/1.1",
+            "http.response.code": "200",
+            "http.response.code.desc": "OK",
+            "http.response.phrase": "OK"
+          },
+          "http.content_type": "application/json; charset=utf-8",
+          "http.response.line": [
+            "Content-Type: application/json; charset=utf-8\r\n",
+            "Vary: Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site\r\n",
+            "X-Content-Type-Options: nosniff\r\n",
+            "x-cup-server-proof: 3045022100d65fc14ee5a35a2025c59e5a354e3955b8fac1cae6b4491733801204cca3b76d02206f75b33362f76dbe99af0bcf1701b8abd0c9287563ebc19bb59d6d80e4bd7c43:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\r\n",
+            "ETag: W/\"3045022100d65fc14ee5a35a2025c59e5a354e3955b8fac1cae6b4491733801204cca3b76d02206f75b33362f76dbe99af0bcf1701b8abd0c9287563ebc19bb59d6d80e4bd7c43:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\r\n",
+            "Cache-Control: no-cache, no-store, max-age=0, must-revalidate\r\n",
+            "Pragma: no-cache\r\n",
+            "Expires: Mon, 01 Jan 1990 00:00:00 GMT\r\n",
+            "Date: Sat, 10 Oct 2026 22:37:48 GMT\r\n",
+            "Content-Disposition: attachment; filename=\"json.txt\"; filename*=UTF-8''json.txt\r\n",
+            "Cross-Origin-Opener-Policy: same-origin\r\n",
+            "Cross-Origin-Resource-Policy: same-site\r\n",
+            "Content-Encoding: gzip\r\n",
+            "Transfer-Encoding: chunked\r\n",
+            "Server: ESF\r\n",
+            "X-XSS-Protection: 0\r\n",
+            "X-Frame-Options: SAMEORIGIN\r\n"
+          ],
+          "http.cache_control": "no-cache, no-store, max-age=0, must-revalidate",
+          "http.date": "Sat, 10 Oct 2026 22:37:48 GMT",
+          "http.content_encoding": "gzip",
+          "http.transfer_encoding": "chunked",
+          "http.server": "ESF",
+          "\\r\\n": "",
+          "http.response": "1",
+          "http.request_in": "175",
+          "http.time": "0.032781000",
+          "http.request.uri": "/time/1/current?cup2key=10:G8HNkQmMXEI7WI6mafabiJfMB28r2OLR8Zf0NfNev7Q&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "http.request.full_uri": "http://clients2.google.com/time/1/current?cup2key=10:G8HNkQmMXEI7WI6mafabiJfMB28r2OLR8Zf0NfNev7Q&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "HTTP chunked response": {
+            "Data chunk (95 octets)": {
+              "http.chunk_size": "95",
+              "http.chunk_boundary": "0d:0a"
+            },
+            "Data chunk (10 octets)": {
+              "http.chunk_size": "10",
+              "http.chunk_boundary": "0d:0a"
+            },
+            "End of chunked encoding": {
+              "http.chunk_size": "0"
+            },
+            "\\r\\n": ""
+          },
+          "Content-encoded entity body (gzip): 105 bytes -> 80 bytes": "",
+          "http.file_data": "29:5d:7d:27:0a:7b:22:63:75:72:72:65:6e:74:5f:74:69:6d:65:5f:6d:69:6c:6c:69:73:22:3a:31:37:39:31:36:37:31:38:36:38:35:32:31:2c:22:73:65:72:76:65:72:5f:6e:6f:6e:63:65:22:3a:31:2e:33:36:39:32:32:31:33:37:34:30:35:35:31:31:31:32:45:31:37:34:7d"
+        },
+        "json": "JavaScript Object Notation: application/json",
+        "data-text-lines": {
+          "filtered": "data-text-lines"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2026-10-10",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "en0",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "2026-10-10T22:37:48.464572000Z",
+          "frame.time_utc": "2026-10-10T22:37:48.464572000Z",
+          "frame.time_epoch": "2026-10-10T22:37:48.464572000Z",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000169000",
+          "frame.time_delta_displayed": "0.042475000",
+          "frame.time_relative": "2.474261000",
+          "frame.number": "310",
+          "frame.len": "554",
+          "frame.cap_len": "554",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:udp:quic:http3:http3",
+          "frame.encoding": "0"
+        },
+        "eth": {
+          "filtered": "eth"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "540",
+          "ip.id": "0x0000",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "17",
+          "ip.checksum": "0x6215",
+          "ip.checksum.status": "2",
+          "ip.src": "192.0.2.10",
+          "ip.addr": [
+            "192.0.2.10",
+            "104.16.123.96"
+          ],
+          "ip.src_host": "192.0.2.10",
+          "ip.host": [
+            "192.0.2.10",
+            "104.16.123.96"
+          ],
+          "ip.dst": "104.16.123.96",
+          "ip.dst_host": "104.16.123.96",
+          "ip.stream": "19"
+        },
+        "udp": {
+          "udp.srcport": "53842",
+          "udp.dstport": "443",
+          "udp.port": [
+            "53842",
+            "443"
+          ],
+          "udp.length": "520",
+          "udp.checksum": "0xe59e",
+          "udp.checksum.status": "2",
+          "udp.stream": "19",
+          "udp.stream.pnum": "12",
+          "Timestamps": {
+            "udp.time_relative": "0.032940000",
+            "udp.time_delta": "0.000169000"
+          },
+          "udp.payload": "48:01:8b:0f:2a:81:39:c3:75:6f:8e:05:2a:19:3b:e4:75:6f:6e:fd:da:f8:0f:d8:5e:ac:42:39:c3:37:85:45:f8:5d:a7:27:8d:17:2c:0d:cd:7c:e6:dc:dd:2a:77:6c:07:3c:dd:f4:5a:f2:70:71:2a:9b:1f:71:ce:f3:ac:8b:b3:de:8e:3f:02:52:4f:92:0e:65:9a:aa:26:86:14:87:ce:67:2e:d9:34:58:aa:53:4b:1c:67:9a:09:b4:f9:4a:6b:43:f9:1e:91:b3:50:1d:01:f4:85:29:f3:dd:ce:53:7f:31:e9:08:41:f5:5f:cf:8e:c0:43:bc:79:8a:06:32:f5:d4:ed:b4:83:5b:bb:bc:42:59:c9:80:42:18:9e:fa:b1:e9:66:09:b8:a5:a7:2a:0d:0f:c7:6e:2d:d8:da:0c:46:2a:e2:75:1b:0b:90:22:ad:8b:a7:0f:0d:da:bb:59:2d:a4:84:43:1c:13:30:02:a3:5a:b2:d1:c3:e3:e1:7a:78:9a:48:78:9e:c3:75:e8:70:ac:65:7c:6e:1f:db:95:c7:72:f0:26:4e:ef:df:53:be:ee:15:cf:69:8c:ed:79:ba:c1:75:1b:65:1f:1a:ca:c8:47:08:a4:10:90:b6:ed:f2:7b:56:90:15:b6:20:bd:84:5b:80:99:95:28:5c:a5:38:e5:5d:6f:9c:ba:ae:02:4d:2c:eb:9f:35:e4:a0:41:fb:1f:82:01:eb:ac:7c:89:98:bc:16:7c:86:f0:d5:ba:4c:24:38:19:d7:d9:54:a8:e6:e3:e0:6e:30:52:96:11:33:9f:16:f1:b8:f1:6c:7d:81:32:2f:9f:3f:56:9c:24:67:85:0f:92:95:a5:11:27:13:dd:a5:7b:94:d2:50:f2:08:6e:a8:63:1f:e7:a1:14:34:90:63:b7:d7:29:1e:81:a1:64:96:8b:a5:51:99:a1:53:26:26:7e:23:67:e2:99:10:33:19:2e:ae:b7:ba:1d:ac:9d:65:1f:56:cc:d5:d3:40:d8:a6:ec:a1:62:58:22:a2:91:aa:6e:e6:73:85:64:b0:2d:f0:6a:18:d0:f8:bd:f3:bc:ee:d6:ce:2c:b9:63:50:1f:fa:81:ce:65:e6:ee:a1:3f:d0:1f:13:a2:df:60:14:f2:41:6d:74:97:2a:48:27:bc:34:44:a0:80:a9:8a:2e:11:85:51:95:01:b3:7c:dd:17:9b:25:e9:d8:80:07:2d:cf:81:35:5f:82:94:57:cd:ff:33:d3:93:7f:9f:24:04:a6:22:40:ee:62:57:74:05:08:d7:5a:e6:c6:28:87:3f:6d:77:a7:17:c8:60:4b:d7:f3:d4:bb:22:bb:ce:01"
+        },
+        "quic": {
+          "QUIC Connection information": {
+            "quic.connection.number": "0"
+          },
+          "quic.packet_length": "512",
+          "quic.short": {
+            "quic.header_form": "0",
+            "quic.fixed_bit": "1",
+            "quic.spin_bit": "0",
+            "quic.short.reserved": "0",
+            "quic.key_phase": "0",
+            "quic.packet_number_length": "0",
+            "quic.dcid": "01:8b:0f:2a:81:39:c3:75:6f:8e:05:2a:19:3b:e4:75:6f:6e:fd:da",
+            "quic.packet_number": "7",
+            "quic.protected_payload": "0f:d8:5e:ac:42:39:c3:37:85:45:f8:5d:a7:27:8d:17:2c:0d:cd:7c:e6:dc:dd:2a:77:6c:07:3c:dd:f4:5a:f2:70:71:2a:9b:1f:71:ce:f3:ac:8b:b3:de:8e:3f:02:52:4f:92:0e:65:9a:aa:26:86:14:87:ce:67:2e:d9:34:58:aa:53:4b:1c:67:9a:09:b4:f9:4a:6b:43:f9:1e:91:b3:50:1d:01:f4:85:29:f3:dd:ce:53:7f:31:e9:08:41:f5:5f:cf:8e:c0:43:bc:79:8a:06:32:f5:d4:ed:b4:83:5b:bb:bc:42:59:c9:80:42:18:9e:fa:b1:e9:66:09:b8:a5:a7:2a:0d:0f:c7:6e:2d:d8:da:0c:46:2a:e2:75:1b:0b:90:22:ad:8b:a7:0f:0d:da:bb:59:2d:a4:84:43:1c:13:30:02:a3:5a:b2:d1:c3:e3:e1:7a:78:9a:48:78:9e:c3:75:e8:70:ac:65:7c:6e:1f:db:95:c7:72:f0:26:4e:ef:df:53:be:ee:15:cf:69:8c:ed:79:ba:c1:75:1b:65:1f:1a:ca:c8:47:08:a4:10:90:b6:ed:f2:7b:56:90:15:b6:20:bd:84:5b:80:99:95:28:5c:a5:38:e5:5d:6f:9c:ba:ae:02:4d:2c:eb:9f:35:e4:a0:41:fb:1f:82:01:eb:ac:7c:89:98:bc:16:7c:86:f0:d5:ba:4c:24:38:19:d7:d9:54:a8:e6:e3:e0:6e:30:52:96:11:33:9f:16:f1:b8:f1:6c:7d:81:32:2f:9f:3f:56:9c:24:67:85:0f:92:95:a5:11:27:13:dd:a5:7b:94:d2:50:f2:08:6e:a8:63:1f:e7:a1:14:34:90:63:b7:d7:29:1e:81:a1:64:96:8b:a5:51:99:a1:53:26:26:7e:23:67:e2:99:10:33:19:2e:ae:b7:ba:1d:ac:9d:65:1f:56:cc:d5:d3:40:d8:a6:ec:a1:62:58:22:a2:91:aa:6e:e6:73:85:64:b0:2d:f0:6a:18:d0:f8:bd:f3:bc:ee:d6:ce:2c:b9:63:50:1f:fa:81:ce:65:e6:ee:a1:3f:d0:1f:13:a2:df:60:14:f2:41:6d:74:97:2a:48:27:bc:34:44:a0:80:a9:8a:2e:11:85:51:95:01:b3:7c:dd:17:9b:25:e9:d8:80:07:2d:cf:81:35:5f:82:94:57:cd:ff:33:d3:93:7f:9f:24:04:a6:22:40:ee:62:57:74:05:08:d7:5a:e6:c6:28:87:3f:6d:77:a7:17:c8:60:4b:d7:f3:d4:bb:22:bb:ce:01"
+          },
+          "quic.frame": [
+            {
+              "quic.frame_type": "0x000000000000000e",
+              "quic.frame_type_tree": {
+                "quic.stream.fin": "0",
+                "quic.stream.len": "1",
+                "quic.stream.off": "1"
+              },
+              "quic.stream.stream_id": "2",
+              "quic.stream.stream_id_tree": {
+                "quic.stream.initiator": "0",
+                "quic.stream.direction": "1"
+              },
+              "quic.stream.offset": "43",
+              "quic.stream.length": "12",
+              "quic.stream_data": "80:0f:07:00:07:00:75:3d:30:2c:20:69"
+            },
+            {
+              "quic.frame_type": "0x0000000000000009",
+              "quic.frame_type_tree": {
+                "quic.stream.fin": "1",
+                "quic.stream.len": "0",
+                "quic.stream.off": "0"
+              },
+              "quic.stream.stream_id": "0",
+              "quic.stream.stream_id_tree": {
+                "quic.stream.initiator": "0",
+                "quic.stream.direction": "0"
+              },
+              "quic.stream_data": "01:41:c5:00:00:d1:50:8e:f1:e3:c2:e4:a0:f6:c9:2d:03:b0:ab:90:f4:ff:d7:c1:2f:00:41:48:b1:27:5a:d1:ff:b8:fe:71:1c:f3:50:55:2f:4f:61:e9:2f:f3:f7:de:0f:e4:2d:b7:fc:fd:29:fc:de:9e:c3:d2:6b:69:fe:7e:fb:c1:fc:85:b6:ff:9f:a5:3f:9d:27:4f:f5:0d:cb:b6:0e:a9:3f:9f:be:f0:7f:22:6b:f9:2f:04:41:48:b1:27:5a:d1:ad:49:e3:35:05:02:3f:30:2f:06:41:48:b1:27:5a:d1:ad:5d:03:4c:a7:b2:9f:07:22:6d:61:63:4f:53:22:ff:1f:5f:50:de:d0:7f:66:a2:81:b0:da:e0:53:fa:d0:32:1a:a4:9d:13:fd:a9:92:a4:96:85:34:0c:8a:6a:dc:a7:e2:81:04:41:6e:27:7f:b5:21:ae:ba:0b:c8:b1:e6:32:58:6d:97:57:65:c5:3f:ac:d8:f7:e8:cf:f4:a5:06:ea:55:31:14:9d:4f:fd:a9:8c:a3:92:82:a1:17:a7:b0:f4:95:80:b6:da:e0:5c:0b:81:4d:c3:94:76:19:86:d9:75:76:5c:5f:0e:ec:49:7c:a5:89:d3:4d:1f:43:ae:ba:0c:41:a4:c7:a9:8f:33:a6:9a:3f:df:9a:68:fa:1d:75:d0:62:0d:26:3d:4c:79:a6:8f:be:d0:01:77:fe:8d:48:e6:2b:1d:3c:d1:f4:6a:47:31:58:1f:73:4b:f4:6a:47:31:58:f0:58:eb:fa:35:23:98:ac:0e:ba:a6:fa:f9:63:e7:ef:b4:00:5d:ef:a1:d7:5d:06:20:d2:63:d4:c2:0d:35:45:91:62:f9:24:e3:aa:62:fd:f7:82:36:7e:fb:40:05:dd:2f:03:41:48:b4:a5:49:27:59:06:49:7f:83:a8:f5:17:2f:03:41:48:b4:a5:49:27:5a:93:c8:5f:86:a8:7d:cd:30:d2:5f:2f:03:41:48:b4:a5:49:27:5a:d4:16:cf:02:3f:31:2f:03:41:48:b4:a5:49:27:5a:42:a1:3f:86:90:e4:b6:92:d4:9f:5f:10:92:9b:d9:ab:fa:52:42:cb:40:d2:5f:a5:23:b3:e9:4f:68:4c:9f:5f:39:8b:2d:4b:70:dd:f4:5a:be:fb:40:05:df:2e:ae:c3:1e:c3:27:d7:85:b6:00:7d:28:6f"
+            }
+          ]
+        },
+        "http3": [
+          {
+            "http3.stream.uni": {
+              "http3.frame": {
+                "http3.frame_streamid": "2",
+                "http3.frame_type": "0x00000000000f0700",
+                "http3.frame_length": "7",
+                "http3.priority_update_element_id": "0",
+                "http3.priority_update_field_value": "u=0, i"
+              }
+            }
+          },
+          {
+            "http3.stream": {
+              "http3.frame": {
+                "http3.frame_streamid": "0",
+                "http3.frame_type": "0x0000000000000001",
+                "http3.frame_length": "453",
+                "http3.headers.decoded_length": "780",
+                "http3.headers.count": "17",
+                "http3.headers.header": [
+                  {
+                    "http3.headers.header.name.length": "7",
+                    "http3.header.header.name": ":method",
+                    "http3.headers.header.value.length": "3",
+                    "http3.headers.header.value": "GET",
+                    "http3.headers.method": "GET"
+                  },
+                  {
+                    "http3.headers.header.name.length": "10",
+                    "http3.header.header.name": ":authority",
+                    "http3.headers.header.value.length": "18",
+                    "http3.headers.header.value": "www.cloudflare.com",
+                    "http3.headers.authority": "www.cloudflare.com"
+                  },
+                  {
+                    "http3.headers.header.name.length": "7",
+                    "http3.header.header.name": ":scheme",
+                    "http3.headers.header.value.length": "5",
+                    "http3.headers.header.value": "https",
+                    "http3.headers.scheme": "https"
+                  },
+                  {
+                    "http3.headers.header.name.length": "5",
+                    "http3.header.header.name": ":path",
+                    "http3.headers.header.value.length": "1",
+                    "http3.headers.header.value": "/",
+                    "http3.headers.path": "/"
+                  },
+                  {
+                    "http3.headers.header.name.length": "9",
+                    "http3.header.header.name": "sec-ch-ua",
+                    "http3.headers.header.value.length": "65",
+                    "http3.headers.header.value": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\""
+                  },
+                  {
+                    "http3.headers.header.name.length": "16",
+                    "http3.header.header.name": "sec-ch-ua-mobile",
+                    "http3.headers.header.value.length": "2",
+                    "http3.headers.header.value": "?0"
+                  },
+                  {
+                    "http3.headers.header.name.length": "18",
+                    "http3.header.header.name": "sec-ch-ua-platform",
+                    "http3.headers.header.value.length": "7",
+                    "http3.headers.header.value": "\"macOS\""
+                  },
+                  {
+                    "http3.headers.header.name.length": "25",
+                    "http3.header.header.name": "upgrade-insecure-requests",
+                    "http3.headers.header.value.length": "1",
+                    "http3.headers.header.value": "1"
+                  },
+                  {
+                    "http3.headers.header.name.length": "10",
+                    "http3.header.header.name": "user-agent",
+                    "http3.headers.header.value.length": "125",
+                    "http3.headers.header.value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+                    "http3.headers.user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+                  },
+                  {
+                    "http3.headers.header.name.length": "6",
+                    "http3.header.header.name": "accept",
+                    "http3.headers.header.value.length": "145",
+                    "http3.headers.header.value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                    "http3.headers.accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+                  },
+                  {
+                    "http3.headers.header.name.length": "14",
+                    "http3.header.header.name": "sec-fetch-site",
+                    "http3.headers.header.value.length": "4",
+                    "http3.headers.header.value": "none"
+                  },
+                  {
+                    "http3.headers.header.name.length": "14",
+                    "http3.header.header.name": "sec-fetch-mode",
+                    "http3.headers.header.value.length": "8",
+                    "http3.headers.header.value": "navigate"
+                  },
+                  {
+                    "http3.headers.header.name.length": "14",
+                    "http3.header.header.name": "sec-fetch-user",
+                    "http3.headers.header.value.length": "2",
+                    "http3.headers.header.value": "?1"
+                  },
+                  {
+                    "http3.headers.header.name.length": "14",
+                    "http3.header.header.name": "sec-fetch-dest",
+                    "http3.headers.header.value.length": "8",
+                    "http3.headers.header.value": "document"
+                  },
+                  {
+                    "http3.headers.header.name.length": "15",
+                    "http3.header.header.name": "accept-encoding",
+                    "http3.headers.header.value.length": "23",
+                    "http3.headers.header.value": "gzip, deflate, br, zstd",
+                    "http3.headers.accept_encoding": "gzip, deflate, br, zstd"
+                  },
+                  {
+                    "http3.headers.header.name.length": "15",
+                    "http3.header.header.name": "accept-language",
+                    "http3.headers.header.value.length": "14",
+                    "http3.headers.header.value": "en-US,en;q=0.9",
+                    "http3.headers.accept_language": "en-US,en;q=0.9"
+                  },
+                  {
+                    "http3.headers.header.name.length": "8",
+                    "http3.header.header.name": "priority",
+                    "http3.headers.header.value.length": "6",
+                    "http3.headers.header.value": "u=0, i"
+                  }
+                ],
+                "http3.request.full_uri": "https://www.cloudflare.com/"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2026-10-10",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "en0",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "2026-10-10T22:37:48.550169000Z",
+          "frame.time_utc": "2026-10-10T22:37:48.550169000Z",
+          "frame.time_epoch": "2026-10-10T22:37:48.550169000Z",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000001000",
+          "frame.time_delta_displayed": "0.085597000",
+          "frame.time_relative": "2.559858000",
+          "frame.number": "478",
+          "frame.len": "1242",
+          "frame.cap_len": "1242",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:udp:quic:http3",
+          "frame.encoding": "0"
+        },
+        "eth": {
+          "filtered": "eth"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "1228",
+          "ip.id": "0x0002",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "53",
+          "ip.proto": "17",
+          "ip.checksum": "0x6a63",
+          "ip.checksum.status": "2",
+          "ip.src": "104.16.123.96",
+          "ip.addr": [
+            "104.16.123.96",
+            "192.0.2.10"
+          ],
+          "ip.src_host": "104.16.123.96",
+          "ip.host": [
+            "104.16.123.96",
+            "192.0.2.10"
+          ],
+          "ip.dst": "192.0.2.10",
+          "ip.dst_host": "192.0.2.10",
+          "ip.stream": "19"
+        },
+        "udp": {
+          "udp.srcport": "443",
+          "udp.dstport": "53842",
+          "udp.port": [
+            "443",
+            "53842"
+          ],
+          "udp.length": "1208",
+          "udp.checksum": "0x8a97",
+          "udp.checksum.status": "2",
+          "udp.stream": "19",
+          "udp.stream.pnum": "30",
+          "Timestamps": {
+            "udp.time_relative": "0.118537000",
+            "udp.time_delta": "0.000001000"
+          },
+          "udp.payload": "44:7c:77:3d:12:dc:ce:ba:67:c8:48:00:f0:74:88:d1:f7:cb:56:6d:fa:c1:d6:f0:94:5c:f6:b0:e8:fe:84:f0:17:22:04:ce:29:77:8e:aa:35:41:04:62:a5:d7:b7:2a:96:ea:d9:03:6c:11:93:12:c5:39:60:1b:cc:f2:79:36:d5:03:20:86:5a:aa:ef:5e:3a:54:71:32:97:5c:6a:25:a2:6a:2d:f1:38:b0:9c:81:3b:56:37:2e:ed:a9:64:6b:6f:4d:9e:29:de:fb:b2:b8:61:91:69:61:a3:a7:4e:ad:a8:af:6f:74:fd:bc:78:74:45:ee:ac:86:bf:d9:ae:92:dc:78:29:8f:ca:80:ed:b5:1f:07:3b:39:17:ae:11:54:8e:54:3d:5f:68:f6:a9:84:c8:f7:fa:9f:19:7f:83:99:2d:da:87:58:07:47:57:d9:f7:e6:e9:18:97:29:68:2c:62:3a:dd:bd:90:95:45:05:20:75:03:01:02:56:19:80:b3:1d:5f:48:ce:74:e0:6e:c4:d3:e0:7e:f3:d2:9a:a2:eb:bf:9c:b6:be:81:55:c4:a3:0d:74:1e:bf:5e:43:6b:01:64:e8:6a:16:d2:b4:f7:bb:7d:05:7e:36:79:aa:69:b9:65:fb:78:06:56:c0:29:92:e7:18:87:b8:fc:25:7f:1e:5c:92:18:42:dd:ed:f0:93:34:36:67:c3:c2:9f:88:1c:ee:4b:a3:60:db:8f:f1:ab:3b:77:ae:07:af:f2:0a:82:b5:9f:65:c9:93:b6:ef:22:a6:09:77:9e:a2:da:6f:34:2d:45:55:13:3c:1c:4a:11:d5:e3:12:cf:90:01:e7:ab:86:e3:17:b6:13:a1:be:e3:e0:ae:e4:ec:2a:ef:89:e0:33:c0:1c:c2:e2:62:49:b3:5e:42:4b:93:9e:e3:82:cf:d0:7b:2f:79:81:54:14:37:7c:7f:df:8b:46:d9:e9:ea:58:dc:5d:6c:bb:81:7d:fc:58:a4:cb:e7:4a:eb:6d:ba:8d:fc:ae:6e:59:c5:cc:6d:0e:a3:38:37:35:4d:9a:72:0f:e3:a7:55:c5:76:7a:59:6e:55:d6:e1:e1:2c:7e:6a:00:0f:32:10:ba:8c:16:2a:9d:97:77:46:b3:1e:42:10:b8:5d:54:94:dd:f4:00:ab:8f:ca:f5:9e:99:b0:9c:2b:90:32:e2:f7:68:5f:2a:de:4d:99:b2:4b:9f:84:bf:d7:79:d3:c9:e7:04:03:58:92:86:99:e8:ca:20:2d:e7:63:e7:54:24:96:4b:12:d7:a9:81:c2:15:63:3e:40:52:45:14:ec:13:74:a9:33:04:4e:a3:7b:6b:fe:d1:b8:1c:52:3b:13:3c:b8:ed:8c:ed:48:63:18:86:85:e9:92:32:50:f7:1a:50:d5:fa:be:20:18:23:9d:d1:de:8e:fa:b2:16:04:89:77:18:6c:da:1e:d1:e5:ee:75:ad:a3:c2:12:81:34:07:50:3f:3d:44:30:35:63:6a:c0:6f:f8:a7:36:27:6e:b4:7f:d9:96:55:51:ca:30:8c:b6:38:eb:41:73:c9:69:c1:e9:59:dc:0c:3f:8f:f6:93:5e:5c:b6:ac:51:c2:c5:8e:e0:66:0f:06:1d:55:d5:73:d9:88:b7:43:54:be:5e:13:ad:44:9e:ee:43:a7:41:2c:e9:96:9c:d2:71:c5:ae:68:c9:23:78:d0:9a:ae:ff:bc:5e:45:8b:5e:24:4b:f9:df:6d:2d:e4:91:91:bd:30:dd:fb:77:6f:8a:d3:ff:7a:fd:52:50:52:b8:43:22:53:d1:e2:34:f6:f7:7b:98:e8:35:32:24:e2:65:75:be:75:ac:30:45:08:38:60:ed:ee:66:ce:88:ce:9c:b4:65:fe:bd:c6:b7:06:5e:12:d1:73:08:5f:5b:1c:b6:59:a0:9d:a8:42:4a:bf:e6:3f:25:b2:f4:b1:65:5a:df:ee:2d:6e:2c:cd:52:db:2e:7e:3e:23:a8:71:2b:ba:43:04:72:eb:e6:70:77:64:59:88:40:a8:03:76:80:15:25:3d:89:84:d0:c4:49:7d:21:30:79:1e:33:2d:bc:66:68:29:61:d2:f4:f5:ea:e2:89:04:e8:85:fc:ca:43:b1:1c:d6:60:c7:88:81:6d:80:45:6d:35:a6:79:3c:17:ba:fc:e3:b8:be:e1:a2:fb:b1:0c:2f:4e:37:c0:ba:41:9a:c8:33:1f:c4:93:f4:e5:f6:54:58:65:62:b1:59:2b:36:f5:d9:e8:8a:f0:c8:c5:a2:4f:a3:e2:60:6d:42:b3:67:03:35:22:dd:65:df:3d:c7:f6:ca:3f:27:d8:5e:50:ed:75:05:d0:5a:4f:ad:93:e4:01:ad:5e:4e:f1:1e:63:01:02:48:84:ee:1e:40:d0:3d:ce:3c:91:88:3d:d2:b2:cf:2c:75:fb:fc:8a:08:95:78:92:6f:1b:d6:47:16:8d:5c:0c:b4:0d:25:30:57:7f:76:6f:f9:52:7f:77:b0:12:da:99:88:c0:c8:11:6d:79:61:c3:d6:e9:5d:e8:9c:a0:eb:54:04:e9:f5:29:84:2b:31:73:e2:86:54:ab:80:9e:eb:cb:99:78:12:87:8f:b5:a1:05:9f:77:30:fc:04:1e:8b:d5:5d:f5:3e:71:7e:c9:cf:bb:05:0a:62:5f:93:84:cc:8c:4f:98:4e:ea:c9:fe:44:f8:b2:cc:e0:d4:23:58:c3:78:4f:dd:10:01:e1:ea:ac:b9:ad:ad:aa:19:f8:31:ca:4e:5e:45:7d:1d:ae:08:4a:40:f8:5e:da:4b:b1:a4:d1:82:e8:de:0b:2a:9e:c1:0a:39:84:03:57:09:1c:b1:cd:b0:09:73:3c:05:76:ae:6f:7a:b7:08:5d:72:9e:12:23:a6:ec:d4:ad:01:49:06:d3:5f:ef:2b:ea:2b:c6:19:62:b7:15:60:13:78:52:3e:84:ff:f8:d3:4b:cb:08:08:41:30:fc:b6:92:ff:43:32:d1:6c:55:a7:0e:1c:b4:31:86:03:c9:bb:2b:ab:92:a7:5e:c5:0a:5b:f3:d9:7b:2d:9f:a3:6b:c5:85:88:a5:b9:91:b8:53:1f:56:5a:c9:c1:d7:1d:e3:ce:88:a2:b2:28:3c:2d:7d:4c:55:13:3e:ea:b0:a8:4e:d3:9f:77:e3:3a:6d:67:8a"
+        },
+        "quic": {
+          "QUIC Connection information": {
+            "quic.connection.number": "0"
+          },
+          "quic.packet_length": "1200",
+          "quic.short": {
+            "quic.header_form": "0",
+            "quic.fixed_bit": "1",
+            "quic.spin_bit": "0",
+            "quic.short.reserved": "0",
+            "quic.key_phase": "0",
+            "quic.packet_number_length": "0",
+            "quic.packet_number": "16",
+            "quic.protected_payload": "77:3d:12:dc:ce:ba:67:c8:48:00:f0:74:88:d1:f7:cb:56:6d:fa:c1:d6:f0:94:5c:f6:b0:e8:fe:84:f0:17:22:04:ce:29:77:8e:aa:35:41:04:62:a5:d7:b7:2a:96:ea:d9:03:6c:11:93:12:c5:39:60:1b:cc:f2:79:36:d5:03:20:86:5a:aa:ef:5e:3a:54:71:32:97:5c:6a:25:a2:6a:2d:f1:38:b0:9c:81:3b:56:37:2e:ed:a9:64:6b:6f:4d:9e:29:de:fb:b2:b8:61:91:69:61:a3:a7:4e:ad:a8:af:6f:74:fd:bc:78:74:45:ee:ac:86:bf:d9:ae:92:dc:78:29:8f:ca:80:ed:b5:1f:07:3b:39:17:ae:11:54:8e:54:3d:5f:68:f6:a9:84:c8:f7:fa:9f:19:7f:83:99:2d:da:87:58:07:47:57:d9:f7:e6:e9:18:97:29:68:2c:62:3a:dd:bd:90:95:45:05:20:75:03:01:02:56:19:80:b3:1d:5f:48:ce:74:e0:6e:c4:d3:e0:7e:f3:d2:9a:a2:eb:bf:9c:b6:be:81:55:c4:a3:0d:74:1e:bf:5e:43:6b:01:64:e8:6a:16:d2:b4:f7:bb:7d:05:7e:36:79:aa:69:b9:65:fb:78:06:56:c0:29:92:e7:18:87:b8:fc:25:7f:1e:5c:92:18:42:dd:ed:f0:93:34:36:67:c3:c2:9f:88:1c:ee:4b:a3:60:db:8f:f1:ab:3b:77:ae:07:af:f2:0a:82:b5:9f:65:c9:93:b6:ef:22:a6:09:77:9e:a2:da:6f:34:2d:45:55:13:3c:1c:4a:11:d5:e3:12:cf:90:01:e7:ab:86:e3:17:b6:13:a1:be:e3:e0:ae:e4:ec:2a:ef:89:e0:33:c0:1c:c2:e2:62:49:b3:5e:42:4b:93:9e:e3:82:cf:d0:7b:2f:79:81:54:14:37:7c:7f:df:8b:46:d9:e9:ea:58:dc:5d:6c:bb:81:7d:fc:58:a4:cb:e7:4a:eb:6d:ba:8d:fc:ae:6e:59:c5:cc:6d:0e:a3:38:37:35:4d:9a:72:0f:e3:a7:55:c5:76:7a:59:6e:55:d6:e1:e1:2c:7e:6a:00:0f:32:10:ba:8c:16:2a:9d:97:77:46:b3:1e:42:10:b8:5d:54:94:dd:f4:00:ab:8f:ca:f5:9e:99:b0:9c:2b:90:32:e2:f7:68:5f:2a:de:4d:99:b2:4b:9f:84:bf:d7:79:d3:c9:e7:04:03:58:92:86:99:e8:ca:20:2d:e7:63:e7:54:24:96:4b:12:d7:a9:81:c2:15:63:3e:40:52:45:14:ec:13:74:a9:33:04:4e:a3:7b:6b:fe:d1:b8:1c:52:3b:13:3c:b8:ed:8c:ed:48:63:18:86:85:e9:92:32:50:f7:1a:50:d5:fa:be:20:18:23:9d:d1:de:8e:fa:b2:16:04:89:77:18:6c:da:1e:d1:e5:ee:75:ad:a3:c2:12:81:34:07:50:3f:3d:44:30:35:63:6a:c0:6f:f8:a7:36:27:6e:b4:7f:d9:96:55:51:ca:30:8c:b6:38:eb:41:73:c9:69:c1:e9:59:dc:0c:3f:8f:f6:93:5e:5c:b6:ac:51:c2:c5:8e:e0:66:0f:06:1d:55:d5:73:d9:88:b7:43:54:be:5e:13:ad:44:9e:ee:43:a7:41:2c:e9:96:9c:d2:71:c5:ae:68:c9:23:78:d0:9a:ae:ff:bc:5e:45:8b:5e:24:4b:f9:df:6d:2d:e4:91:91:bd:30:dd:fb:77:6f:8a:d3:ff:7a:fd:52:50:52:b8:43:22:53:d1:e2:34:f6:f7:7b:98:e8:35:32:24:e2:65:75:be:75:ac:30:45:08:38:60:ed:ee:66:ce:88:ce:9c:b4:65:fe:bd:c6:b7:06:5e:12:d1:73:08:5f:5b:1c:b6:59:a0:9d:a8:42:4a:bf:e6:3f:25:b2:f4:b1:65:5a:df:ee:2d:6e:2c:cd:52:db:2e:7e:3e:23:a8:71:2b:ba:43:04:72:eb:e6:70:77:64:59:88:40:a8:03:76:80:15:25:3d:89:84:d0:c4:49:7d:21:30:79:1e:33:2d:bc:66:68:29:61:d2:f4:f5:ea:e2:89:04:e8:85:fc:ca:43:b1:1c:d6:60:c7:88:81:6d:80:45:6d:35:a6:79:3c:17:ba:fc:e3:b8:be:e1:a2:fb:b1:0c:2f:4e:37:c0:ba:41:9a:c8:33:1f:c4:93:f4:e5:f6:54:58:65:62:b1:59:2b:36:f5:d9:e8:8a:f0:c8:c5:a2:4f:a3:e2:60:6d:42:b3:67:03:35:22:dd:65:df:3d:c7:f6:ca:3f:27:d8:5e:50:ed:75:05:d0:5a:4f:ad:93:e4:01:ad:5e:4e:f1:1e:63:01:02:48:84:ee:1e:40:d0:3d:ce:3c:91:88:3d:d2:b2:cf:2c:75:fb:fc:8a:08:95:78:92:6f:1b:d6:47:16:8d:5c:0c:b4:0d:25:30:57:7f:76:6f:f9:52:7f:77:b0:12:da:99:88:c0:c8:11:6d:79:61:c3:d6:e9:5d:e8:9c:a0:eb:54:04:e9:f5:29:84:2b:31:73:e2:86:54:ab:80:9e:eb:cb:99:78:12:87:8f:b5:a1:05:9f:77:30:fc:04:1e:8b:d5:5d:f5:3e:71:7e:c9:cf:bb:05:0a:62:5f:93:84:cc:8c:4f:98:4e:ea:c9:fe:44:f8:b2:cc:e0:d4:23:58:c3:78:4f:dd:10:01:e1:ea:ac:b9:ad:ad:aa:19:f8:31:ca:4e:5e:45:7d:1d:ae:08:4a:40:f8:5e:da:4b:b1:a4:d1:82:e8:de:0b:2a:9e:c1:0a:39:84:03:57:09:1c:b1:cd:b0:09:73:3c:05:76:ae:6f:7a:b7:08:5d:72:9e:12:23:a6:ec:d4:ad:01:49:06:d3:5f:ef:2b:ea:2b:c6:19:62:b7:15:60:13:78:52:3e:84:ff:f8:d3:4b:cb:08:08:41:30:fc:b6:92:ff:43:32:d1:6c:55:a7:0e:1c:b4:31:86:03:c9:bb:2b:ab:92:a7:5e:c5:0a:5b:f3:d9:7b:2d:9f:a3:6b:c5:85:88:a5:b9:91:b8:53:1f:56:5a:c9:c1:d7:1d:e3:ce:88:a2:b2:28:3c:2d:7d:4c:55:13:3e:ea:b0:a8:4e:d3:9f:77:e3:3a:6d:67:8a"
+          },
+          "quic.frame": {
+            "quic.frame_type": "0x000000000000000e",
+            "quic.frame_type_tree": {
+              "quic.stream.fin": "0",
+              "quic.stream.len": "1",
+              "quic.stream.off": "1"
+            },
+            "quic.stream.stream_id": "12",
+            "quic.stream.stream_id_tree": {
+              "quic.stream.initiator": "0",
+              "quic.stream.direction": "0"
+            },
+            "quic.stream.offset": "2353",
+            "quic.stream.length": "1176",
+            "quic.stream_data": "7f:25:aa:4a:ce:6a:92:8f:e6:e7:fe:ff:ff:7f:36:d9:47:f3:73:f9:9d:29:ad:17:18:60:6b:d4:5a:17:25:07:b6:49:68:1d:85:5c:87:a5:8b:0b:59:ec:4b:1d:da:ff:11:05:b3:dd:eb:45:0d:51:65:79:3b:e9:7b:bb:3f:a4:f5:27:ad:32:5d:24:29:6b:1e:25:45:87:f1:ce:b5:cf:35:bf:b9:cd:5e:cd:38:52:cd:4d:d3:25:e4:5d:40:b9:f9:aa:cb:f8:5c:fd:bd:c7:65:7a:69:7e:de:77:cf:e2:d9:71:5f:f5:56:57:92:e2:7f:1a:01:ef:60:23:83:fd:e4:57:bd:d5:7b:0e:eb:15:15:d4:67:cf:ef:08:cb:7f:9d:98:9e:4e:1d:d1:f7:c1:37:78:f9:f4:eb:cb:44:ca:b3:7d:56:6f:ff:3f:fe:ff:f3:ff:df:5f:44:90:9d:98:3f:9b:8d:34:cf:f3:f6:a5:23:81:e7:1a:00:3f:54:84:0b:af:32:e7:00:51:4f:00:00:00:20:66:74:79:70:61:76:69:66:00:00:00:00:61:76:69:66:6d:69:66:31:6d:69:61:66:4d:41:31:42:00:00:00:f9:6d:65:74:61:00:00:00:00:00:00:00:2f:68:64:6c:72:00:00:00:00:00:00:00:00:70:69:63:74:00:00:00:00:00:00:00:00:00:00:00:00:50:69:63:74:75:72:65:48:61:6e:64:6c:65:72:00:00:00:00:0e:70:69:74:6d:00:00:00:00:00:01:00:00:00:1e:69:6c:6f:63:00:00:00:00:44:00:00:01:00:01:00:00:00:01:00:00:01:21:00:00:44:8b:00:00:00:28:69:69:6e:66:00:00:00:00:00:01:00:00:00:1a:69:6e:66:65:02:00:00:00:00:01:00:00:61:76:30:31:43:6f:6c:6f:72:00:00:00:00:6a:69:70:72:70:00:00:00:4b:69:70:63:6f:00:00:00:14:69:73:70:65:00:00:00:00:00:00:05:c0:00:00:03:5c:00:00:00:10:70:69:78:69:00:00:00:00:03:08:08:08:00:00:00:0c:61:76:31:43:81:08:0c:00:00:00:00:13:63:6f:6c:72:6e:63:6c:78:00:01:00:01:00:02:00:00:00:00:17:69:70:6d:61:00:00:00:00:00:00:00:01:00:01:04:01:02:83:04:00:00:44:93:6d:64:61:74:0a:0e:00:00:00:42:a6:df:eb:63:57:cc:80:80:81:02:32:f7:88:01:10:00:91:20:82:08:00:00:97:80:08:08:38:de:11:44:d0:36:61:7b:72:2e:34:1c:2c:fb:e8:93:46:20:29:bf:5b:ca:22:26:dd:9e:78:b3:41:8a:91:c9:04:83:03:ef:91:0c:83:d9:c8:87:c0:5f:b9:43:66:dd:b1:5b:1d:b5:f2:25:a0:94:79:71:42:d2:ef:f6:70:a2:c8:7f:6a:c6:7c:b3:c9:45:b9:ef:f7:42:a7:50:69:df:c0:a2:1b:73:88:b7:3b:8b:b7:34:18:72:2f:cf:1b:20:91:7e:e3:79:7e:0f:9b:6f:16:b6:94:76:78:75:6b:76:dc:4d:c4:11:28:d5:eb:6b:93:86:35:06:d9:ce:1d:b6:23:be:74:0c:50:84:50:b8:d3:02:07:2a:6a:7d:ec:ac:1f:6f:8f:0f:2a:2e:72:c6:c1:d9:b1:99:aa:51:c0:94:b8:2d:6d:75:37:f9:9b:f5:97:2e:4a:f1:1a:46:e7:df:b2:ab:73:92:6c:e0:35:c9:1f:fd:9f:b7:65:9a:ce:80:e1:3d:6b:8a:73:39:60:6d:45:e7:14:c5:ee:d8:9d:75:35:89:61:cf:97:c0:f6:c0:91:a9:93:36:53:ec:21:fc:15:06:fd:e4:64:4a:31:b6:42:9b:2a:ef:46:12:b7:bd:f3:cf:dc:89:a4:7e:af:a5:c4:3a:17:00:50:27:51:35:72:51:de:59:85:6a:90:7f:da:a5:0d:22:f5:5b:81:9c:ce:6a:08:1a:ea:c5:df:ff:12:b9:30:15:6a:11:a0:37:2b:f6:14:ee:42:00:6e:d5:6d:91:5e:aa:c2:96:05:c3:aa:a1:61:c6:4d:d5:07:c4:6f:31:dc:ed:34:3c:36:f4:b6:85:5f:dc:36:aa:21:66:01:fc:e0:4a:34:c7:ce:d8:20:ce:f1:15:0b:0a:87:37:1e:73:24:5b:60:97:88:99:86:d7:6d:cb:84:33:b4:46:2f:56:45:9f:d2:b5:84:ba:dc:79:1f:c2:e7:16:92:e4:89:0d:08:76:5a:7f:cb:d6:f3:36:a4:bb:9c:a6:a7:69:a9:97:f4:d3:a8:73:89:b4:70:25:69:47:87:09:49:62:3c:1d:0d:89:c2:ca:fa:63:3d:ff:35:df:d1:8f:6a:68:03:cc:0c:79:01:18:ee:6c:b9:6f:7c:1f:da:84:79:37:2f:b5:b1:17:df:3e:f2:5d:12:b8:bc:17:7b:5a:22:84:c1:af:28:af:c1:0f:6b:38:d8:77:fb:ad:83:bb:72:16:1f:a2:f8:a1:df:5f:7d:db:c1:bd:22:5a:e0:6b:ce:ed:76:eb:b6:83:45:71:22:45:b0:d2:05:33:5f:18:5b:e7:7b:fe:01:ab:d4:5c:67:67:1a:6a:82:6f:7f:bd:fc:97:bb:1d:cc:d7:e7:74:7d:21:a9:00:98:c7:cc:03:7e:9b:cb:86:a6:3e:a3:55:f3:46:c3:c6:b0:a5:86:2b:6d:23:e3:09:db:5e:22:04:ed:7d:8f:cd:8e:70:2a:a9:9e:b0:6c:2e:e6:c0:5e:bc:a6:fb:4a:2a:23:32:f9:52:3b:39:55:9d:5e:67:c9:ed:7d:6f:e6:e8:3e:ce:68:ec:6a:73:a4:cd:92:26:0c:1f:31:1d:8f:38:f6:22:c2:8e:0a:7c:6c:a1:6b:80:d0:15:59:20:c3:88:38:f0:62:b3:e0:c1:3d:85:05:44:dc:b7:9f:ef:37:90:35:3d:d4:8a:2f:df:43:07:b7:95:c8:73:78:1f",
+            "quic.fragments": {
+              "quic.fragment": [
+                "476",
+                "477",
+                "478"
+              ],
+              "quic.fragment.count": "3",
+              "quic.reassembled.length": "2549",
+              "quic.reassembled.data": "01:49:f2:00:00:d9:2f:03:41:6c:ee:5b:16:49:a9:35:53:7f:86:24:b8:3c:a7:5d:86:2b:a8:b4:7f:b3:ff:fd:fc:d8:5a:cf:62:62:49:ff:9b:9f:c9:25:5a:a2:d1:fc:fd:7f:28:b4:84:2a:11:14:b6:0c:89:31:ea:fe:6e:01:70:7d:7f:34:8f:cc:43:98:bf:cd:c7:00:d3:c0:07:ff:bf:56:96:dc:34:fd:28:10:29:a8:89:50:40:13:8a:08:57:19:76:e3:4f:29:8b:46:ff:5f:1d:87:35:23:98:ac:0f:b9:a5:5b:ff:42:ff:f8:c2:fe:0b:45:0b:75:a8:fe:2a:60:75:99:62:0d:23:a0:f3:7f:df:da:96:16:88:3f:91:d6:65:88:34:8e:83:cd:fc:fd:29:ff:f1:85:fc:16:8a:16:eb:51:fc:54:c0:e6:2d:49:42:fd:10:7a:bf:ef:ed:4b:0b:44:1f:ca:0b:67:73:10:ab:48:54:13:f9:fa:53:ff:e3:0b:f8:2d:14:2d:d6:a3:f8:a9:8f:05:8e:92:56:bf:44:1e:af:fb:fb:52:c2:d1:07:f2:82:d9:dc:c4:2a:d2:15:04:fe:7e:94:ff:f8:c1:eb:2d:43:ac:cb:f4:41:ea:ff:bf:b5:2c:2d:10:7f:28:2d:9d:cc:42:ad:21:50:4f:e7:e9:4f:ff:8c:51:45:28:5d:3e:53:ff:7f:6a:58:5a:20:fe:50:5b:3b:98:85:5a:43:93:f9:fa:53:ff:e3:08:32:4b:48:eb:5f:cd:34:7f:df:da:96:16:88:3f:94:19:25:a4:75:ff:3f:2d:24:ab:58:3f:5f:8f:1b:4f:3e:12:3e:39:47:1b:b2:ba:28:d6:c9:0d:ff:2f:03:24:ab:10:64:9c:ab:21:23:4d:a8:83:c7:93:7f:e0:52:85:7c:2c:b6:e8:3f:5f:15:8b:a4:7e:56:1c:c5:80:22:7d:c0:00:00:57:99:fe:46:21:c8:e3:e5:7c:92:4a:fb:6f:84:a2:0b:e4:23:85:08:8a:f0:59:6e:37:7f:9f:2e:ae:c3:1e:c3:27:d7:84:b6:00:fd:1b:5f:4d:87:25:07:b6:49:68:1d:85:5f:29:9a:a4:7e:56:1c:c5:81:90:b6:cb:80:00:3e:d4:35:44:a2:d9:0b:ba:d8:ef:9e:91:9a:a4:7f:2f:02:f2:b2:0b:67:72:c8:b4:7e:bf:8a:a4:76:75:2a:4d:54:cb:20:c9:2f:5f:46:ff:84:0a:90:b2:8e:da:12:b2:2c:22:9f:e9:05:a2:5f:f5:f6:a2:09:61:ab:4a:c8:b0:8a:7f:a4:16:89:7f:d2:9f:ea:da:90:39:4a:b1:aa:a0:d5:17:fd:29:fe:ad:a9:03:94:ab:17:b8:e8:ff:4a:4e:94:d6:8b:8c:30:84:8d:26:22:e4:a0:f6:c9:2d:03:b0:a6:a9:06:9a:74:a1:72:1e:95:27:4a:6b:45:c6:18:42:46:93:11:64:24:73:1a:a9:97:25:07:b6:49:68:1d:85:35:48:34:d3:a5:0b:90:f4:a9:3a:53:5a:2e:30:c1:27:1d:14:16:a9:8a:85:c9:41:ed:92:5a:07:61:57:21:e9:52:74:a6:b4:5c:61:8f:95:cf:51:53:65:a8:4a:e4:3d:2a:4e:94:d6:8b:8c:30:49:2a:5c:87:3f:53:16:81:f8:5c:f6:4c:a4:e9:4d:68:b8:c3:07:4a:fe:3c:78:5c:94:1e:d9:25:a0:76:15:72:1e:95:27:4a:6b:45:c6:18:f1:e3:c2:f3:1c:f3:50:54:8e:6a:47:50:e6:2d:8b:90:f4:a9:3a:53:5a:2e:30:c2:47:35:23:a8:73:16:c5:e6:39:e6:a0:ab:90:f4:a9:3a:53:5a:2e:30:c7:8f:1e:17:98:e7:9a:82:8e:44:16:ce:e6:21:50:b9:0f:4a:93:a5:35:a2:e3:0c:4c:73:cd:41:47:22:17:99:79:0f:6c:74:14:94:18:9d:57:a8:a9:52:74:a6:b4:5c:61:81:c8:82:d9:dc:c4:2a:f3:1c:f3:50:55:c8:7a:54:9d:29:ad:17:18:60:92:54:bc:66:f6:68:e8:2a:e4:3d:2a:4e:94:d6:8b:8c:31:d1:0b:8e:44:59:de:c5:cf:64:ca:4e:94:d6:8b:8c:31:f2:bd:23:b3:a9:52:75:ea:2a:54:9d:29:ad:17:18:62:ba:06:99:4f:65:2b:a7:c1:92:92:d8:b9:0f:4a:93:a5:35:a2:e3:0c:21:23:49:88:b8:e4:42:c9:f0:64:a4:b6:2e:43:d2:a4:e9:4d:68:b8:c3:08:25:86:ad:28:5e:42:d2:3a:a4:8c:68:2a:e4:3d:2a:4e:94:d6:8b:8c:30:91:cc:bc:85:a4:75:49:18:d0:55:c8:7a:54:9d:29:ad:17:18:63:e5:77:10:45:c8:75:27:4a:6b:45:c6:18:f9:5f:b5:a3:a0:d2:98:b2:2e:43:d2:a4:e9:4d:68:b8:c3:08:a8:75:af:41:89:25:4b:90:f4:a9:3a:53:5a:2e:30:c4:63:4a:f1:9a:a9:97:21:e9:fb:51:09:f5:41:56:45:84:53:fd:20:b4:4b:fe:94:ff:56:d4:81:ca:55:8d:55:06:a8:bf:eb:ed:43:53:32:c8:b0:8a:7f:a4:16:89:7f:d2:92:0d:23:b8:a4:e9:4d:68:b9:f6:a4:a7:a9:2b:22:c2:29:fe:90:5a:25:ff:4a:48:34:8e:e7:da:84:3d:55:14:89:59:16:11:4f:f4:82:d1:2f:fa:52:74:a6:b4:5c:61:8f:95:e6:39:e6:a0:a9:1c:d4:8e:a1:cc:5b:17:21:e9:52:74:a6:b4:5c:61:8f:95:e6:39:e6:a0:ab:0e:a1:d1:e9:26:22:17:21:e9:52:74:a6:b4:5c:61:8f:95:e6:39:e6:a0:ab:90:f4:a9:3a:53:5a:2e:30:c7:ca:f2:1e:d8:e8:29:28:31:3a:af:51:52:a4:e9:4d:68:b8:c3:1e:3c:78:5e:63:9e:6a:0a:39:10:5b:3b:98:85:42:e4:3d:2a:4e:94:d6:8b:8c:30:9b:07:52:28:1a:4a:bc:c7:3c:d4:14:75:99:0b:90:f4:a9:3a:53:5a:2e:30:c1:24:a9:78:cd:ec:d1:d0:55:c8:7a:54:9d:29:ad:17:18:63:a2:17:1c:88:b3:bd:8b:9e:c9:94:9d:29:ad:17:18:63:e5:7a:47:67:52:a4:eb:d4:54:a9:3a:53:5a:2e:30:c0:e4:42:c9:f0:64:a4:b6:2e:43:d2:a4:e9:4d:68:b8:c3:03:a8:74:7a:49:88:85:d3:e0:c9:49:6c:5c:87:a5:49:d2:9a:d1:71:86:3e:57:4f:83:53:32:e4:3d:2a:4e:94:d6:8b:8c:30:3a:cc:bc:85:a4:75:49:18:d0:55:c8:7a:54:9d:29:ad:17:18:61:04:b0:d5:a5:0b:c8:5a:47:54:91:8d:05:5c:87:a5:49:d2:9a:d1:71:86:12:39:97:90:b4:8e:a9:23:1a:0a:b9:0f:4a:93:a5:35:a2:e3:0c:24:73:2d:41:e6:98:b6:2f:21:69:1d:52:46:34:15:72:1e:95:27:4a:6b:45:c6:18:1d:66:5c:87:a6:b1:d5:e9:64:8e:c9:8a:95:c8:7a:54:9d:29:ad:17:18:63:e5:77:10:45:c8:75:27:4a:6b:45:c6:18:2d:68:35:07:a9:77:10:5a:90:55:c8:7a:54:9d:29:ad:17:18:63:e5:7e:d6:8e:83:4a:62:c8:b9:0f:4a:93:a5:35:a2:e3:0c:7c:ae:39:10:bd:06:ab:a9:64:35:4b:90:f4:a9:3a:53:5a:2e:30:c7:8f:1e:17:a0:d5:75:2c:86:a9:72:1e:95:27:4a:6b:45:c6:18:8c:69:5e:33:55:32:e4:3d:2a:4e:94:d6:8b:8a:78:42:2e:30:c7:ca:fd:ad:1d:06:94:c5:91:72:1e:95:3c:21:17:18:63:e5:7b:0b:31:90:9b:07:62:e4:a0:f6:c9:2d:03:b0:ab:90:f4:fd:a9:2d:83:a4:ab:22:c2:29:3a:53:5a:2e:30:c7:ca:e3:91:16:77:b1:73:d9:32:93:a5:35:a2:e3:0c:7c:ae:4a:0f:6c:92:d0:3b:0a:b9:0f:4a:93:a5:35:a2:e3:0c:7c:af:dc:d2:14:f2:16:83:77:2d:9e:97:a8:a9:52:74:a6:b4:5c:61:8f:95:c9:41:ed:92:5a:07:61:50:9b:0a:3a:57:21:e9:52:74:a6:b4:5c:61:8f:1e:3c:2f:31:cf:35:05:48:e6:a4:75:0e:62:d8:b9:0f:4a:93:a5:35:a2:e3:0c:7c:af:da:d1:d0:69:4c:59:17:21:e9:52:74:a6:b4:5c:61:84:c8:bc:87:b6:3a:0a:4a:0c:4e:ab:d4:54:a9:3a:53:5a:2e:30:c4:66:91:79:97:90:f6:c7:41:49:41:89:d5:7a:8a:95:27:4a:6b:45:c6:18:7d:90:3e:17:1e:5e:5a:10:bc:87:b6:3a:0a:4a:0c:4e:ab:d4:54:a9:3a:53:5a:2e:30:c3:ef:ba:c8:1c:71:79:68:42:f2:1e:d8:e8:29:28:31:3a:af:51:52:a4:e9:4d:68:b8:c3:08:5c:87:a6:b1:d5:e9:64:8e:c9:8a:95:c8:7a:7e:d4:3c:7d:0a:44:ac:8b:08:a7:fa:a8:f5:17:fd:7d:a9:18:d0:55:ad:b0:ca:7f:a4:16:89:7f:d7:da:92:9e:ca:56:19:12:63:d4:a7:fa:41:68:97:fd:7d:a9:2d:83:a4:ab:0e:a2:15:09:3d:88:53:fd:20:b4:4b:fe:be:d4:f0:7b:3a:96:c5:91:61:14:ff:48:2d:12:ff:a5:23:a0:f1:dc:fb:50:93:9a:89:16:45:84:53:fd:20:b4:4b:fe:94:8e:83:c7:73:ed:4b:6b:9a:c1:c8:55:8d:52:0a:4b:6c:2a:d6:17:b5:a5:42:51:2f:0b:25:87:42:16:3d:86:98:d5:2c:7a:cb:51:6c:5a:b3:d0:62:7a:88:b6:a4:0e:52:ad:51:ea:2f:2f:0d:25:87:42:16:3d:86:98:d5:2d:61:50:7b:6c:21:56:ac:f4:18:9e:bf:89:25:87:42:16:3d:86:98:d5:7f:2f:06:ac:b6:52:64:20:c7:a9:0b:56:7a:0c:4f:5f:a0:98:a7:a0:e4:1a:4c:7a:a0:fe:bf:bf:a5:08:3a:4b:60:e0:fe:bf:bf:a5:29:31:2c:3d:73:9e:a2:c1:fd:7f:7f:2f:04:b0:b2:96:cb:0b:62:d5:9e:83:13:d7:96:42:6c:31:12:b1:ec:34:c6:a9:6f:13:96:a5:89:61:d0:85:8f:61:a6:35:5f:fd:5f:52:89:dd:0e:8c:1a:b6:e4:c5:93:4f:fe:fb:5e:ff:86:01:8a:22:4b:14:74:c1:fb:2f:2b:f3:65:8f:87:13:75:db:ab:a5:e4:47:8d:77:75:12:8b:3f:33:f4:0f:e7:a3:fe:2e:1e:b2:45:c2:fb:2d:66:e6:b0:5d:7c:2e:3a:17:9c:79:77:19:69:b6:de:58:2b:81:70:ae:15:b4:fe:c3:c2:3d:98:05:c4:3a:33:72:ee:cc:45:d4:35:f1:2e:6c:9e:b3:f0:87:8e:3f:76:61:ac:fc:bf:63:fc:ca:4d:56:76:3e:9a:34:f7:40:23:93:90:34:42:cf:9a:f8:68:b3:87:13:c5:56:21:0e:be:b7:4f:6d:7c:1f:b7:f3:83:ef:5d:be:56:ff:0c:38:fd:9c:c9:f5:af:af:0d:63:db:fb:cf:93:da:bb:fe:61:15:fd:d3:77:e6:0b:fb:7f:68:72:7f:39:1b:c9:7b:c3:fa:d0:27:b6:16:ba:f0:62:7f:96:af:77:f3:63:c5:0f:da:98:d2:9a:f5:55:47:af:b5:37:0e:92:ee:32:4b:06:93:d4:5f:b5:37:14:96:d8:5f:b5:35:8d:33:c0:c7:da:97:cf:48:cd:54:1e:3c:78:5c:94:1e:d9:25:a0:76:15:72:1e:9f:b5:30:79:ac:d6:15:10:6e:1a:7e:94:08:14:d4:44:a8:20:09:c5:04:cd:c0:3b:71:a7:94:c5:a3:7f:2f:00:b0:b5:9e:c4:ac:93:ff:ff:4a:ff:fd:fc:cd:61:ed:af:f9:b9:fc:92:55:aa:2d:1f:cf:d7:f3:48:fc:c4:39:8b:fc:dc:70:0d:3c:00:7d:7f:25:aa:4a:ce:6a:92:8f:e6:e7:fe:ff:ff:7f:36:d9:47:f3:73:f9:9d:29:ad:17:18:60:6b:d4:5a:17:25:07:b6:49:68:1d:85:5c:87:a5:8b:0b:59:ec:4b:1d:da:ff:11:05:b3:dd:eb:45:0d:51:65:79:3b:e9:7b:bb:3f:a4:f5:27:ad:32:5d:24:29:6b:1e:25:45:87:f1:ce:b5:cf:35:bf:b9:cd:5e:cd:38:52:cd:4d:d3:25:e4:5d:40:b9:f9:aa:cb:f8:5c:fd:bd:c7:65:7a:69:7e:de:77:cf:e2:d9:71:5f:f5:56:57:92:e2:7f:1a:01:ef:60:23:83:fd:e4:57:bd:d5:7b:0e:eb:15:15:d4:67:cf:ef:08:cb:7f:9d:98:9e:4e:1d:d1:f7:c1:37:78:f9:f4:eb:cb:44:ca:b3:7d:56:6f:ff:3f:fe:ff:f3:ff:df:5f:44:90:9d:98:3f:9b:8d:34:cf:f3:f6:a5:23:81:e7:1a:00:3f:54:84:0b:af:32:e7"
+            }
+          }
+        },
+        "http3": {
+          "http3.stream": {
+            "http3.frame": {
+              "http3.frame_streamid": "12",
+              "http3.frame_type": "0x0000000000000001",
+              "http3.frame_length": "2546",
+              "http3.headers.decoded_length": "3789",
+              "http3.headers.count": "29",
+              "http3.headers.header": [
+                {
+                  "http3.headers.header.name.length": "7",
+                  "http3.header.header.name": ":status",
+                  "http3.headers.header.value.length": "3",
+                  "http3.headers.header.value": "200",
+                  "http3.headers.status": "200"
+                },
+                {
+                  "http3.headers.header.name.length": "13",
+                  "http3.header.header.name": "server-timing",
+                  "http3.headers.header.value.length": "8",
+                  "http3.headers.header.value": "cfExtPri"
+                },
+                {
+                  "http3.headers.header.name.length": "3",
+                  "http3.header.header.name": "nel",
+                  "http3.headers.header.value.length": "62",
+                  "http3.headers.header.value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+                },
+                {
+                  "http3.headers.header.name.length": "4",
+                  "http3.header.header.name": "date",
+                  "http3.headers.header.value.length": "29",
+                  "http3.headers.header.value": "Sat, 10 Oct 2026 22:37:48 GMT",
+                  "http3.headers.date": "Sat, 10 Oct 2026 22:37:48 GMT"
+                },
+                {
+                  "http3.headers.header.name.length": "12",
+                  "http3.header.header.name": "content-type",
+                  "http3.headers.header.value.length": "10",
+                  "http3.headers.header.value": "image/avif",
+                  "http3.headers.content_type": "image/avif"
+                },
+                {
+                  "http3.headers.header.name.length": "4",
+                  "http3.header.header.name": "link",
+                  "http3.headers.header.value.length": "241",
+                  "http3.headers.header.value": "</.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/agents.json>; rel=\"service-desc\", </.well-known/webmcp.json>; rel=\"service-desc\", </openapi.json>; rel=\"service-desc\", </llms.txt>; rel=\"service-doc\", </sitemap.xml>; rel=\"sitemap\"",
+                  "http3.headers.link": "</.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/agents.json>; rel=\"service-desc\", </.well-known/webmcp.json>; rel=\"service-desc\", </openapi.json>; rel=\"service-desc\", </llms.txt>; rel=\"service-doc\", </sitemap.xml>; rel=\"sitemap\""
+                },
+                {
+                  "http3.headers.header.name.length": "6",
+                  "http3.header.header.name": "cf-ray",
+                  "http3.headers.header.value.length": "20",
+                  "http3.headers.header.value": "a4891c9afab7f72b-XXX"
+                },
+                {
+                  "http3.headers.header.name.length": "15",
+                  "http3.header.header.name": "cf-cache-status",
+                  "http3.headers.header.value.length": "3",
+                  "http3.headers.header.value": "HIT"
+                },
+                {
+                  "http3.headers.header.name.length": "13",
+                  "http3.header.header.name": "accept-ranges",
+                  "http3.headers.header.value.length": "5",
+                  "http3.headers.header.value": "bytes",
+                  "http3.headers.accept_ranges": "bytes"
+                },
+                {
+                  "http3.headers.header.name.length": "3",
+                  "http3.header.header.name": "age",
+                  "http3.headers.header.value.length": "6",
+                  "http3.headers.header.value": "913570",
+                  "http3.headers.age": "913570"
+                },
+                {
+                  "http3.headers.header.name.length": "13",
+                  "http3.header.header.name": "cache-control",
+                  "http3.headers.header.value.length": "16",
+                  "http3.headers.header.value": "max-age=12960000",
+                  "http3.headers.cache_control": "max-age=12960000"
+                },
+                {
+                  "http3.headers.header.name.length": "4",
+                  "http3.header.header.name": "etag",
+                  "http3.headers.header.value.length": "34",
+                  "http3.headers.header.value": "\"a2ad69e9cdf9591e219cc6e12e8135b7\"",
+                  "http3.headers.etag": "\"a2ad69e9cdf9591e219cc6e12e8135b7\""
+                },
+                {
+                  "http3.headers.header.name.length": "8",
+                  "http3.header.header.name": "priority",
+                  "http3.headers.header.value.length": "5",
+                  "http3.headers.header.value": "u=1,i"
+                },
+                {
+                  "http3.headers.header.name.length": "6",
+                  "http3.header.header.name": "server",
+                  "http3.headers.header.value.length": "10",
+                  "http3.headers.header.value": "cloudflare",
+                  "http3.headers.server": "cloudflare"
+                },
+                {
+                  "http3.headers.header.name.length": "25",
+                  "http3.header.header.name": "strict-transport-security",
+                  "http3.headers.header.value.length": "35",
+                  "http3.headers.header.value": "max-age=31536000; includeSubDomains",
+                  "http3.headers.strict_transport_security": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "http3.headers.header.name.length": "11",
+                  "http3.header.header.name": "x-served-by",
+                  "http3.headers.header.value.length": "14",
+                  "http3.headers.header.value": "marketing-site"
+                },
+                {
+                  "http3.headers.header.name.length": "23",
+                  "http3.header.header.name": "content-security-policy",
+                  "http3.headers.header.value.length": "1959",
+                  "http3.headers.header.value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.cloudflareinsights.com https://static-staging.cloudflareinsights.com https://challenges.cloudflare.com https://*.onetrust.com https://cdn.cookielaw.org https://ot.www.cloudflare.com https://www.googletagmanager.com https://tagmanager.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://adservice.google.com https://cdn.bizible.com https://js.adsrvr.org https://*.marketo.net https://platform.twitter.com https://static.ads-twitter.com https://scripts.demandbase.com https://tag.demandbase.com https://*.6sc.co https://*.qualified.com https://snap.licdn.com https://bat.bing.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://*.google.com https://*.doubleclick.net https://www.googleadservices.com https://translate.googleapis.com https://cdn.bizible.com https://js.adsrvr.org https://*.marketo.net https://ads-twitter.com https://analytics.twitter.com https://*.twimg.com https://api.demandbase.com https://scripts.demandbase.com https://tag.demandbase.com https://tag-logger.demandbase.com https://api.company-target.com https://*.6sc.co https://epsilon.6sense.com https://*.qualified.com https://*.ads.linkedin.com https://www.linkedin.com https://bat.bing.com https: wss://*.qualified.com wss://*.registrar.cloudflare.com; frame-src https://*.adsrvr.org https://*.cloudflare.com https://*.videodelivery.net https://*.cloudflarestream.com https://www.googletagmanager.com https://*.qualified.com https://td.doubleclick.net https://bid.g.doubleclick.net https://9309168.fls.doubleclick.net https://9973066.fls.doubleclick.net https://s.company-target.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; worker-src 'self' blob:; child-src 'self' blob:; upgrade-insecure-requests"
+                },
+                {
+                  "http3.headers.header.name.length": "26",
+                  "http3.header.header.name": "cross-origin-opener-policy",
+                  "http3.headers.header.value.length": "11",
+                  "http3.headers.header.value": "unsafe-none"
+                },
+                {
+                  "http3.headers.header.name.length": "28",
+                  "http3.header.header.name": "cross-origin-resource-policy",
+                  "http3.headers.header.value.length": "12",
+                  "http3.headers.header.value": "cross-origin"
+                },
+                {
+                  "http3.headers.header.name.length": "18",
+                  "http3.header.header.name": "permissions-policy",
+                  "http3.headers.header.value.length": "40",
+                  "http3.headers.header.value": "geolocation=(), camera=(), microphone=()"
+                },
+                {
+                  "http3.headers.header.name.length": "15",
+                  "http3.header.header.name": "referrer-policy",
+                  "http3.headers.header.value.length": "31",
+                  "http3.headers.header.value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "http3.headers.header.name.length": "22",
+                  "http3.header.header.name": "x-content-type-options",
+                  "http3.headers.header.value.length": "7",
+                  "http3.headers.header.value": "nosniff"
+                },
+                {
+                  "http3.headers.header.name.length": "15",
+                  "http3.header.header.name": "x-frame-options",
+                  "http3.headers.header.value.length": "10",
+                  "http3.headers.header.value": "SAMEORIGIN"
+                },
+                {
+                  "http3.headers.header.name.length": "16",
+                  "http3.header.header.name": "x-xss-protection",
+                  "http3.headers.header.value.length": "13",
+                  "http3.headers.header.value": "1; mode=block"
+                },
+                {
+                  "http3.headers.header.name.length": "4",
+                  "http3.header.header.name": "vary",
+                  "http3.headers.header.value.length": "15",
+                  "http3.headers.header.value": "accept-encoding",
+                  "http3.headers.vary": "accept-encoding"
+                },
+                {
+                  "http3.headers.header.name.length": "10",
+                  "http3.header.header.name": "set-cookie",
+                  "http3.headers.header.value.length": "335",
+                  "http3.headers.header.value": "__cf_bm=redacted-test-value; HttpOnly; SameSite=None; Secure; Path=/; Domain=www.cloudflare.com; Expires=Sat, 10 Oct 2026 23:07:48 GMT",
+                  "http3.headers.set_cookie": "__cf_bm=redacted-test-value; HttpOnly; SameSite=None; Secure; Path=/; Domain=www.cloudflare.com; Expires=Sat, 10 Oct 2026 23:07:48 GMT"
+                },
+                {
+                  "http3.headers.header.name.length": "9",
+                  "http3.header.header.name": "report-to",
+                  "http3.headers.header.value.length": "245",
+                  "http3.headers.header.value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=uhBkll4lrpIvN8v3ZcydyNdBcAt4HG%2FX6kphguZLipQNFt3n5mdCsBs2YxnrDF6ZCVQpNm9uYDowufGDynJ8t6tX40oCEc6aZWe8znCFSr%2BsLLzFaeDYrG8tFSbvEgvbYjkWMg%3D%3D\"}]}"
+                },
+                {
+                  "http3.headers.header.name.length": "7",
+                  "http3.header.header.name": "alt-svc",
+                  "http3.headers.header.value.length": "19",
+                  "http3.headers.header.value": "h3=\":443\"; ma=86400"
+                },
+                {
+                  "http3.headers.header.name.length": "14",
+                  "http3.header.header.name": "content-length",
+                  "http3.headers.header.value.length": "5",
+                  "http3.headers.header.value": "17836",
+                  "http3.headers.content_length": "17836"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2026-10-10",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "en0",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "2026-10-10T22:37:48.589598000Z",
+          "frame.time_utc": "2026-10-10T22:37:48.589598000Z",
+          "frame.time_epoch": "2026-10-10T22:37:48.589598000Z",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000001000",
+          "frame.time_delta_displayed": "0.039429000",
+          "frame.time_relative": "2.599287000",
+          "frame.number": "641",
+          "frame.len": "1242",
+          "frame.cap_len": "1242",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:udp:quic:http3",
+          "frame.encoding": "0"
+        },
+        "eth": {
+          "filtered": "eth"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "1228",
+          "ip.id": "0x0001",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "53",
+          "ip.proto": "17",
+          "ip.checksum": "0x6a64",
+          "ip.checksum.status": "2",
+          "ip.src": "104.16.123.96",
+          "ip.addr": [
+            "104.16.123.96",
+            "192.0.2.10"
+          ],
+          "ip.src_host": "104.16.123.96",
+          "ip.host": [
+            "104.16.123.96",
+            "192.0.2.10"
+          ],
+          "ip.dst": "192.0.2.10",
+          "ip.dst_host": "192.0.2.10",
+          "ip.stream": "19"
+        },
+        "udp": {
+          "udp.srcport": "443",
+          "udp.dstport": "53842",
+          "udp.port": [
+            "443",
+            "53842"
+          ],
+          "udp.length": "1208",
+          "udp.checksum": "0xc29c",
+          "udp.checksum.status": "2",
+          "udp.stream": "19",
+          "udp.stream.pnum": "120",
+          "Timestamps": {
+            "udp.time_relative": "0.157966000",
+            "udp.time_delta": "0.000001000"
+          },
+          "udp.payload": "5a:60:c2:df:00:d3:96:05:48:65:17:ac:83:14:45:10:37:56:66:d7:95:32:98:19:ec:be:47:08:81:b1:ab:c1:f5:9a:06:fb:ac:6f:62:9e:94:74:11:d8:b7:58:f4:de:1a:a4:fc:39:38:9a:d4:3a:ce:e9:ca:73:3b:55:d6:a6:1b:b6:07:a9:ec:ea:3f:08:a6:1e:f9:5f:a5:9f:f9:d8:5e:e6:70:8c:58:90:af:6b:b0:92:50:f5:da:a5:04:67:31:cf:af:f3:04:83:88:31:b8:10:77:1a:33:59:18:fd:d6:3b:06:bd:2a:c2:f4:df:1f:b5:d5:73:f3:56:57:21:b4:01:11:dd:15:eb:5e:30:17:6d:ff:ff:66:6f:3b:f5:ef:79:9b:d9:e7:47:70:2e:2a:93:44:a3:62:97:a3:6f:d3:2e:5a:dd:cd:23:f2:ca:f1:48:f9:5c:66:c9:fa:55:76:2f:e6:95:fe:c0:82:5d:6c:44:8e:7b:a4:01:8b:7a:80:b9:7c:b6:e5:a9:c0:68:8e:96:bb:0c:15:a4:21:fc:b9:e1:3c:0d:b3:3e:98:e5:83:7d:e6:bb:88:47:ec:e5:37:24:11:64:9c:82:08:f1:8f:dc:52:11:dd:8d:a2:53:6d:2b:08:de:01:7f:c1:6c:66:47:85:9b:47:fb:e7:50:7e:5c:08:c6:0c:84:c0:01:c1:aa:33:79:7f:67:39:f2:8a:71:77:48:ad:c1:c5:67:86:de:77:66:26:28:02:d2:3b:b3:4f:ec:d7:fe:17:bc:00:ab:c0:eb:f4:53:3c:94:ea:7c:74:34:5c:a4:01:b4:55:4a:36:6b:82:38:5f:5c:52:00:49:7c:be:0d:7f:83:be:fe:ed:56:95:1a:bb:e4:12:94:5c:61:df:4d:a7:b0:7a:5a:a7:7b:84:1a:05:34:d1:a5:41:ac:ad:80:7a:22:cf:78:13:22:71:f0:fe:53:f7:f5:c9:df:e4:ce:59:88:9d:6f:f7:6e:d8:d6:7a:de:8e:ee:69:9b:42:07:78:c1:a9:1c:a1:40:fb:36:af:52:85:ca:a2:79:4d:90:2e:12:b8:5a:7e:36:a5:a0:f3:11:73:41:b2:79:de:75:f4:a6:bd:86:0e:df:61:92:ee:86:7e:0b:15:41:23:34:a6:92:73:11:6b:e9:b8:24:da:a9:17:c8:44:2e:be:7d:9f:26:03:85:70:24:f1:41:04:ed:a4:9a:86:cd:5b:d2:04:a5:fd:d6:7c:1c:9d:e7:bc:f2:9c:24:2d:29:bd:51:49:2d:f7:94:c0:cb:ad:04:6e:e5:05:b2:e4:e0:cf:d5:a1:b1:11:ae:8c:63:9d:c2:3d:b7:e6:df:6e:a3:57:65:77:7d:b2:fe:42:ea:56:e3:3d:e3:2c:1c:ea:dd:e6:fa:18:bb:5a:d3:10:0b:10:79:8e:0c:bf:92:67:98:3e:f5:84:f4:98:1c:f3:73:63:18:16:df:41:88:59:75:cb:f2:62:5e:ee:a5:58:8b:64:5e:fc:f8:9f:1f:2d:8b:ea:da:33:38:bc:fd:3d:44:fa:89:e9:89:f0:ce:a9:71:0f:ec:aa:b2:0f:0e:3a:4c:98:a0:8e:17:e7:81:a6:f4:29:4b:ac:6a:0e:14:a4:c6:e0:9a:6c:4f:0a:6f:9b:94:62:1a:58:58:90:15:f0:3b:52:09:51:24:da:e8:67:df:aa:3b:cc:66:f8:9e:ce:f0:24:03:25:46:4d:69:6d:34:7c:01:f4:84:f8:d2:db:b4:37:4d:46:e8:ab:f8:03:2d:b8:04:d0:52:ae:7f:f8:18:f3:85:7d:ea:e3:25:63:5c:63:6c:c1:be:09:69:fc:21:48:17:fc:20:22:2b:08:21:7d:9b:37:8f:84:35:ff:6b:a9:5c:db:3f:30:0f:cf:13:32:5e:e3:cf:af:7b:5e:a0:4f:a6:2a:90:03:de:81:13:9b:ba:e4:f0:e6:96:ec:0c:60:cc:16:3a:0f:e8:1a:88:2c:d9:62:b2:17:e6:02:ca:19:a3:00:b1:3b:4f:d2:a4:a4:cd:8f:25:c1:7e:ac:3e:90:15:d4:4c:25:5a:e1:c8:6b:55:05:f9:22:3c:26:c4:86:34:87:cb:48:c9:97:92:92:20:c9:14:18:0e:a6:75:54:40:b0:4b:72:5e:e5:15:d9:41:66:6c:05:7c:f7:36:fc:dd:d6:72:3b:2f:60:31:59:a0:8b:af:08:64:3c:ee:59:3b:79:c7:46:53:e4:fe:08:f4:b0:d3:29:37:6c:21:6a:35:43:2a:fd:b0:84:6e:84:cd:4a:bb:b1:66:a5:00:ab:e0:3b:dd:8b:af:36:d9:93:64:c5:af:0b:1d:7f:47:cf:1c:33:07:b8:b5:81:0c:03:7c:bc:eb:31:15:50:be:4e:40:9d:3a:7c:b4:bf:f0:54:7d:d5:fa:3a:e7:1a:61:1b:56:40:ef:35:8e:16:5b:dd:70:02:24:7a:ea:80:a5:ac:a6:7c:a7:b8:01:56:cd:30:2a:b3:54:52:2a:a9:aa:7b:ee:a2:b1:52:61:13:90:ab:ac:50:00:07:7b:54:c8:9b:82:9b:60:5f:cf:2a:1b:73:2a:45:ea:7f:8c:73:1f:85:d3:7b:4b:94:76:78:b2:f6:5f:81:be:df:ee:60:a9:39:7b:53:07:6a:2a:29:a8:d7:84:7e:43:16:82:e4:4c:10:f6:f2:3b:52:0f:33:9b:09:0d:51:9f:cb:3d:ae:a7:4b:94:76:68:8d:e1:dd:06:3c:30:74:e8:ba:22:df:eb:ce:69:13:76:94:2c:f5:ec:40:90:7d:93:4f:14:16:b8:48:89:ed:1c:da:e1:f4:b2:ff:41:60:97:a0:8d:ca:49:0b:9d:ac:6b:ed:d7:a9:34:55:57:b2:5e:a5:71:3f:39:ba:1e:f1:f2:8c:31:6f:25:99:b7:3d:30:fe:ae:58:5d:17:04:a4:fb:85:95:87:19:dc:d8:54:f9:f9:90:fc:ae:87:37:01:e4:72:e7:c9:c5:7a:72:85:b9:83:25:0e:0f:a8:eb:87:3d:77:d7:e9:fe:67:9b:1c:e4:b8:45:9a:03:e1:13:05:e7:39:c4:a8:47:d2:09:2f:cf:72:b8:0a:4f:07:6e:6e:ee:76:a2:71:af:24:16:09:9c:e8:d5:6f:27:63:b9:8b:b7"
+        },
+        "quic": {
+          "QUIC Connection information": {
+            "quic.connection.number": "0"
+          },
+          "quic.packet_length": "1200",
+          "quic.short": {
+            "quic.header_form": "0",
+            "quic.fixed_bit": "1",
+            "quic.spin_bit": "0",
+            "quic.short.reserved": "0",
+            "quic.key_phase": "0",
+            "quic.packet_number_length": "0",
+            "quic.packet_number": "78",
+            "quic.protected_payload": "c2:df:00:d3:96:05:48:65:17:ac:83:14:45:10:37:56:66:d7:95:32:98:19:ec:be:47:08:81:b1:ab:c1:f5:9a:06:fb:ac:6f:62:9e:94:74:11:d8:b7:58:f4:de:1a:a4:fc:39:38:9a:d4:3a:ce:e9:ca:73:3b:55:d6:a6:1b:b6:07:a9:ec:ea:3f:08:a6:1e:f9:5f:a5:9f:f9:d8:5e:e6:70:8c:58:90:af:6b:b0:92:50:f5:da:a5:04:67:31:cf:af:f3:04:83:88:31:b8:10:77:1a:33:59:18:fd:d6:3b:06:bd:2a:c2:f4:df:1f:b5:d5:73:f3:56:57:21:b4:01:11:dd:15:eb:5e:30:17:6d:ff:ff:66:6f:3b:f5:ef:79:9b:d9:e7:47:70:2e:2a:93:44:a3:62:97:a3:6f:d3:2e:5a:dd:cd:23:f2:ca:f1:48:f9:5c:66:c9:fa:55:76:2f:e6:95:fe:c0:82:5d:6c:44:8e:7b:a4:01:8b:7a:80:b9:7c:b6:e5:a9:c0:68:8e:96:bb:0c:15:a4:21:fc:b9:e1:3c:0d:b3:3e:98:e5:83:7d:e6:bb:88:47:ec:e5:37:24:11:64:9c:82:08:f1:8f:dc:52:11:dd:8d:a2:53:6d:2b:08:de:01:7f:c1:6c:66:47:85:9b:47:fb:e7:50:7e:5c:08:c6:0c:84:c0:01:c1:aa:33:79:7f:67:39:f2:8a:71:77:48:ad:c1:c5:67:86:de:77:66:26:28:02:d2:3b:b3:4f:ec:d7:fe:17:bc:00:ab:c0:eb:f4:53:3c:94:ea:7c:74:34:5c:a4:01:b4:55:4a:36:6b:82:38:5f:5c:52:00:49:7c:be:0d:7f:83:be:fe:ed:56:95:1a:bb:e4:12:94:5c:61:df:4d:a7:b0:7a:5a:a7:7b:84:1a:05:34:d1:a5:41:ac:ad:80:7a:22:cf:78:13:22:71:f0:fe:53:f7:f5:c9:df:e4:ce:59:88:9d:6f:f7:6e:d8:d6:7a:de:8e:ee:69:9b:42:07:78:c1:a9:1c:a1:40:fb:36:af:52:85:ca:a2:79:4d:90:2e:12:b8:5a:7e:36:a5:a0:f3:11:73:41:b2:79:de:75:f4:a6:bd:86:0e:df:61:92:ee:86:7e:0b:15:41:23:34:a6:92:73:11:6b:e9:b8:24:da:a9:17:c8:44:2e:be:7d:9f:26:03:85:70:24:f1:41:04:ed:a4:9a:86:cd:5b:d2:04:a5:fd:d6:7c:1c:9d:e7:bc:f2:9c:24:2d:29:bd:51:49:2d:f7:94:c0:cb:ad:04:6e:e5:05:b2:e4:e0:cf:d5:a1:b1:11:ae:8c:63:9d:c2:3d:b7:e6:df:6e:a3:57:65:77:7d:b2:fe:42:ea:56:e3:3d:e3:2c:1c:ea:dd:e6:fa:18:bb:5a:d3:10:0b:10:79:8e:0c:bf:92:67:98:3e:f5:84:f4:98:1c:f3:73:63:18:16:df:41:88:59:75:cb:f2:62:5e:ee:a5:58:8b:64:5e:fc:f8:9f:1f:2d:8b:ea:da:33:38:bc:fd:3d:44:fa:89:e9:89:f0:ce:a9:71:0f:ec:aa:b2:0f:0e:3a:4c:98:a0:8e:17:e7:81:a6:f4:29:4b:ac:6a:0e:14:a4:c6:e0:9a:6c:4f:0a:6f:9b:94:62:1a:58:58:90:15:f0:3b:52:09:51:24:da:e8:67:df:aa:3b:cc:66:f8:9e:ce:f0:24:03:25:46:4d:69:6d:34:7c:01:f4:84:f8:d2:db:b4:37:4d:46:e8:ab:f8:03:2d:b8:04:d0:52:ae:7f:f8:18:f3:85:7d:ea:e3:25:63:5c:63:6c:c1:be:09:69:fc:21:48:17:fc:20:22:2b:08:21:7d:9b:37:8f:84:35:ff:6b:a9:5c:db:3f:30:0f:cf:13:32:5e:e3:cf:af:7b:5e:a0:4f:a6:2a:90:03:de:81:13:9b:ba:e4:f0:e6:96:ec:0c:60:cc:16:3a:0f:e8:1a:88:2c:d9:62:b2:17:e6:02:ca:19:a3:00:b1:3b:4f:d2:a4:a4:cd:8f:25:c1:7e:ac:3e:90:15:d4:4c:25:5a:e1:c8:6b:55:05:f9:22:3c:26:c4:86:34:87:cb:48:c9:97:92:92:20:c9:14:18:0e:a6:75:54:40:b0:4b:72:5e:e5:15:d9:41:66:6c:05:7c:f7:36:fc:dd:d6:72:3b:2f:60:31:59:a0:8b:af:08:64:3c:ee:59:3b:79:c7:46:53:e4:fe:08:f4:b0:d3:29:37:6c:21:6a:35:43:2a:fd:b0:84:6e:84:cd:4a:bb:b1:66:a5:00:ab:e0:3b:dd:8b:af:36:d9:93:64:c5:af:0b:1d:7f:47:cf:1c:33:07:b8:b5:81:0c:03:7c:bc:eb:31:15:50:be:4e:40:9d:3a:7c:b4:bf:f0:54:7d:d5:fa:3a:e7:1a:61:1b:56:40:ef:35:8e:16:5b:dd:70:02:24:7a:ea:80:a5:ac:a6:7c:a7:b8:01:56:cd:30:2a:b3:54:52:2a:a9:aa:7b:ee:a2:b1:52:61:13:90:ab:ac:50:00:07:7b:54:c8:9b:82:9b:60:5f:cf:2a:1b:73:2a:45:ea:7f:8c:73:1f:85:d3:7b:4b:94:76:78:b2:f6:5f:81:be:df:ee:60:a9:39:7b:53:07:6a:2a:29:a8:d7:84:7e:43:16:82:e4:4c:10:f6:f2:3b:52:0f:33:9b:09:0d:51:9f:cb:3d:ae:a7:4b:94:76:68:8d:e1:dd:06:3c:30:74:e8:ba:22:df:eb:ce:69:13:76:94:2c:f5:ec:40:90:7d:93:4f:14:16:b8:48:89:ed:1c:da:e1:f4:b2:ff:41:60:97:a0:8d:ca:49:0b:9d:ac:6b:ed:d7:a9:34:55:57:b2:5e:a5:71:3f:39:ba:1e:f1:f2:8c:31:6f:25:99:b7:3d:30:fe:ae:58:5d:17:04:a4:fb:85:95:87:19:dc:d8:54:f9:f9:90:fc:ae:87:37:01:e4:72:e7:c9:c5:7a:72:85:b9:83:25:0e:0f:a8:eb:87:3d:77:d7:e9:fe:67:9b:1c:e4:b8:45:9a:03:e1:13:05:e7:39:c4:a8:47:d2:09:2f:cf:72:b8:0a:4f:07:6e:6e:ee:76:a2:71:af:24:16:09:9c:e8:d5:6f:27:63:b9:8b:b7"
+          },
+          "quic.frame": {
+            "quic.frame_type": "0x000000000000000e",
+            "quic.frame_type_tree": {
+              "quic.stream.fin": "0",
+              "quic.stream.len": "1",
+              "quic.stream.off": "1"
+            },
+            "quic.stream.stream_id": "0",
+            "quic.stream.stream_id_tree": {
+              "quic.stream.initiator": "0",
+              "quic.stream.direction": "0"
+            },
+            "quic.stream.offset": "3367",
+            "quic.stream.length": "1176",
+            "quic.stream_data": "52:5f:ef:ed:4c:69:4d:7a:aa:a3:d7:da:9b:87:49:77:19:25:83:38:fc:fd:a9:ac:69:9e:06:3e:d4:dc:52:5b:61:7f:5e:ff:22:eb:54:84:4d:91:3d:0d:f6:dc:c2:27:9c:0b:d0:b6:07:9b:04:2d:3e:de:1b:ae:45:0c:87:8c:ba:ac:9a:23:48:5a:92:64:fa:82:f1:b9:b3:a2:fc:2d:6a:df:83:d6:9d:f0:f8:d1:d3:80:b4:74:23:3a:3a:73:06:9d:e4:06:9b:f8:1b:d1:be:10:ea:df:0f:bd:37:f4:35:a7:de:4f:1a:30:e4:d5:7b:46:a6:d9:ce:b6:ed:37:8f:7f:8f:5c:02:d1:0e:7f:10:93:53:6c:e7:5b:76:98:60:83:ed:4c:1e:6b:35:85:44:1b:ed:2f:d2:80:7d:4d:27:ee:a0:80:27:54:10:ae:32:ed:c6:9e:53:16:8d:ff:6a:6b:1a:67:81:8f:b5:37:14:96:d8:5f:b5:37:0e:92:ee:32:4b:06:71:f9:5e:ff:86:01:8a:22:4b:14:74:c1:ef:3e:8b:32:f0:c5:aa:44:bd:21:9b:32:5c:c9:b3:de:5d:bf:b3:d6:e6:0e:b3:f2:ef:4e:5e:d7:bf:61:d1:b5:3e:30:a1:60:ba:f8:5c:74:2f:38:f2:ed:be:00:be:e3:8b:05:70:2e:15:c2:b5:d3:5e:d0:d4:36:1b:f2:c6:ba:03:43:f6:f7:ac:fa:73:12:91:73:fc:9b:80:29:bb:75:dd:5c:77:f0:9b:f3:cc:e9:e9:96:2d:1a:3d:fb:6f:ba:fe:17:c3:ec:d3:0b:50:6f:b8:bc:a2:3f:11:df:fd:ee:0e:38:b0:99:2e:0c:bf:bb:35:93:66:24:fe:e7:9a:5e:bb:f8:c7:46:2e:78:7f:11:af:42:6c:9b:9c:63:8e:8d:9d:39:64:e9:8e:ea:7c:b3:a6:51:07:5c:bc:65:c1:0f:9c:fb:bc:db:b4:9d:b3:68:3a:f9:af:64:ac:d3:7d:a9:8d:29:af:55:54:7a:fb:53:70:e9:2e:e3:24:b0:69:3d:45:fb:53:71:49:6d:85:fb:53:58:d3:3c:0c:7d:a9:7c:f4:8c:d5:41:e3:c7:85:c9:41:ed:92:5a:07:61:57:21:e9:fb:53:07:9a:cd:61:51:06:e1:a7:e9:40:81:4d:44:4a:82:00:9c:50:4c:dc:03:b7:1a:79:4c:5a:37:ff:2f:03:41:6c:ee:5b:16:49:a9:35:53:7f:93:24:b7:86:49:cb:b9:23:4d:a8:fb:90:a8:24:1f:ce:3c:9b:ff:9f:2f:03:41:6c:ee:5b:16:49:a9:35:53:7f:a2:24:b8:24:98:bf:72:5b:64:01:6f:e8:92:ea:b0:d3:1a:af:b9:2d:b2:00:7d:12:5e:47:b3:a9:6c:fb:92:db:20:13:9f:2f:03:41:6c:ee:5b:16:49:a9:35:53:7f:86:24:b8:3c:a7:5d:86:5f:44:90:9d:98:3f:9b:8d:34:cf:f3:f6:a5:23:81:e7:1a:00:3f:00:4b:9c:9b:8d:5d:14:3b:29:d8:e6:1f:58:c5:64:11:b3:65:61:a8:1e:00:00:d2:fd:ff:70:65:41:c0:c6:01:00:c0:95:7b:f8:05:19:00:47:4e:5a:3d:00:aa:aa:aa:aa:aa:aa:aa:aa:aa:aa:aa:aa:aa:3b:13:01:03:af:55:dd:e0:17:10:f8:a1:1f:f9:b1:9f:f8:a9:9f:f9:b9:5f:f8:a5:5f:f9:b5:df:f0:9b:7e:cb:6f:fb:1d:bf:eb:f7:fc:be:3f:f0:87:fe:c8:1f:fb:13:7f:ea:cf:fc:b9:bf:f0:97:fe:ca:5f:fb:1b:7f:eb:ef:fc:bd:7f:f0:8f:fe:c9:3f:fb:17:ff:ea:df:fc:bb:ff:f0:9f:fe:cb:7f:fb:1f:ff:eb:ff:fc:bf:7f:41:60:00:70:4c:00:00:00:c0:07:86:46:c6:26:a6:66:e6:16:96:56:d6:36:b6:76:f6:0e:8e:4e:ce:2e:ae:6e:ee:1e:9e:5e:de:3e:be:7e:fe:fc:fb:ff:f2:9d:fd:ff:98:4c:46:9b:ea:04:a9:3a:25:59:36:90:8f:1c:41:d3:90:0f:09:24:9c:00:9d:be:f1:f1:31:65:69:4b:2a:5c:aa:52:57:6d:f9:83:ad:b5:7a:f4:d6:fc:ad:1e:0c:46:7d:fe:9b:6a:5f:bf:13:ee:45:6e:a9:c9:9b:f3:bd:91:97:0e:50:f6:50:b0:ea:71:a9:ed:1a:46:a0:58:b4:2d:2c:75:40:62:63:07:96:ff:5f:43:fb:5f:6d:5d:cd:ea:f7:7c:54:7c:e7:75:c9:08:c9:90:cf:bd:d6:8a:49:cd:ce:98:0c:01:93:a6:bf:91:22:fc:99:bf:ac:7b:2e:a7:17:a6:d2:c0:04:09:49:fe:f0:e9:86:2d:02:74:42:16:43:d2:d0:49:08:45:65:85:2d:fc:c1:b6:bc:92:0c:36:e9:ae:9a:cb:61:4e:f7:bd:ef:e9:38:3f:ba:b4:af:6a:df:df:e3:34:1e:ce:b9:f6:64:2c:92:61:d6:12:21:86:64:9c:3d:65:90:85:04:46:7c:90:02:d2:9e:45:bf:d5:ef:b7:ea:b6:ea:fe:b9:e4:cd:3f:5d:7b:b8:54:c2:18:aa:5e:1d:43:52:22:66:f8:ac:71:de:92:5b:42:5a:62:fc:b2:91:be:ed:05:e6:ac:57:f5:ef:be:9c:26:ad:70:3c:a5:6d:3a:f1:a8:18:4c:f4:28:17:3a:86:fc:2b:55:2a:1b:44:2a:2c:40:56:fb:b4:be:7b:2e:27:4d:80:00:e3:8f:d0:4d:91:94:44:a6:fe:b2:6f:94:44:a5:8c:b1:fd:8c:a5:ba:52:dd:b3:9d:0e:33:f7:cb:b7:f0:9b:be:5f:bf:2a:3c:b6:ae:33:b3:5a:e9:b6:40:57:46:a7:24:53:e2:90:1d:c0:52:a8:8b:44:f4:00:74:e2:ec:54:8f:4b:51:3b:d2:07:ac:66:2f:90:87:b4:16:25:a2:0f:50:4a:92:47:ee:35:3e:c2:82:05:9e:a4:03:6c:27:9f:e3:22:4a:03:13:d1:01:98:b3:a3:b4:c5:4f:d8",
+            "quic.fragments": {
+              "quic.fragment": [
+                "630",
+                "634",
+                "639",
+                "640",
+                "641"
+              ],
+              "quic.fragment.count": "5",
+              "quic.reassembled.length": "3609",
+              "quic.reassembled.data": "01:4e:16:00:00:d9:2b:a8:b4:7f:b3:ff:fd:fc:d8:5a:cf:62:62:49:ff:9b:9f:c9:25:5a:a2:d1:fc:fd:7f:28:b4:84:2a:11:14:b6:0c:89:31:ea:fe:6e:01:70:7d:7f:34:8f:cc:43:98:bf:cd:c7:00:d3:c0:07:ff:bf:2f:00:b0:b5:9e:c4:ac:93:ff:ff:4b:ff:fd:fc:cd:61:ed:af:f9:b9:fc:92:55:aa:2d:1f:cf:d7:f3:48:fc:c4:39:8b:fc:dc:70:0d:3c:00:7d:7f:25:aa:4a:ce:6a:92:8f:e6:e7:fe:ff:ff:7f:36:d9:47:f3:73:f9:9d:29:ad:17:18:60:6b:d4:5a:17:25:07:b6:49:68:1d:85:5c:87:a5:8b:0b:59:ec:4b:1d:da:ff:11:06:47:5d:2d:db:ba:11:d6:ee:ab:28:2f:8c:3a:95:15:dc:f9:2a:2e:fd:7a:3f:53:c4:57:f0:61:71:e0:79:c9:90:13:5b:44:92:f2:66:f5:9d:fd:68:7f:5d:49:d1:b1:e7:2b:73:67:18:76:5a:da:03:83:6a:38:7e:27:33:5f:bd:a6:e5:ca:a7:4f:7f:df:0f:5d:a9:9d:e5:45:87:5b:7b:c1:23:7d:f0:4b:8a:f7:8b:78:12:f1:f9:e1:ef:f8:f6:10:df:44:73:f7:df:d3:b5:99:fb:ef:a2:3f:1e:15:66:fa:ac:df:fe:7f:fd:ff:e7:ff:bf:56:96:dc:34:fd:28:10:29:a8:89:50:40:13:8a:08:57:19:76:e3:4f:29:8b:46:ff:f4:5b:ff:e0:03:ff:f9:3a:53:5a:2e:30:c7:8f:1e:17:25:07:b6:49:68:1d:85:5c:87:a5:85:fc:16:8a:16:eb:51:fc:54:c0:eb:32:c4:1a:47:41:e6:ff:bf:b5:2c:2d:10:7f:23:ac:cb:10:69:1d:07:9b:f9:fa:53:ff:e4:e9:4d:68:b8:c3:1e:3c:78:5c:94:1e:d9:25:a0:76:15:72:1e:96:17:f0:5a:28:5b:ad:47:f1:53:03:98:b5:25:0b:f4:41:ea:ff:bf:b5:2c:2d:10:7f:28:2d:9d:cc:42:ad:21:50:4f:e7:e9:4f:ff:93:a5:35:a2:e3:0c:78:f1:e1:72:50:7b:64:96:81:d8:55:c8:7a:58:5f:c1:68:a1:6e:b5:1f:c5:4c:78:2c:74:92:b5:fa:20:f5:7f:df:da:96:16:88:3f:94:16:ce:e6:21:56:90:a8:27:f3:f4:a7:ff:c9:d2:9a:d1:71:86:3c:78:f0:b9:28:3d:b2:4b:40:ec:2a:e4:3d:2c:1e:b2:d4:3a:cc:bf:44:1e:af:fb:fb:52:c2:d1:07:f2:82:d9:dc:c4:2a:d2:15:04:fe:7e:94:ff:f9:3a:53:5a:2e:30:c7:8f:1e:17:25:07:b6:49:68:1d:85:5c:87:a5:8a:28:a5:0b:a7:ca:7f:ef:ed:4b:0b:44:1f:ca:0b:67:73:10:ab:48:72:7f:3f:4a:7f:fc:9d:29:ad:17:18:63:c7:8f:0b:92:83:db:24:b4:0e:c2:ae:43:d2:c2:0c:92:d2:3a:d7:f3:4d:1f:f7:f6:a5:85:a2:0f:e5:06:49:69:1d:7f:cf:d2:9f:ff:18:94:f5:25:0c:66:b6:a4:25:51:03:15:87:49:51:d5:51:03:69:66:b6:81:d8:bf:83:cb:28:bf:ef:ed:4b:0b:44:15:d8:5a:0e:39:3e:d4:1a:20:94:f5:27:ed:44:fa:ac:b0:7f:32:9e:a4:b1:e0:f2:ca:2f:e7:ed:42:58:74:20:f6:1a:63:55:f4:a7:ff:c6:25:3d:49:43:19:ad:a9:09:54:40:c5:61:d2:54:75:54:40:d0:59:0d:6d:2b:f8:3c:b2:8b:fe:fe:d4:b0:b4:41:5d:85:a0:e3:93:ed:41:a2:09:4f:52:7e:d4:4f:aa:cb:07:f3:29:ea:4b:1e:0f:2c:a2:fe:7e:d4:25:87:42:0f:61:a6:35:5f:4a:7f:fc:9d:29:ad:17:18:60:e9:5f:c7:8f:0b:92:83:db:24:b4:0e:c2:ae:43:d3:ff:7f:6a:58:5a:20:ae:c2:90:f5:54:52:27:ed:42:58:74:20:f6:1a:63:55:f4:a7:ff:c9:d2:9a:d1:71:86:0d:48:e6:2c:85:a0:dd:cb:67:a5:ea:2a:7f:ef:ed:4b:0b:44:15:d8:52:1e:aa:8a:44:fd:a8:4b:0e:84:1e:c3:4c:6a:be:94:ff:f8:c2:12:34:98:8c:4e:5b:0e:b5:67:42:4b:62:e3:ee:69:7f:ef:ed:4b:0b:44:15:d8:5a:0e:39:3e:d4:1a:20:35:23:98:bf:6a:27:d5:65:83:f9:35:23:98:ac:0f:b9:a5:fe:7e:d4:94:a9:24:f5:d8:63:d8:64:fa:82:73:4d:3f:2d:24:ab:58:3f:5f:8f:1b:4f:3e:12:3e:31:8d:e9:25:74:51:ad:92:1b:ff:2f:03:24:ab:10:64:9c:ab:21:23:4d:a8:83:c7:93:7f:2e:ae:c3:1e:c3:27:d7:84:b6:00:7d:1b:c2:5f:15:87:a4:7e:56:1c:c5:80:20:ea:5f:4d:87:25:07:b6:49:68:1d:85:fb:5f:29:9a:a4:7e:56:1c:c5:81:90:b6:cb:80:00:3e:d4:35:44:a2:d9:0b:ba:d8:ef:9e:91:9a:a4:7f:5f:46:ff:84:0a:90:b2:8e:da:12:b2:2c:22:9f:e9:05:a2:5f:f5:f6:a2:09:61:ab:4a:c8:b0:8a:7f:a4:16:89:7f:d2:9f:ea:da:90:39:4a:b1:aa:a0:d5:17:fd:29:fe:ad:a9:03:94:ab:17:b8:e8:ff:4a:4e:94:d6:8b:8c:30:84:8d:26:22:e4:a0:f6:c9:2d:03:b0:a6:a9:06:9a:74:a1:72:1e:95:27:4a:6b:45:c6:18:42:46:93:11:64:24:73:1a:a9:97:25:07:b6:49:68:1d:85:35:48:34:d3:a5:0b:90:f4:a9:3a:53:5a:2e:30:c1:27:1d:14:16:a9:8a:85:c9:41:ed:92:5a:07:61:57:21:e9:52:74:a6:b4:5c:61:8f:95:cf:51:53:65:a8:4a:e4:3d:2a:4e:94:d6:8b:8c:30:49:2a:5c:87:3f:53:16:81:f8:5c:f6:4c:a4:e9:4d:68:b8:c3:07:4a:fe:3c:78:5c:94:1e:d9:25:a0:76:15:72:1e:95:27:4a:6b:45:c6:18:f1:e3:c2:f3:1c:f3:50:54:8e:6a:47:50:e6:2d:8b:90:f4:a9:3a:53:5a:2e:30:c2:47:35:23:a8:73:16:c5:e6:39:e6:a0:ab:90:f4:a9:3a:53:5a:2e:30:c7:8f:1e:17:98:e7:9a:82:8e:44:16:ce:e6:21:50:b9:0f:4a:93:a5:35:a2:e3:0c:4c:73:cd:41:47:22:17:99:79:0f:6c:74:14:94:18:9d:57:a8:a9:52:74:a6:b4:5c:61:81:c8:82:d9:dc:c4:2a:f3:1c:f3:50:55:c8:7a:54:9d:29:ad:17:18:60:92:54:bc:66:f6:68:e8:2a:e4:3d:2a:4e:94:d6:8b:8c:31:d1:0b:8e:44:59:de:c5:cf:64:ca:4e:94:d6:8b:8c:31:f2:bd:23:b3:a9:52:75:ea:2a:54:9d:29:ad:17:18:62:ba:06:99:4f:65:2b:a7:c1:92:92:d8:b9:0f:4a:93:a5:35:a2:e3:0c:21:23:49:88:b8:e4:42:c9:f0:64:a4:b6:2e:43:d2:a4:e9:4d:68:b8:c3:08:25:86:ad:28:5e:42:d2:3a:a4:8c:68:2a:e4:3d:2a:4e:94:d6:8b:8c:30:91:cc:bc:85:a4:75:49:18:d0:55:c8:7a:54:9d:29:ad:17:18:63:e5:77:10:45:c8:75:27:4a:6b:45:c6:18:f9:5f:b5:a3:a0:d2:98:b2:2e:43:d2:a4:e9:4d:68:b8:c3:08:a8:75:af:41:89:25:4b:90:f4:a9:3a:53:5a:2e:30:c4:63:4a:f1:9a:a9:97:21:e9:fb:51:09:f5:41:56:45:84:53:fd:20:b4:4b:fe:94:ff:56:d4:81:ca:55:8d:55:06:a8:bf:eb:ed:43:53:32:c8:b0:8a:7f:a4:16:89:7f:d2:92:0d:23:b8:a4:e9:4d:68:b9:f6:a4:a7:a9:2b:22:c2:29:fe:90:5a:25:ff:4a:48:34:8e:e7:da:84:3d:55:14:89:59:16:11:4f:f4:82:d1:2f:fa:52:74:a6:b4:5c:61:8f:95:e6:39:e6:a0:a9:1c:d4:8e:a1:cc:5b:17:21:e9:52:74:a6:b4:5c:61:8f:95:e6:39:e6:a0:ab:0e:a1:d1:e9:26:22:17:21:e9:52:74:a6:b4:5c:61:8f:95:e6:39:e6:a0:ab:90:f4:a9:3a:53:5a:2e:30:c7:ca:f2:1e:d8:e8:29:28:31:3a:af:51:52:a4:e9:4d:68:b8:c3:1e:3c:78:5e:63:9e:6a:0a:39:10:5b:3b:98:85:42:e4:3d:2a:4e:94:d6:8b:8c:30:9b:07:52:28:1a:4a:bc:c7:3c:d4:14:75:99:0b:90:f4:a9:3a:53:5a:2e:30:c1:24:a9:78:cd:ec:d1:d0:55:c8:7a:54:9d:29:ad:17:18:63:a2:17:1c:88:b3:bd:8b:9e:c9:94:9d:29:ad:17:18:63:e5:7a:47:67:52:a4:eb:d4:54:a9:3a:53:5a:2e:30:c0:e4:42:c9:f0:64:a4:b6:2e:43:d2:a4:e9:4d:68:b8:c3:03:a8:74:7a:49:88:85:d3:e0:c9:49:6c:5c:87:a5:49:d2:9a:d1:71:86:3e:57:4f:83:53:32:e4:3d:2a:4e:94:d6:8b:8c:30:3a:cc:bc:85:a4:75:49:18:d0:55:c8:7a:54:9d:29:ad:17:18:61:04:b0:d5:a5:0b:c8:5a:47:54:91:8d:05:5c:87:a5:49:d2:9a:d1:71:86:12:39:97:90:b4:8e:a9:23:1a:0a:b9:0f:4a:93:a5:35:a2:e3:0c:24:73:2d:41:e6:98:b6:2f:21:69:1d:52:46:34:15:72:1e:95:27:4a:6b:45:c6:18:1d:66:5c:87:a6:b1:d5:e9:64:8e:c9:8a:95:c8:7a:54:9d:29:ad:17:18:63:e5:77:10:45:c8:75:27:4a:6b:45:c6:18:2d:68:35:07:a9:77:10:5a:90:55:c8:7a:54:9d:29:ad:17:18:63:e5:7e:d6:8e:83:4a:62:c8:b9:0f:4a:93:a5:35:a2:e3:0c:7c:ae:39:10:bd:06:ab:a9:64:35:4b:90:f4:a9:3a:53:5a:2e:30:c7:8f:1e:17:a0:d5:75:2c:86:a9:72:1e:95:27:4a:6b:45:c6:18:8c:69:5e:33:55:32:e4:3d:2a:4e:94:d6:8b:8a:78:42:2e:30:c7:ca:fd:ad:1d:06:94:c5:91:72:1e:95:3c:21:17:18:63:e5:7b:0b:31:90:9b:07:62:e4:a0:f6:c9:2d:03:b0:ab:90:f4:fd:a9:2d:83:a4:ab:22:c2:29:3a:53:5a:2e:30:c7:ca:e3:91:16:77:b1:73:d9:32:93:a5:35:a2:e3:0c:7c:ae:4a:0f:6c:92:d0:3b:0a:b9:0f:4a:93:a5:35:a2:e3:0c:7c:af:dc:d2:14:f2:16:83:77:2d:9e:97:a8:a9:52:74:a6:b4:5c:61:8f:95:c9:41:ed:92:5a:07:61:50:9b:0a:3a:57:21:e9:52:74:a6:b4:5c:61:8f:1e:3c:2f:31:cf:35:05:48:e6:a4:75:0e:62:d8:b9:0f:4a:93:a5:35:a2:e3:0c:7c:af:da:d1:d0:69:4c:59:17:21:e9:52:74:a6:b4:5c:61:84:c8:bc:87:b6:3a:0a:4a:0c:4e:ab:d4:54:a9:3a:53:5a:2e:30:c4:66:91:79:97:90:f6:c7:41:49:41:89:d5:7a:8a:95:27:4a:6b:45:c6:18:7d:90:3e:17:1e:5e:5a:10:bc:87:b6:3a:0a:4a:0c:4e:ab:d4:54:a9:3a:53:5a:2e:30:c3:ef:ba:c8:1c:71:79:68:42:f2:1e:d8:e8:29:28:31:3a:af:51:52:a4:e9:4d:68:b8:c3:08:5c:87:a6:b1:d5:e9:64:8e:c9:8a:95:c8:7a:7e:d4:3c:7d:0a:44:ac:8b:08:a7:fa:a8:f5:17:fd:7d:a9:18:d0:55:ad:b0:ca:7f:a4:16:89:7f:d7:da:92:9e:ca:56:19:12:63:d4:a7:fa:41:68:97:fd:7d:a9:2d:83:a4:ab:0e:a2:15:09:3d:88:53:fd:54:7a:8b:fe:be:d4:f0:7b:3a:96:c5:91:61:14:ff:48:2d:12:ff:a5:23:a0:f1:dc:fb:50:93:9a:89:16:45:84:53:fd:20:b4:4b:fe:94:8e:83:c7:73:ed:4b:6b:9a:c1:c8:55:8d:52:0a:4b:6c:2a:d6:17:b5:a5:42:51:2f:0b:25:87:42:16:3d:86:98:d5:2c:7a:cb:51:6c:5a:b3:d0:62:7a:88:b6:a4:0e:52:ad:51:ea:2f:2f:0d:25:87:42:16:3d:86:98:d5:2d:61:50:7b:6c:21:56:ac:f4:18:9e:bf:89:25:87:42:16:3d:86:98:d5:7f:2f:06:ac:b6:52:64:20:c7:a9:0b:56:7a:0c:4f:5f:a0:98:a7:a0:e4:1a:4c:7a:a0:fe:bf:bf:a5:08:3a:4b:60:e0:fe:bf:bf:a5:29:31:2c:3d:73:9e:a2:c1:fd:7f:7f:2f:04:b0:b2:96:cb:0b:62:d5:9e:83:13:d7:96:42:6c:31:12:b1:ec:34:c6:a9:6f:13:96:a5:89:61:d0:85:8f:61:a6:35:5f:fd:5f:52:89:dd:0e:8c:1a:b6:e4:c5:93:4f:2f:02:f2:b2:0b:67:72:c8:b4:7e:bf:8a:a4:76:75:2a:4d:54:cb:20:c9:2f:fe:2c:f2:b5:94:ff:82:c5:cb:5e:c5:8a:61:c1:8a:10:ae:15:df:19:48:56:5e:8d:66:5d:28:16:68:6d:3a:b0:da:24:8b:4a:e0:a4:72:42:ba:32:b2:1f:b5:30:79:ac:d6:15:10:72:2c:9f:4a:04:0a:69:3f:75:04:01:3a:a0:85:71:97:6e:34:f2:98:b4:6f:fb:53:58:d3:3c:0c:7f:5e:ff:26:24:be:e2:98:e7:9a:82:ac:3a:87:47:a4:98:88:8b:bb:50:7f:fe:fe:6a:f6:4b:22:98:6d:7f:37:3f:ff:7f:3d:ff:9b:9f:cb:e3:29:0a:cb:d1:ac:cb:a5:02:cd:0d:a7:56:1b:44:91:69:5c:14:8e:48:57:46:56:43:fc:fd:7f:25:fe:6e:05:e1:36:f3:ce:09:c7:9b:7d:ff:ff:7f:fd:fb:53:07:9a:cd:61:51:07:22:c8:a6:93:f7:50:20:50:40:13:aa:08:57:19:76:e3:4f:29:8b:46:ff:f6:00:00:0a:7f:57:8e:7b:24:35:43:49:64:53:85:46:ee:5b:10:3a:14:de:6a:4b:fd:fd:a9:8d:29:af:55:54:7a:fb:53:70:e9:2e:e3:24:b0:67:1f:9f:b5:35:8d:33:c0:c7:da:9b:8a:4b:6c:2f:5e:ff:4c:24:be:e2:1c:87:8c:b0:7f:fe:fe:74:23:8e:58:8a:43:49:fc:dc:ff:fd:fc:f7:fe:6e:7f:37:8d:cd:9d:17:e1:6b:56:fc:1e:b4:ef:87:c6:8e:9c:05:a3:a1:19:d1:d3:98:34:ef:20:34:df:c0:de:8d:f0:87:56:f8:7d:e9:bf:a1:ad:3e:f2:78:d1:87:26:ab:da:35:36:ce:75:b7:69:bc:7b:fc:7a:e0:16:88:73:f8:84:9a:9b:67:3a:db:b4:c3:04:1f:cf:d7:f2:5f:e6:e0:5e:13:6e:be:fb:ce:3c:e0:5d:ff:f7:ff:df:b5:30:79:ac:d6:15:10:6f:b4:aa:69:3f:75:00:fa:82:00:9d:50:42:b8:cb:b7:1a:79:4c:5a:37:ff:b0:00:00:53:fa:bc:73:d9:21:aa:1a:4b:22:9c:2a:37:72:d8:81:d0:a6:f3:52:5f:ef:ed:4c:69:4d:7a:aa:a3:d7:da:9b:87:49:77:19:25:83:38:fc:fd:a9:ac:69:9e:06:3e:d4:dc:52:5b:61:7f:5e:ff:22:eb:54:84:4d:91:3d:0d:f6:dc:c2:27:9c:0b:d0:b6:07:9b:04:2d:3e:de:1b:ae:45:0c:87:8c:ba:ac:9a:23:48:5a:92:64:fa:82:f1:b9:b3:a2:fc:2d:6a:df:83:d6:9d:f0:f8:d1:d3:80:b4:74:23:3a:3a:73:06:9d:e4:06:9b:f8:1b:d1:be:10:ea:df:0f:bd:37:f4:35:a7:de:4f:1a:30:e4:d5:7b:46:a6:d9:ce:b6:ed:37:8f:7f:8f:5c:02:d1:0e:7f:10:93:53:6c:e7:5b:76:98:60:83:ed:4c:1e:6b:35:85:44:1b:ed:2f:d2:80:7d:4d:27:ee:a0:80:27:54:10:ae:32:ed:c6:9e:53:16:8d:ff:6a:6b:1a:67:81:8f:b5:37:14:96:d8:5f:b5:37:0e:92:ee:32:4b:06:71:f9:5e:ff:86:01:8a:22:4b:14:74:c1:ef:3e:8b:32:f0:c5:aa:44:bd:21:9b:32:5c:c9:b3:de:5d:bf:b3:d6:e6:0e:b3:f2:ef:4e:5e:d7:bf:61:d1:b5:3e:30:a1:60:ba:f8:5c:74:2f:38:f2:ed:be:00:be:e3:8b:05:70:2e:15:c2:b5:d3:5e:d0:d4:36:1b:f2:c6:ba:03:43:f6:f7:ac:fa:73:12:91:73:fc:9b:80:29:bb:75:dd:5c:77:f0:9b:f3:cc:e9:e9:96:2d:1a:3d:fb:6f:ba:fe:17:c3:ec:d3:0b:50:6f:b8:bc:a2:3f:11:df:fd:ee:0e:38:b0:99:2e:0c:bf:bb:35:93:66:24:fe:e7:9a:5e:bb:f8:c7:46:2e:78:7f:11:af:42:6c:9b:9c:63:8e:8d:9d:39:64:e9:8e:ea:7c:b3:a6:51:07:5c:bc:65:c1:0f:9c:fb:bc:db:b4:9d:b3:68:3a:f9:af:64:ac:d3:7d:a9:8d:29:af:55:54:7a:fb:53:70:e9:2e:e3:24:b0:69:3d:45:fb:53:71:49:6d:85:fb:53:58:d3:3c:0c:7d:a9:7c:f4:8c:d5:41:e3:c7:85:c9:41:ed:92:5a:07:61:57:21:e9:fb:53:07:9a:cd:61:51:06:e1:a7:e9:40:81:4d:44:4a:82:00:9c:50:4c:dc:03:b7:1a:79:4c:5a:37:ff:2f:03:41:6c:ee:5b:16:49:a9:35:53:7f:93:24:b7:86:49:cb:b9:23:4d:a8:fb:90:a8:24:1f:ce:3c:9b:ff:9f:2f:03:41:6c:ee:5b:16:49:a9:35:53:7f:a2:24:b8:24:98:bf:72:5b:64:01:6f:e8:92:ea:b0:d3:1a:af:b9:2d:b2:00:7d:12:5e:47:b3:a9:6c:fb:92:db:20:13:9f:2f:03:41:6c:ee:5b:16:49:a9:35:53:7f:86:24:b8:3c:a7:5d:86:5f:44:90:9d:98:3f:9b:8d:34:cf:f3:f6:a5:23:81:e7:1a:00:3f"
+            }
+          }
+        },
+        "http3": {
+          "http3.stream": {
+            "http3.frame": {
+              "http3.frame_streamid": "0",
+              "http3.frame_type": "0x0000000000000001",
+              "http3.frame_length": "3606",
+              "http3.headers.decoded_length": "5234",
+              "http3.headers.count": "34",
+              "http3.headers.header": [
+                {
+                  "http3.headers.header.name.length": "7",
+                  "http3.header.header.name": ":status",
+                  "http3.headers.header.value.length": "3",
+                  "http3.headers.header.value": "200",
+                  "http3.headers.status": "200"
+                },
+                {
+                  "http3.headers.header.name.length": "3",
+                  "http3.header.header.name": "nel",
+                  "http3.headers.header.value.length": "62",
+                  "http3.headers.header.value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+                },
+                {
+                  "http3.headers.header.name.length": "9",
+                  "http3.header.header.name": "report-to",
+                  "http3.headers.header.value.length": "245",
+                  "http3.headers.header.value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=I77eBBMskBOrlewFO%2BLIneTPMZtV2DEF680xII0guldfW3CrvyM9PntMQ86p6QVAQu5s1ERsUXtK4ZqgWWn7oDzUyqmh8%2FP5T0d5vEfGCwuUcCoYFvX8F1DsbhvTjqrLvTlbww%3D%3D\"}]}"
+                },
+                {
+                  "http3.headers.header.name.length": "4",
+                  "http3.header.header.name": "date",
+                  "http3.headers.header.value.length": "29",
+                  "http3.headers.header.value": "Sat, 10 Oct 2026 22:37:48 GMT",
+                  "http3.headers.date": "Sat, 10 Oct 2026 22:37:48 GMT"
+                },
+                {
+                  "http3.headers.header.name.length": "12",
+                  "http3.header.header.name": "content-type",
+                  "http3.headers.header.value.length": "24",
+                  "http3.headers.header.value": "text/html; charset=utf-8",
+                  "http3.headers.content_type": "text/html; charset=utf-8"
+                },
+                {
+                  "http3.headers.header.name.length": "4",
+                  "http3.header.header.name": "link",
+                  "http3.headers.header.value.length": "798",
+                  "http3.headers.header.value": "<https://www.cloudflare.com/.well-known/api-catalog>; rel=\"api-catalog\", <https://www.cloudflare.com/.well-known/agents.json>; rel=\"service-desc\", <https://www.cloudflare.com/.well-known/webmcp.json>; rel=\"service-desc\", <https://www.cloudflare.com/openapi.json>; rel=\"service-desc\", <https://www.cloudflare.com/llms.txt>; rel=\"service-doc\", <https://www.cloudflare.com/sitemap.xml>; rel=\"sitemap\", </fonts/Kunst%20Grotesk%20Regular.woff2>; rel=preload; as=font; type=\"font/woff2\"; crossorigin, </fonts/Kunst%20Grotesk%20Medium.woff2>; rel=preload; as=font; type=\"font/woff2\"; crossorigin, <https://ot.www.cloudflare.com>; rel=preconnect; crossorigin, <https://imagedelivery.net>; rel=preconnect; crossorigin, </static/hero-poster.avif>; rel=preload; as=image; type=\"image/avif\"; fetchpriority=high",
+                  "http3.headers.link": "<https://www.cloudflare.com/.well-known/api-catalog>; rel=\"api-catalog\", <https://www.cloudflare.com/.well-known/agents.json>; rel=\"service-desc\", <https://www.cloudflare.com/.well-known/webmcp.json>; rel=\"service-desc\", <https://www.cloudflare.com/openapi.json>; rel=\"service-desc\", <https://www.cloudflare.com/llms.txt>; rel=\"service-doc\", <https://www.cloudflare.com/sitemap.xml>; rel=\"sitemap\", </fonts/Kunst%20Grotesk%20Regular.woff2>; rel=preload; as=font; type=\"font/woff2\"; crossorigin, </fonts/Kunst%20Grotesk%20Medium.woff2>; rel=preload; as=font; type=\"font/woff2\"; crossorigin, <https://ot.www.cloudflare.com>; rel=preconnect; crossorigin, <https://imagedelivery.net>; rel=preconnect; crossorigin, </static/hero-poster.avif>; rel=preload; as=image; type=\"image/avif\"; fetchpriority=high"
+                },
+                {
+                  "http3.headers.header.name.length": "6",
+                  "http3.header.header.name": "cf-ray",
+                  "http3.headers.header.value.length": "20",
+                  "http3.headers.header.value": "a4891c9aaa8df72b-XXX"
+                },
+                {
+                  "http3.headers.header.name.length": "15",
+                  "http3.header.header.name": "cf-cache-status",
+                  "http3.headers.header.value.length": "3",
+                  "http3.headers.header.value": "HIT"
+                },
+                {
+                  "http3.headers.header.name.length": "8",
+                  "http3.header.header.name": "priority",
+                  "http3.headers.header.value.length": "5",
+                  "http3.headers.header.value": "u=0,i"
+                },
+                {
+                  "http3.headers.header.name.length": "3",
+                  "http3.header.header.name": "age",
+                  "http3.headers.header.value.length": "1",
+                  "http3.headers.header.value": "0",
+                  "http3.headers.age": "0"
+                },
+                {
+                  "http3.headers.header.name.length": "13",
+                  "http3.header.header.name": "cache-control",
+                  "http3.headers.header.value.length": "10",
+                  "http3.headers.header.value": "max-age=10",
+                  "http3.headers.cache_control": "max-age=10"
+                },
+                {
+                  "http3.headers.header.name.length": "16",
+                  "http3.header.header.name": "content-encoding",
+                  "http3.headers.header.value.length": "2",
+                  "http3.headers.header.value": "br",
+                  "http3.headers.content_encoding": "br"
+                },
+                {
+                  "http3.headers.header.name.length": "6",
+                  "http3.header.header.name": "server",
+                  "http3.headers.header.value.length": "10",
+                  "http3.headers.header.value": "cloudflare",
+                  "http3.headers.server": "cloudflare"
+                },
+                {
+                  "http3.headers.header.name.length": "4",
+                  "http3.header.header.name": "vary",
+                  "http3.headers.header.value.length": "15",
+                  "http3.headers.header.value": "accept-encoding",
+                  "http3.headers.vary": "accept-encoding"
+                },
+                {
+                  "http3.headers.header.name.length": "25",
+                  "http3.header.header.name": "strict-transport-security",
+                  "http3.headers.header.value.length": "35",
+                  "http3.headers.header.value": "max-age=31536000; includeSubDomains",
+                  "http3.headers.strict_transport_security": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "http3.headers.header.name.length": "23",
+                  "http3.header.header.name": "content-security-policy",
+                  "http3.headers.header.value.length": "1959",
+                  "http3.headers.header.value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.cloudflareinsights.com https://static-staging.cloudflareinsights.com https://challenges.cloudflare.com https://*.onetrust.com https://cdn.cookielaw.org https://ot.www.cloudflare.com https://www.googletagmanager.com https://tagmanager.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://adservice.google.com https://cdn.bizible.com https://js.adsrvr.org https://*.marketo.net https://platform.twitter.com https://static.ads-twitter.com https://scripts.demandbase.com https://tag.demandbase.com https://*.6sc.co https://*.qualified.com https://snap.licdn.com https://bat.bing.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://*.google.com https://*.doubleclick.net https://www.googleadservices.com https://translate.googleapis.com https://cdn.bizible.com https://js.adsrvr.org https://*.marketo.net https://ads-twitter.com https://analytics.twitter.com https://*.twimg.com https://api.demandbase.com https://scripts.demandbase.com https://tag.demandbase.com https://tag-logger.demandbase.com https://api.company-target.com https://*.6sc.co https://epsilon.6sense.com https://*.qualified.com https://*.ads.linkedin.com https://www.linkedin.com https://bat.bing.com https: wss://*.qualified.com wss://*.registrar.cloudflare.com; frame-src https://*.adsrvr.org https://*.cloudflare.com https://*.videodelivery.net https://*.cloudflarestream.com https://www.googletagmanager.com https://*.qualified.com https://td.doubleclick.net https://bid.g.doubleclick.net https://9309168.fls.doubleclick.net https://9973066.fls.doubleclick.net https://s.company-target.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; worker-src 'self' blob:; child-src 'self' blob:; upgrade-insecure-requests"
+                },
+                {
+                  "http3.headers.header.name.length": "26",
+                  "http3.header.header.name": "cross-origin-opener-policy",
+                  "http3.headers.header.value.length": "11",
+                  "http3.headers.header.value": "unsafe-none"
+                },
+                {
+                  "http3.headers.header.name.length": "28",
+                  "http3.header.header.name": "cross-origin-resource-policy",
+                  "http3.headers.header.value.length": "12",
+                  "http3.headers.header.value": "cross-origin"
+                },
+                {
+                  "http3.headers.header.name.length": "18",
+                  "http3.header.header.name": "permissions-policy",
+                  "http3.headers.header.value.length": "40",
+                  "http3.headers.header.value": "geolocation=(), camera=(), microphone=()"
+                },
+                {
+                  "http3.headers.header.name.length": "15",
+                  "http3.header.header.name": "referrer-policy",
+                  "http3.headers.header.value.length": "31",
+                  "http3.headers.header.value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "http3.headers.header.name.length": "22",
+                  "http3.header.header.name": "x-content-type-options",
+                  "http3.headers.header.value.length": "7",
+                  "http3.headers.header.value": "nosniff"
+                },
+                {
+                  "http3.headers.header.name.length": "15",
+                  "http3.header.header.name": "x-frame-options",
+                  "http3.headers.header.value.length": "10",
+                  "http3.headers.header.value": "SAMEORIGIN"
+                },
+                {
+                  "http3.headers.header.name.length": "11",
+                  "http3.header.header.name": "x-served-by",
+                  "http3.headers.header.value.length": "14",
+                  "http3.headers.header.value": "marketing-site"
+                },
+                {
+                  "http3.headers.header.name.length": "16",
+                  "http3.header.header.name": "x-xss-protection",
+                  "http3.headers.header.value.length": "13",
+                  "http3.headers.header.value": "1; mode=block"
+                },
+                {
+                  "http3.headers.header.name.length": "4",
+                  "http3.header.header.name": "x-rm",
+                  "http3.headers.header.value.length": "2",
+                  "http3.headers.header.value": "GW"
+                },
+                {
+                  "http3.headers.header.name.length": "10",
+                  "http3.header.header.name": "set-cookie",
+                  "http3.headers.header.value.length": "93",
+                  "http3.headers.header.value": "_ga=redacted-test-value; Expires=Wed, 10 Nov 2027 22:37:48 GMT; Path=/",
+                  "http3.headers.set_cookie": "_ga=redacted-test-value; Expires=Wed, 10 Nov 2027 22:37:48 GMT; Path=/"
+                },
+                {
+                  "http3.headers.header.name.length": "10",
+                  "http3.header.header.name": "set-cookie",
+                  "http3.headers.header.value.length": "211",
+                  "http3.headers.header.value": "cfz_google-analytics_v4=redacted-test-value; Expires=Wed Nov 10 2027 22:37:48 GMT+0000 (Coordinated Universal Time); HttpOnly; SameSite=Lax; Path=/; Secure",
+                  "http3.headers.set_cookie": "cfz_google-analytics_v4=redacted-test-value; Expires=Wed Nov 10 2027 22:37:48 GMT+0000 (Coordinated Universal Time); HttpOnly; SameSite=Lax; Path=/; Secure"
+                },
+                {
+                  "http3.headers.header.name.length": "10",
+                  "http3.header.header.name": "set-cookie",
+                  "http3.headers.header.value.length": "250",
+                  "http3.headers.header.value": "cfz_adobe=redacted-test-value; Expires=Tue Nov 09 2027 22:37:48 GMT+0000 (Coordinated Universal Time); HttpOnly; SameSite=Lax; Path=/; Secure",
+                  "http3.headers.set_cookie": "cfz_adobe=redacted-test-value; Expires=Tue Nov 09 2027 22:37:48 GMT+0000 (Coordinated Universal Time); HttpOnly; SameSite=Lax; Path=/; Secure"
+                },
+                {
+                  "http3.headers.header.name.length": "10",
+                  "http3.header.header.name": "set-cookie",
+                  "http3.headers.header.value.length": "207",
+                  "http3.headers.header.value": "kndctr_8AD56F28618A50850A495FB6_AdobeOrg_identity=redacted-test-value; Expires=Tue, 09 Nov 2027 22:37:48 GMT; Path=/; Secure; SameSite=Lax",
+                  "http3.headers.set_cookie": "kndctr_8AD56F28618A50850A495FB6_AdobeOrg_identity=redacted-test-value; Expires=Tue, 09 Nov 2027 22:37:48 GMT; Path=/; Secure; SameSite=Lax"
+                },
+                {
+                  "http3.headers.header.name.length": "10",
+                  "http3.header.header.name": "set-cookie",
+                  "http3.headers.header.value.length": "336",
+                  "http3.headers.header.value": "__cf_bm=redacted-test-value; HttpOnly; SameSite=None; Secure; Path=/; Domain=www.cloudflare.com; Expires=Sat, 10 Oct 2026 23:07:48 GMT",
+                  "http3.headers.set_cookie": "__cf_bm=redacted-test-value; HttpOnly; SameSite=None; Secure; Path=/; Domain=www.cloudflare.com; Expires=Sat, 10 Oct 2026 23:07:48 GMT"
+                },
+                {
+                  "http3.headers.header.name.length": "13",
+                  "http3.header.header.name": "server-timing",
+                  "http3.headers.header.value.length": "24",
+                  "http3.headers.header.value": "cfCacheStatus;desc=\"HIT\""
+                },
+                {
+                  "http3.headers.header.name.length": "13",
+                  "http3.header.header.name": "server-timing",
+                  "http3.headers.header.value.length": "44",
+                  "http3.headers.header.value": "cfEdge;dur=15,cfOrigin;dur=0,cfWorker;dur=26"
+                },
+                {
+                  "http3.headers.header.name.length": "13",
+                  "http3.header.header.name": "server-timing",
+                  "http3.headers.header.value.length": "8",
+                  "http3.headers.header.value": "cfExtPri"
+                },
+                {
+                  "http3.headers.header.name.length": "7",
+                  "http3.header.header.name": "alt-svc",
+                  "http3.headers.header.value.length": "19",
+                  "http3.headers.header.value": "h3=\":443\"; ma=86400"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2026-10-10",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "en0",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "2026-10-10T22:37:49.969901000Z",
+          "frame.time_utc": "2026-10-10T22:37:49.969901000Z",
+          "frame.time_epoch": "2026-10-10T22:37:49.969901000Z",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000023000",
+          "frame.time_delta_displayed": "1.380303000",
+          "frame.time_relative": "3.979590000",
+          "frame.number": "3933",
+          "frame.len": "593",
+          "frame.cap_len": "593",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:tcp:tls:http2",
+          "frame.encoding": "0"
+        },
+        "eth": {
+          "filtered": "eth"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x02",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "2"
+          },
+          "ip.len": "579",
+          "ip.id": "0x0000",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "6",
+          "ip.checksum": "0xae99",
+          "ip.checksum.status": "2",
+          "ip.src": "192.0.2.10",
+          "ip.addr": [
+            "192.0.2.10",
+            "32.194.118.12"
+          ],
+          "ip.src_host": "192.0.2.10",
+          "ip.host": [
+            "192.0.2.10",
+            "32.194.118.12"
+          ],
+          "ip.dst": "32.194.118.12",
+          "ip.dst_host": "32.194.118.12",
+          "ip.stream": "80"
+        },
+        "tcp": {
+          "tcp.srcport": "50427",
+          "tcp.dstport": "443",
+          "tcp.port": [
+            "50427",
+            "443"
+          ],
+          "tcp.stream": "114",
+          "tcp.stream.pnum": "15",
+          "tcp.completeness": "15",
+          "tcp.completeness_tree": {
+            "tcp.completeness.rst": "0",
+            "tcp.completeness.fin": "0",
+            "tcp.completeness.data": "1",
+            "tcp.completeness.ack": "1",
+            "tcp.completeness.syn-ack": "1",
+            "tcp.completeness.syn": "1",
+            "tcp.completeness.str": "··DASS"
+          },
+          "tcp.len": "527",
+          "tcp.seq": "2145",
+          "tcp.seq_raw": "883427413",
+          "tcp.nxtseq": "2672",
+          "tcp.ack": "4268",
+          "tcp.ack_raw": "2075735770",
+          "tcp.hdr_len": "32",
+          "tcp.flags": "0x0018",
+          "tcp.flags_tree": {
+            "tcp.flags.res": "0",
+            "tcp.flags.ae": "0",
+            "tcp.flags.cwr": "0",
+            "tcp.flags.ece": "0",
+            "tcp.flags.urg": "0",
+            "tcp.flags.ack": "1",
+            "tcp.flags.push": "1",
+            "tcp.flags.reset": "0",
+            "tcp.flags.syn": "0",
+            "tcp.flags.fin": "0",
+            "tcp.flags.str": "·······AP···"
+          },
+          "tcp.window_size_value": "2048",
+          "tcp.window_size": "131072",
+          "tcp.window_size_scalefactor": "64",
+          "tcp.checksum": "0xcc4a",
+          "tcp.checksum.status": "2",
+          "tcp.urgent_pointer": "0",
+          "tcp.options": "01:01:08:0a:89:b4:64:7b:4d:5e:ee:54",
+          "tcp.options_tree": {
+            "tcp.options.nop": [
+              "01",
+              "01"
+            ],
+            "tcp.options.nop_tree": [
+              {
+                "tcp.option_kind": "1"
+              },
+              {
+                "tcp.option_kind": "1"
+              }
+            ],
+            "tcp.options.timestamp": "08:0a:89:b4:64:7b:4d:5e:ee:54",
+            "tcp.options.timestamp_tree": {
+              "tcp.option_kind": "8",
+              "tcp.option_len": "10",
+              "tcp.options.timestamp.tsval": "2310300795",
+              "tcp.options.timestamp.tsecr": "1298067028"
+            }
+          },
+          "Timestamps": {
+            "tcp.time_relative": "0.065922000",
+            "tcp.time_delta": "0.000023000"
+          },
+          "tcp.analysis": {
+            "tcp.analysis.initial_rtt": "0.029159000",
+            "tcp.analysis.bytes_in_flight": "752",
+            "tcp.analysis.push_bytes_sent": "527"
+          },
+          "tcp.stream.client.contiguity_count": "1",
+          "tcp.stream.server.contiguity_count": "1",
+          "tcp.pdu.size": "498"
+        },
+        "tls": {
+          "filtered": "tls"
+        },
+        "http2": {
+          "http2.stream": {
+            "http2.length": "489",
+            "http2.type": "1",
+            "http2.flags": "0x25",
+            "http2.flags_tree": {
+              "http2.flags.unused_headers": "0x00",
+              "http2.flags.priority": "1",
+              "http2.flags.padded": "0",
+              "http2.flags.eh": "1",
+              "http2.flags.end_stream": "1"
+            },
+            "http2.r": "0x00000000",
+            "http2.streamid": "1",
+            "http2.pad_length": "0",
+            "http2.exclusive": "1",
+            "http2.stream_dependency": "0",
+            "http2.headers.weight": "255",
+            "http2.headers.weight_real": "256",
+            "http2.header.length": "802",
+            "http2.header.count": "17",
+            "http2.header": [
+              {
+                "http2.header.name.length": "7",
+                "http2.header.name": ":method",
+                "http2.header.value.length": "3",
+                "http2.header.value": "GET",
+                "http2.headers.method": "GET",
+                "http2.header.unescaped": "GET",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "2"
+              },
+              {
+                "http2.header.name.length": "10",
+                "http2.header.name": ":authority",
+                "http2.header.value.length": "11",
+                "http2.header.value": "httpbin.org",
+                "http2.headers.authority": "httpbin.org",
+                "http2.header.unescaped": "httpbin.org",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - Indexed Name",
+                "http2.header.index": "1"
+              },
+              {
+                "http2.header.name.length": "7",
+                "http2.header.name": ":scheme",
+                "http2.header.value.length": "5",
+                "http2.header.value": "https",
+                "http2.headers.scheme": "https",
+                "http2.header.unescaped": "https",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "7"
+              },
+              {
+                "http2.header.name.length": "5",
+                "http2.header.name": ":path",
+                "http2.header.value.length": "30",
+                "http2.header.value": "/cookies/set?session_id=abc123",
+                "http2.headers.path": "/cookies/set?session_id=abc123",
+                "http2.headers.path_tree": {
+                  "http.request.uri.path": "/cookies/set",
+                  "http.request.uri.query": "session_id=abc123",
+                  "http.request.uri.query_tree": {
+                    "http.request.uri.query.parameter": "session_id=abc123"
+                  }
+                },
+                "http2.header.unescaped": "/cookies/set?session_id=abc123",
+                "http2.header.repr": "Literal Header Field without Indexing - Indexed Name",
+                "http2.header.index": "4"
+              },
+              {
+                "http2.header.name.length": "9",
+                "http2.header.name": "sec-ch-ua",
+                "http2.header.value.length": "65",
+                "http2.header.value": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+                "http2.header.unescaped": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - New Name"
+              },
+              {
+                "http2.header.name.length": "16",
+                "http2.header.name": "sec-ch-ua-mobile",
+                "http2.header.value.length": "2",
+                "http2.header.value": "?0",
+                "http2.header.unescaped": "?0",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - New Name"
+              },
+              {
+                "http2.header.name.length": "18",
+                "http2.header.name": "sec-ch-ua-platform",
+                "http2.header.value.length": "7",
+                "http2.header.value": "\"macOS\"",
+                "http2.header.unescaped": "\"macOS\"",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - New Name"
+              },
+              {
+                "http2.header.name.length": "25",
+                "http2.header.name": "upgrade-insecure-requests",
+                "http2.header.value.length": "1",
+                "http2.header.value": "1",
+                "http2.header.unescaped": "1",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - New Name"
+              },
+              {
+                "http2.header.name.length": "10",
+                "http2.header.name": "user-agent",
+                "http2.header.value.length": "125",
+                "http2.header.value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+                "http2.headers.user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+                "http2.header.unescaped": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - Indexed Name",
+                "http2.header.index": "58"
+              },
+              {
+                "http2.header.name.length": "6",
+                "http2.header.name": "accept",
+                "http2.header.value.length": "145",
+                "http2.header.value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "http2.headers.accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "http2.header.unescaped": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - Indexed Name",
+                "http2.header.index": "19"
+              },
+              {
+                "http2.header.name.length": "14",
+                "http2.header.name": "sec-fetch-site",
+                "http2.header.value.length": "4",
+                "http2.header.value": "none",
+                "http2.header.unescaped": "none",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - New Name"
+              },
+              {
+                "http2.header.name.length": "14",
+                "http2.header.name": "sec-fetch-mode",
+                "http2.header.value.length": "8",
+                "http2.header.value": "navigate",
+                "http2.header.unescaped": "navigate",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - New Name"
+              },
+              {
+                "http2.header.name.length": "14",
+                "http2.header.name": "sec-fetch-user",
+                "http2.header.value.length": "2",
+                "http2.header.value": "?1",
+                "http2.header.unescaped": "?1",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - New Name"
+              },
+              {
+                "http2.header.name.length": "14",
+                "http2.header.name": "sec-fetch-dest",
+                "http2.header.value.length": "8",
+                "http2.header.value": "document",
+                "http2.header.unescaped": "document",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - New Name"
+              },
+              {
+                "http2.header.name.length": "15",
+                "http2.header.name": "accept-encoding",
+                "http2.header.value.length": "23",
+                "http2.header.value": "gzip, deflate, br, zstd",
+                "http2.headers.accept_encoding": "gzip, deflate, br, zstd",
+                "http2.header.unescaped": "gzip, deflate, br, zstd",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - Indexed Name",
+                "http2.header.index": "16"
+              },
+              {
+                "http2.header.name.length": "15",
+                "http2.header.name": "accept-language",
+                "http2.header.value.length": "14",
+                "http2.header.value": "en-US,en;q=0.9",
+                "http2.headers.accept_language": "en-US,en;q=0.9",
+                "http2.header.unescaped": "en-US,en;q=0.9",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - Indexed Name",
+                "http2.header.index": "17"
+              },
+              {
+                "http2.header.name.length": "8",
+                "http2.header.name": "priority",
+                "http2.header.value.length": "6",
+                "http2.header.value": "u=0, i",
+                "http2.header.unescaped": "u=0, i",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - New Name"
+              }
+            ],
+            "http2.request.full_uri": "https://httpbin.org/cookies/set?session_id=abc123"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2026-10-10",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "en0",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "2026-10-10T22:37:50.002406000Z",
+          "frame.time_utc": "2026-10-10T22:37:50.002406000Z",
+          "frame.time_epoch": "2026-10-10T22:37:50.002406000Z",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.001685000",
+          "frame.time_delta_displayed": "0.032505000",
+          "frame.time_relative": "4.012095000",
+          "frame.number": "4002",
+          "frame.len": "504",
+          "frame.cap_len": "504",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:tcp:tls:http2",
+          "frame.encoding": "0"
+        },
+        "eth": {
+          "filtered": "eth"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x02",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "2"
+          },
+          "ip.len": "490",
+          "ip.id": "0xbb84",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "243",
+          "ip.proto": "6",
+          "ip.checksum": "0x406d",
+          "ip.checksum.status": "2",
+          "ip.src": "32.194.118.12",
+          "ip.addr": [
+            "32.194.118.12",
+            "192.0.2.10"
+          ],
+          "ip.src_host": "32.194.118.12",
+          "ip.host": [
+            "32.194.118.12",
+            "192.0.2.10"
+          ],
+          "ip.dst": "192.0.2.10",
+          "ip.dst_host": "192.0.2.10",
+          "ip.stream": "80"
+        },
+        "tcp": {
+          "tcp.srcport": "443",
+          "tcp.dstport": "50427",
+          "tcp.port": [
+            "443",
+            "50427"
+          ],
+          "tcp.stream": "114",
+          "tcp.stream.pnum": "21",
+          "tcp.completeness": "15",
+          "tcp.completeness_tree": {
+            "tcp.completeness.rst": "0",
+            "tcp.completeness.fin": "0",
+            "tcp.completeness.data": "1",
+            "tcp.completeness.ack": "1",
+            "tcp.completeness.syn-ack": "1",
+            "tcp.completeness.syn": "1",
+            "tcp.completeness.str": "··DASS"
+          },
+          "tcp.len": "438",
+          "tcp.seq": "4550",
+          "tcp.seq_raw": "2075736052",
+          "tcp.nxtseq": "4988",
+          "tcp.ack": "2672",
+          "tcp.ack_raw": "883427940",
+          "tcp.hdr_len": "32",
+          "tcp.flags": "0x0018",
+          "tcp.flags_tree": {
+            "tcp.flags.res": "0",
+            "tcp.flags.ae": "0",
+            "tcp.flags.cwr": "0",
+            "tcp.flags.ece": "0",
+            "tcp.flags.urg": "0",
+            "tcp.flags.ack": "1",
+            "tcp.flags.push": "1",
+            "tcp.flags.reset": "0",
+            "tcp.flags.syn": "0",
+            "tcp.flags.fin": "0",
+            "tcp.flags.str": "·······AP···"
+          },
+          "tcp.window_size_value": "198",
+          "tcp.window_size": "50688",
+          "tcp.window_size_scalefactor": "256",
+          "tcp.checksum": "0x67cc",
+          "tcp.checksum.status": "2",
+          "tcp.urgent_pointer": "0",
+          "tcp.options": "01:01:08:0a:4d:5e:ee:78:89:b4:64:7b",
+          "tcp.options_tree": {
+            "tcp.options.nop": [
+              "01",
+              "01"
+            ],
+            "tcp.options.nop_tree": [
+              {
+                "tcp.option_kind": "1"
+              },
+              {
+                "tcp.option_kind": "1"
+              }
+            ],
+            "tcp.options.timestamp": "08:0a:4d:5e:ee:78:89:b4:64:7b",
+            "tcp.options.timestamp_tree": {
+              "tcp.option_kind": "8",
+              "tcp.option_len": "10",
+              "tcp.options.timestamp.tsval": "1298067064",
+              "tcp.options.timestamp.tsecr": "2310300795"
+            }
+          },
+          "Timestamps": {
+            "tcp.time_relative": "0.098427000",
+            "tcp.time_delta": "0.001685000"
+          },
+          "tcp.analysis": {
+            "tcp.analysis.initial_rtt": "0.029159000",
+            "tcp.analysis.bytes_in_flight": "438",
+            "tcp.analysis.push_bytes_sent": "438"
+          },
+          "tcp.stream.client.contiguity_count": "1",
+          "tcp.stream.server.contiguity_count": "1",
+          "tcp.pdu.size": [
+            "177",
+            "232"
+          ]
+        },
+        "tls": {
+          "filtered": "tls"
+        },
+        "http2": [
+          {
+            "http2.stream": {
+              "http2.length": "168",
+              "http2.type": "1",
+              "http2.flags": "0x04",
+              "http2.flags_tree": {
+                "http2.flags.unused_headers": "0x00",
+                "http2.flags.priority": "0",
+                "http2.flags.padded": "0",
+                "http2.flags.eh": "1",
+                "http2.flags.end_stream": "0"
+              },
+              "http2.r": "0x00000000",
+              "http2.streamid": "1",
+              "http2.pad_length": "0",
+              "http2.header.length": "304",
+              "http2.header.count": "10",
+              "http2.header_table_size_update": {
+                "http2.header_table_size_update.header_table_size": "0"
+              },
+              "http2.header": [
+                {
+                  "http2.header.name.length": "7",
+                  "http2.header.name": ":status",
+                  "http2.header.value.length": "3",
+                  "http2.header.value": "302",
+                  "http2.headers.status": "302",
+                  "http2.header.unescaped": "302",
+                  "http2.header.repr": "Literal Header Field with Incremental Indexing - Indexed Name",
+                  "http2.header.index": "8"
+                },
+                {
+                  "http2.header.name.length": "4",
+                  "http2.header.name": "date",
+                  "http2.header.value.length": "29",
+                  "http2.header.value": "Sat, 10 Oct 2026 22:37:50 GMT",
+                  "http2.headers.date": "Sat, 10 Oct 2026 22:37:50 GMT",
+                  "http2.header.unescaped": "Sat, 10 Oct 2026 22:37:50 GMT",
+                  "http2.header.repr": "Literal Header Field with Incremental Indexing - Indexed Name",
+                  "http2.header.index": "33"
+                },
+                {
+                  "http2.header.name.length": "12",
+                  "http2.header.name": "content-type",
+                  "http2.header.value.length": "24",
+                  "http2.header.value": "text/html; charset=utf-8",
+                  "http2.headers.content_type": "text/html; charset=utf-8",
+                  "http2.header.unescaped": "text/html; charset=utf-8",
+                  "http2.header.repr": "Literal Header Field with Incremental Indexing - Indexed Name",
+                  "http2.header.index": "31"
+                },
+                {
+                  "http2.header.name.length": "14",
+                  "http2.header.name": "content-length",
+                  "http2.header.value.length": "3",
+                  "http2.header.value": "223",
+                  "http2.headers.content_length": "223",
+                  "http2.header.unescaped": "223",
+                  "http2.header.repr": "Literal Header Field with Incremental Indexing - Indexed Name",
+                  "http2.header.index": "28"
+                },
+                {
+                  "http2.header.name.length": "6",
+                  "http2.header.name": "server",
+                  "http2.header.value.length": "15",
+                  "http2.header.value": "gunicorn/19.9.0",
+                  "http2.headers.server": "gunicorn/19.9.0",
+                  "http2.header.unescaped": "gunicorn/19.9.0",
+                  "http2.header.repr": "Literal Header Field without Indexing - New Name"
+                },
+                {
+                  "http2.header.name.length": "8",
+                  "http2.header.name": "location",
+                  "http2.header.value.length": "8",
+                  "http2.header.value": "/cookies",
+                  "http2.headers.location": "/cookies",
+                  "http2.header.unescaped": "/cookies",
+                  "http2.header.repr": "Literal Header Field without Indexing - New Name"
+                },
+                {
+                  "http2.header.name.length": "10",
+                  "http2.header.name": "set-cookie",
+                  "http2.header.value.length": "25",
+                  "http2.header.value": "session_id=abc123; Path=/",
+                  "http2.headers.set_cookie": "session_id=abc123; Path=/",
+                  "http2.header.unescaped": "session_id=abc123; Path=/",
+                  "http2.header.repr": "Literal Header Field without Indexing - New Name"
+                },
+                {
+                  "http2.header.name.length": "27",
+                  "http2.header.name": "access-control-allow-origin",
+                  "http2.header.value.length": "1",
+                  "http2.header.value": "*",
+                  "http2.headers.access_control_allow_origin": "*",
+                  "http2.header.unescaped": "*",
+                  "http2.header.repr": "Literal Header Field without Indexing - New Name"
+                },
+                {
+                  "http2.header.name.length": "32",
+                  "http2.header.name": "access-control-allow-credentials",
+                  "http2.header.value.length": "4",
+                  "http2.header.value": "true",
+                  "http2.header.unescaped": "true",
+                  "http2.header.repr": "Literal Header Field without Indexing - New Name"
+                }
+              ],
+              "http2.time": "0.032505000",
+              "http2.request_in": "3933",
+              "http2.request.full_uri": "https://httpbin.org/cookies/set?session_id=abc123"
+            }
+          },
+          {
+            "http2.stream": {
+              "http2.length": "223",
+              "http2.type": "0",
+              "http2.flags": "0x00",
+              "http2.flags_tree": {
+                "http2.flags.unused_data": "0x00",
+                "http2.flags.padded": "0",
+                "http2.flags.end_stream": "0"
+              },
+              "http2.r": "0x00000000",
+              "http2.streamid": "1",
+              "http2.pad_length": "0",
+              "http2.data.data": "3c:21:44:4f:43:54:59:50:45:20:48:54:4d:4c:20:50:55:42:4c:49:43:20:22:2d:2f:2f:57:33:43:2f:2f:44:54:44:20:48:54:4d:4c:20:33:2e:32:20:46:69:6e:61:6c:2f:2f:45:4e:22:3e:0a:3c:74:69:74:6c:65:3e:52:65:64:69:72:65:63:74:69:6e:67:2e:2e:2e:3c:2f:74:69:74:6c:65:3e:0a:3c:68:31:3e:52:65:64:69:72:65:63:74:69:6e:67:2e:2e:2e:3c:2f:68:31:3e:0a:3c:70:3e:59:6f:75:20:73:68:6f:75:6c:64:20:62:65:20:72:65:64:69:72:65:63:74:65:64:20:61:75:74:6f:6d:61:74:69:63:61:6c:6c:79:20:74:6f:20:74:61:72:67:65:74:20:55:52:4c:3a:20:3c:61:20:68:72:65:66:3d:22:2f:63:6f:6f:6b:69:65:73:22:3e:2f:63:6f:6f:6b:69:65:73:3c:2f:61:3e:2e:20:20:49:66:20:6e:6f:74:20:63:6c:69:63:6b:20:74:68:65:20:6c:69:6e:6b:2e",
+              "http2.calculated.connection.window_size.before": "15728640",
+              "http2.calculated.connection.window_size.after": "15728417",
+              "http2.calculated.stream.window_size.before": "6291456",
+              "http2.calculated.stream.window_size.after": "6291233",
+              "http2.request.full_uri": "https://httpbin.org/cookies/set?session_id=abc123"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_index": "packets-2026-10-10",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "en0",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "2026-10-10T22:37:50.003567000Z",
+          "frame.time_utc": "2026-10-10T22:37:50.003567000Z",
+          "frame.time_epoch": "2026-10-10T22:37:50.003567000Z",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000371000",
+          "frame.time_delta_displayed": "0.001161000",
+          "frame.time_relative": "4.013256000",
+          "frame.number": "4022",
+          "frame.len": "147",
+          "frame.cap_len": "147",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:tcp:tls:http2",
+          "frame.encoding": "0"
+        },
+        "eth": {
+          "filtered": "eth"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x02",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "2"
+          },
+          "ip.len": "133",
+          "ip.id": "0x0000",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "6",
+          "ip.checksum": "0xb057",
+          "ip.checksum.status": "2",
+          "ip.src": "192.0.2.10",
+          "ip.addr": [
+            "192.0.2.10",
+            "32.194.118.12"
+          ],
+          "ip.src_host": "192.0.2.10",
+          "ip.host": [
+            "192.0.2.10",
+            "32.194.118.12"
+          ],
+          "ip.dst": "32.194.118.12",
+          "ip.dst_host": "32.194.118.12",
+          "ip.stream": "80"
+        },
+        "tcp": {
+          "tcp.srcport": "50427",
+          "tcp.dstport": "443",
+          "tcp.port": [
+            "50427",
+            "443"
+          ],
+          "tcp.stream": "114",
+          "tcp.stream.pnum": "25",
+          "tcp.completeness": "15",
+          "tcp.completeness_tree": {
+            "tcp.completeness.rst": "0",
+            "tcp.completeness.fin": "0",
+            "tcp.completeness.data": "1",
+            "tcp.completeness.ack": "1",
+            "tcp.completeness.syn-ack": "1",
+            "tcp.completeness.syn": "1",
+            "tcp.completeness.str": "··DASS"
+          },
+          "tcp.len": "81",
+          "tcp.seq": "2752",
+          "tcp.seq_raw": "883428020",
+          "tcp.nxtseq": "2833",
+          "tcp.ack": "5026",
+          "tcp.ack_raw": "2075736528",
+          "tcp.hdr_len": "32",
+          "tcp.flags": "0x0018",
+          "tcp.flags_tree": {
+            "tcp.flags.res": "0",
+            "tcp.flags.ae": "0",
+            "tcp.flags.cwr": "0",
+            "tcp.flags.ece": "0",
+            "tcp.flags.urg": "0",
+            "tcp.flags.ack": "1",
+            "tcp.flags.push": "1",
+            "tcp.flags.reset": "0",
+            "tcp.flags.syn": "0",
+            "tcp.flags.fin": "0",
+            "tcp.flags.str": "·······AP···"
+          },
+          "tcp.window_size_value": "2048",
+          "tcp.window_size": "131072",
+          "tcp.window_size_scalefactor": "64",
+          "tcp.checksum": "0x7ddf",
+          "tcp.checksum.status": "2",
+          "tcp.urgent_pointer": "0",
+          "tcp.options": "01:01:08:0a:89:b4:64:9d:4d:5e:ee:78",
+          "tcp.options_tree": {
+            "tcp.options.nop": [
+              "01",
+              "01"
+            ],
+            "tcp.options.nop_tree": [
+              {
+                "tcp.option_kind": "1"
+              },
+              {
+                "tcp.option_kind": "1"
+              }
+            ],
+            "tcp.options.timestamp": "08:0a:89:b4:64:9d:4d:5e:ee:78",
+            "tcp.options.timestamp_tree": {
+              "tcp.option_kind": "8",
+              "tcp.option_len": "10",
+              "tcp.options.timestamp.tsval": "2310300829",
+              "tcp.options.timestamp.tsecr": "1298067064"
+            }
+          },
+          "Timestamps": {
+            "tcp.time_relative": "0.099588000",
+            "tcp.time_delta": "0.000408000"
+          },
+          "tcp.analysis": {
+            "tcp.analysis.initial_rtt": "0.029159000",
+            "tcp.analysis.bytes_in_flight": "161",
+            "tcp.analysis.push_bytes_sent": "81"
+          },
+          "tcp.stream.client.contiguity_count": "1",
+          "tcp.stream.server.contiguity_count": "1",
+          "tcp.pdu.size": "52"
+        },
+        "tls": {
+          "filtered": "tls"
+        },
+        "http2": {
+          "http2.stream": {
+            "http2.length": "43",
+            "http2.type": "1",
+            "http2.flags": "0x25",
+            "http2.flags_tree": {
+              "http2.flags.unused_headers": "0x00",
+              "http2.flags.priority": "1",
+              "http2.flags.padded": "0",
+              "http2.flags.eh": "1",
+              "http2.flags.end_stream": "1"
+            },
+            "http2.r": "0x00000000",
+            "http2.streamid": "3",
+            "http2.pad_length": "0",
+            "http2.exclusive": "1",
+            "http2.stream_dependency": "0",
+            "http2.headers.weight": "255",
+            "http2.headers.weight_real": "256",
+            "http2.header.length": "811",
+            "http2.header.count": "18",
+            "http2.header": [
+              {
+                "http2.header.name.length": "7",
+                "http2.header.name": ":method",
+                "http2.header.value.length": "3",
+                "http2.header.value": "GET",
+                "http2.headers.method": "GET",
+                "http2.header.unescaped": "GET",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "2"
+              },
+              {
+                "http2.header.name.length": "10",
+                "http2.header.name": ":authority",
+                "http2.header.value.length": "11",
+                "http2.header.value": "httpbin.org",
+                "http2.headers.authority": "httpbin.org",
+                "http2.header.unescaped": "httpbin.org",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "75"
+              },
+              {
+                "http2.header.name.length": "7",
+                "http2.header.name": ":scheme",
+                "http2.header.value.length": "5",
+                "http2.header.value": "https",
+                "http2.headers.scheme": "https",
+                "http2.header.unescaped": "https",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "7"
+              },
+              {
+                "http2.header.name.length": "5",
+                "http2.header.name": ":path",
+                "http2.header.value.length": "8",
+                "http2.header.value": "/cookies",
+                "http2.headers.path": "/cookies",
+                "http2.header.unescaped": "/cookies",
+                "http2.header.repr": "Literal Header Field without Indexing - Indexed Name",
+                "http2.header.index": "4"
+              },
+              {
+                "http2.header.name.length": "25",
+                "http2.header.name": "upgrade-insecure-requests",
+                "http2.header.value.length": "1",
+                "http2.header.value": "1",
+                "http2.header.unescaped": "1",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "71"
+              },
+              {
+                "http2.header.name.length": "10",
+                "http2.header.name": "user-agent",
+                "http2.header.value.length": "125",
+                "http2.header.value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+                "http2.headers.user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+                "http2.header.unescaped": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "70"
+              },
+              {
+                "http2.header.name.length": "6",
+                "http2.header.name": "accept",
+                "http2.header.value.length": "145",
+                "http2.header.value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "http2.headers.accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "http2.header.unescaped": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "69"
+              },
+              {
+                "http2.header.name.length": "14",
+                "http2.header.name": "sec-fetch-site",
+                "http2.header.value.length": "4",
+                "http2.header.value": "none",
+                "http2.header.unescaped": "none",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "68"
+              },
+              {
+                "http2.header.name.length": "14",
+                "http2.header.name": "sec-fetch-mode",
+                "http2.header.value.length": "8",
+                "http2.header.value": "navigate",
+                "http2.header.unescaped": "navigate",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "67"
+              },
+              {
+                "http2.header.name.length": "14",
+                "http2.header.name": "sec-fetch-user",
+                "http2.header.value.length": "2",
+                "http2.header.value": "?1",
+                "http2.header.unescaped": "?1",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "66"
+              },
+              {
+                "http2.header.name.length": "14",
+                "http2.header.name": "sec-fetch-dest",
+                "http2.header.value.length": "8",
+                "http2.header.value": "document",
+                "http2.header.unescaped": "document",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "65"
+              },
+              {
+                "http2.header.name.length": "9",
+                "http2.header.name": "sec-ch-ua",
+                "http2.header.value.length": "65",
+                "http2.header.value": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+                "http2.header.unescaped": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "74"
+              },
+              {
+                "http2.header.name.length": "16",
+                "http2.header.name": "sec-ch-ua-mobile",
+                "http2.header.value.length": "2",
+                "http2.header.value": "?0",
+                "http2.header.unescaped": "?0",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "73"
+              },
+              {
+                "http2.header.name.length": "18",
+                "http2.header.name": "sec-ch-ua-platform",
+                "http2.header.value.length": "7",
+                "http2.header.value": "\"macOS\"",
+                "http2.header.unescaped": "\"macOS\"",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "72"
+              },
+              {
+                "http2.header.name.length": "15",
+                "http2.header.name": "accept-encoding",
+                "http2.header.value.length": "23",
+                "http2.header.value": "gzip, deflate, br, zstd",
+                "http2.headers.accept_encoding": "gzip, deflate, br, zstd",
+                "http2.header.unescaped": "gzip, deflate, br, zstd",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "64"
+              },
+              {
+                "http2.header.name.length": "15",
+                "http2.header.name": "accept-language",
+                "http2.header.value.length": "14",
+                "http2.header.value": "en-US,en;q=0.9",
+                "http2.headers.accept_language": "en-US,en;q=0.9",
+                "http2.header.unescaped": "en-US,en;q=0.9",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "63"
+              },
+              {
+                "http2.header.name.length": "6",
+                "http2.header.name": "cookie",
+                "http2.header.value.length": "17",
+                "http2.header.value": "session_id=abc123",
+                "http2.headers.cookie": "session_id=abc123",
+                "http2.header.unescaped": "session_id=abc123",
+                "http2.header.repr": "Literal Header Field with Incremental Indexing - Indexed Name",
+                "http2.header.index": "32"
+              },
+              {
+                "http2.header.name.length": "8",
+                "http2.header.name": "priority",
+                "http2.header.value.length": "6",
+                "http2.header.value": "u=0, i",
+                "http2.header.unescaped": "u=0, i",
+                "http2.header.repr": "Indexed Header Field",
+                "http2.header.index": "63"
+              }
+            ],
+            "http2.request.full_uri": "https://httpbin.org/cookies"
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2026-10-10",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "en0",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "2026-10-10T22:37:50.034449000Z",
+          "frame.time_utc": "2026-10-10T22:37:50.034449000Z",
+          "frame.time_epoch": "2026-10-10T22:37:50.034449000Z",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000001000",
+          "frame.time_delta_displayed": "0.030882000",
+          "frame.time_relative": "4.044138000",
+          "frame.number": "4072",
+          "frame.len": "275",
+          "frame.cap_len": "275",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:tcp:tls:http2",
+          "frame.encoding": "0"
+        },
+        "eth": {
+          "filtered": "eth"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x02",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "2"
+          },
+          "ip.len": "261",
+          "ip.id": "0xbb87",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "243",
+          "ip.proto": "6",
+          "ip.checksum": "0x414f",
+          "ip.checksum.status": "2",
+          "ip.src": "32.194.118.12",
+          "ip.addr": [
+            "32.194.118.12",
+            "192.0.2.10"
+          ],
+          "ip.src_host": "32.194.118.12",
+          "ip.host": [
+            "32.194.118.12",
+            "192.0.2.10"
+          ],
+          "ip.dst": "192.0.2.10",
+          "ip.dst_host": "192.0.2.10",
+          "ip.stream": "80"
+        },
+        "tcp": {
+          "tcp.srcport": "443",
+          "tcp.dstport": "50427",
+          "tcp.port": [
+            "443",
+            "50427"
+          ],
+          "tcp.stream": "114",
+          "tcp.stream.pnum": "27",
+          "tcp.completeness": "15",
+          "tcp.completeness_tree": {
+            "tcp.completeness.rst": "0",
+            "tcp.completeness.fin": "0",
+            "tcp.completeness.data": "1",
+            "tcp.completeness.ack": "1",
+            "tcp.completeness.syn-ack": "1",
+            "tcp.completeness.syn": "1",
+            "tcp.completeness.str": "··DASS"
+          },
+          "tcp.len": "209",
+          "tcp.seq": "5026",
+          "tcp.seq_raw": "2075736528",
+          "tcp.nxtseq": "5235",
+          "tcp.ack": "2833",
+          "tcp.ack_raw": "883428101",
+          "tcp.hdr_len": "32",
+          "tcp.flags": "0x0018",
+          "tcp.flags_tree": {
+            "tcp.flags.res": "0",
+            "tcp.flags.ae": "0",
+            "tcp.flags.cwr": "0",
+            "tcp.flags.ece": "0",
+            "tcp.flags.urg": "0",
+            "tcp.flags.ack": "1",
+            "tcp.flags.push": "1",
+            "tcp.flags.reset": "0",
+            "tcp.flags.syn": "0",
+            "tcp.flags.fin": "0",
+            "tcp.flags.str": "·······AP···"
+          },
+          "tcp.window_size_value": "198",
+          "tcp.window_size": "50688",
+          "tcp.window_size_scalefactor": "256",
+          "tcp.checksum": "0x8299",
+          "tcp.checksum.status": "2",
+          "tcp.urgent_pointer": "0",
+          "tcp.options": "01:01:08:0a:4d:5e:ee:9a:89:b4:64:9d",
+          "tcp.options_tree": {
+            "tcp.options.nop": [
+              "01",
+              "01"
+            ],
+            "tcp.options.nop_tree": [
+              {
+                "tcp.option_kind": "1"
+              },
+              {
+                "tcp.option_kind": "1"
+              }
+            ],
+            "tcp.options.timestamp": "08:0a:4d:5e:ee:9a:89:b4:64:9d",
+            "tcp.options.timestamp_tree": {
+              "tcp.option_kind": "8",
+              "tcp.option_len": "10",
+              "tcp.options.timestamp.tsval": "1298067098",
+              "tcp.options.timestamp.tsecr": "2310300829"
+            }
+          },
+          "Timestamps": {
+            "tcp.time_relative": "0.130470000",
+            "tcp.time_delta": "0.000010000"
+          },
+          "tcp.analysis": {
+            "tcp.analysis.acks_frame": "4022",
+            "tcp.analysis.ack_rtt": "0.030882000",
+            "tcp.analysis.initial_rtt": "0.029159000",
+            "tcp.analysis.bytes_in_flight": "209",
+            "tcp.analysis.push_bytes_sent": "209"
+          },
+          "tcp.stream.client.contiguity_count": "1",
+          "tcp.stream.server.contiguity_count": "1",
+          "tcp.pdu.size": [
+            "121",
+            "59"
+          ]
+        },
+        "tls": {
+          "filtered": "tls"
+        },
+        "http2": [
+          {
+            "http2.stream": {
+              "http2.length": "112",
+              "http2.type": "1",
+              "http2.flags": "0x04",
+              "http2.flags_tree": {
+                "http2.flags.unused_headers": "0x00",
+                "http2.flags.priority": "0",
+                "http2.flags.padded": "0",
+                "http2.flags.eh": "1",
+                "http2.flags.end_stream": "0"
+              },
+              "http2.r": "0x00000000",
+              "http2.streamid": "3",
+              "http2.pad_length": "0",
+              "http2.header.length": "228",
+              "http2.header.count": "7",
+              "http2.header": [
+                {
+                  "http2.header.name.length": "7",
+                  "http2.header.name": ":status",
+                  "http2.header.value.length": "3",
+                  "http2.header.value": "200",
+                  "http2.headers.status": "200",
+                  "http2.header.unescaped": "200",
+                  "http2.header.repr": "Indexed Header Field",
+                  "http2.header.index": "8"
+                },
+                {
+                  "http2.header.name.length": "4",
+                  "http2.header.name": "date",
+                  "http2.header.value.length": "29",
+                  "http2.header.value": "Sat, 10 Oct 2026 22:37:50 GMT",
+                  "http2.headers.date": "Sat, 10 Oct 2026 22:37:50 GMT",
+                  "http2.header.unescaped": "Sat, 10 Oct 2026 22:37:50 GMT",
+                  "http2.header.repr": "Literal Header Field with Incremental Indexing - Indexed Name",
+                  "http2.header.index": "33"
+                },
+                {
+                  "http2.header.name.length": "12",
+                  "http2.header.name": "content-type",
+                  "http2.header.value.length": "16",
+                  "http2.header.value": "application/json",
+                  "http2.headers.content_type": "application/json",
+                  "http2.header.unescaped": "application/json",
+                  "http2.header.repr": "Literal Header Field with Incremental Indexing - Indexed Name",
+                  "http2.header.index": "31"
+                },
+                {
+                  "http2.header.name.length": "14",
+                  "http2.header.name": "content-length",
+                  "http2.header.value.length": "2",
+                  "http2.header.value": "50",
+                  "http2.headers.content_length": "50",
+                  "http2.header.unescaped": "50",
+                  "http2.header.repr": "Literal Header Field with Incremental Indexing - Indexed Name",
+                  "http2.header.index": "28"
+                },
+                {
+                  "http2.header.name.length": "6",
+                  "http2.header.name": "server",
+                  "http2.header.value.length": "15",
+                  "http2.header.value": "gunicorn/19.9.0",
+                  "http2.headers.server": "gunicorn/19.9.0",
+                  "http2.header.unescaped": "gunicorn/19.9.0",
+                  "http2.header.repr": "Literal Header Field without Indexing - New Name"
+                },
+                {
+                  "http2.header.name.length": "27",
+                  "http2.header.name": "access-control-allow-origin",
+                  "http2.header.value.length": "1",
+                  "http2.header.value": "*",
+                  "http2.headers.access_control_allow_origin": "*",
+                  "http2.header.unescaped": "*",
+                  "http2.header.repr": "Literal Header Field without Indexing - New Name"
+                },
+                {
+                  "http2.header.name.length": "32",
+                  "http2.header.name": "access-control-allow-credentials",
+                  "http2.header.value.length": "4",
+                  "http2.header.value": "true",
+                  "http2.header.unescaped": "true",
+                  "http2.header.repr": "Literal Header Field without Indexing - New Name"
+                }
+              ],
+              "http2.time": "0.030882000",
+              "http2.request_in": "4022",
+              "http2.request.full_uri": "https://httpbin.org/cookies"
+            }
+          },
+          {
+            "http2.stream": {
+              "http2.length": "50",
+              "http2.type": "0",
+              "http2.flags": "0x00",
+              "http2.flags_tree": {
+                "http2.flags.unused_data": "0x00",
+                "http2.flags.padded": "0",
+                "http2.flags.end_stream": "0"
+              },
+              "http2.r": "0x00000000",
+              "http2.streamid": "3",
+              "http2.pad_length": "0",
+              "http2.data.data": "7b:0a:20:20:22:63:6f:6f:6b:69:65:73:22:3a:20:7b:0a:20:20:20:20:22:73:65:73:73:69:6f:6e:5f:69:64:22:3a:20:22:61:62:63:31:32:33:22:0a:20:20:7d:0a:7d:0a",
+              "http2.calculated.connection.window_size.before": "15728417",
+              "http2.calculated.connection.window_size.after": "15728367",
+              "http2.calculated.stream.window_size.before": "6291456",
+              "http2.calculated.stream.window_size.after": "6291406",
+              "http2.request.full_uri": "https://httpbin.org/cookies"
+            }
+          }
+        ]
+      }
+    }
+  }
+]
