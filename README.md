@@ -150,8 +150,9 @@ writes the export, and exits. Open saved sessions later with `python -m sessionl
 | `python -m sessionlens export <id>` | rebuild a session's export folder |
 | `python -m sessionlens setup` | redo the one-time capture profile setup |
 
-Captures are saved to `~/sessionlens-captures/<session-id>/`. Change it with
-`SESSIONLENS_CAPTURES=/path/to/folder`.
+Captures are saved to `~/sessionlens-captures/<session-id>/`. To use another folder, set
+`SESSIONLENS_CAPTURES=/path/to/folder` for every command (`start`, `view`, `export`), or export it in
+`~/.zshrc`.
 
 ## How it works
 
