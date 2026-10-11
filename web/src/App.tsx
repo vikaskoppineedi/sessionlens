@@ -4,7 +4,6 @@ import icon from './assets/icon.png';
 import { CompareView } from './components/CompareView';
 import { Drawer } from './components/Drawer';
 import { Matrix } from './components/Matrix';
-import { StepStrip } from './components/StepStrip';
 import type { Filters, Selection } from './state';
 import type { Model, SessionInfo } from './types';
 
@@ -44,7 +43,6 @@ function SessionView({ session, sessions, onError }: { session: string; sessions
   useEffect(() => {
     if (!live || stepCount < 2) return;
     document.getElementById(`step-col-${stepCount - 1}`)?.scrollIntoView({ behavior: 'smooth', inline: 'end', block: 'nearest' });
-    document.querySelector('.strip-card:last-child')?.scrollIntoView({ behavior: 'smooth', inline: 'end', block: 'nearest' });
   }, [live, stepCount]);
 
   const selectStep = (step: number) => {
@@ -74,9 +72,8 @@ function SessionView({ session, sessions, onError }: { session: string; sessions
       </div>
       {model ? (
         <>
-          <StepStrip session={session} steps={model.steps} selected={selectedStep} onSelect={selectStep} />
           <div className="body">
-            <Matrix model={model} filters={filters} selectedStep={selectedStep} onSelect={setSelection} />
+            <Matrix session={session} model={model} filters={filters} selectedStep={selectedStep} onSelect={setSelection} onSelectStep={selectStep} />
             {selection ? <Drawer session={session} model={model} selection={selection} reveal={reveal} onSelect={setSelection} onClose={() => setSelection(null)} /> : null}
             {comparing ? <CompareView current={session} sessions={sessions} onClose={() => setComparing(false)} /> : null}
           </div>

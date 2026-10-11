@@ -1,16 +1,20 @@
 import { useMemo, useState } from 'react';
+import { api } from '../api';
 import { groupBySection, requestsForRow, visibleRows, type Filters, type Selection } from '../state';
-import type { Cell, Model, RequestSummary, Row } from '../types';
+import type { Cell, Model, RequestSummary, Row, Step } from '../types';
 import { relTime } from '../util';
 
 interface Props {
+  session: string;
   model: Model;
   filters: Filters;
   selectedStep: number | null;
   onSelect: (s: Selection) => void;
+  onSelectStep: (step: number) => void;
 }
 
 const LANE_LIMIT = 12;
+const ICON: Record<Step['kind'], string> = { start: '🚀', action: '👆', nav: '🧭', spa: '↪️' };
 const MATCH_ICON: Record<RequestSummary['match'], string> = { matched: '🌐', 'ext-only': '🧩', 'wire-only': '📡', ambiguous: '❓', cache: '💾' };
 const MATCH_HELP: Record<RequestSummary['match'], string> = {
   matched: 'seen by extension and on the wire',
@@ -64,7 +68,7 @@ function host(url: string): string {
   }
 }
 
-export function Matrix({ model, filters, selectedStep, onSelect }: Props) {
+export function Matrix({ session, model, filters, selectedStep, onSelect, onSelectStep }: Props) {
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
   const [expandedLane, setExpandedLane] = useState<Set<number>>(new Set());
   const [hoverRow, setHoverRow] = useState<Row | null>(null);
@@ -101,7 +105,8 @@ export function Matrix({ model, filters, selectedStep, onSelect }: Props) {
               {rows.length} rows · {requests.length} requests
             </th>
             {model.steps.map((s, i) => (
-              <th key={s.id} id={`step-col-${s.id}`} className={`step-head ${colClass(i)}`} title={s.url ?? ''}>
+              <th key={s.id} id={`step-col-${s.id}`} className={`step-head ${colClass(i)}`} title={s.url ?? ''} onClick={() => onSelectStep(s.id)}>
+                {s.screenshot !== null ? <img src={api.screenshotUrl(session, s.screenshot)} alt="" loading="lazy" /> : <div className="no-shot">{ICON[s.kind]}</div>}
                 <div>
                   #{s.id} {truncate(s.label, 28)}
                 </div>
